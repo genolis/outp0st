@@ -1,0 +1,65 @@
+{
+  "name": "@top/core",
+  "version": "1.0.0",
+  "description": "terra outpost core lib",
+  "keywords": [
+    "typescript",
+    "library",
+    "starter",
+    "template"
+  ],
+  "homepage": "",
+  "bugs": "",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "",
+  "main": "./build/cjs/index.js",
+  "module": "./build/esm/index.js",
+  "types": "./build/index.d.ts",
+  "license": "MIT",
+  "engines": {
+    "node": "> 14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "setup": "node -r ./esbuild-hook ./scripts/setup",
+    "build": "yarn clean && yarn type:dts && yarn type:build",
+    "clean": "node -r ./esbuild-hook ./scripts/clean",
+    "type:dts": "tsc --emitDeclarationOnly",
+    "type:check": "tsc --noEmit",
+    "type:build": "node -r ./esbuild-hook ./scripts/build",
+    "format": "prettier \"src/**/*.ts\" --write",
+    "format:check": "prettier \"src/**/*.ts\" --check",
+    "lint": "eslint src --ext .ts --fix",
+    "lint:check": "eslint src --ext .ts",
+    "test": "ava",
+    "test:watch": "ava -w --color -v",
+    "test:coverage": "nyc ava && nyc report --reporter=html",
+    "spell:check": "cspell \"{README.md,CODE_OF_CONDUCT.md,CONTRIBUTING.md,.github/*.md,src/**/*.ts}\""
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.1",
+    "@types/prompts": "^2.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "ava": "^3.15.0",
+    "cspell": "^5.9.0",
+    "esbuild": "^0.13.5",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.24.2",
+    "nyc": "^15.1.0",
+    "prompts": "^2.4.1",
+    "slugify": "^1.6.0",
+    "source-map-support": "^0.5.20",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.4.3"
+  },
+  "volta": {
+    "node": "16.4.1",
+    "yarn": "1.22.10",
+    "npm": "7.19.1"
+  }
+}

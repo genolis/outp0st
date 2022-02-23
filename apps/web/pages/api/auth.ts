@@ -22,6 +22,7 @@ export default async function handler(
         'terra187th39ts5h0hmz8w4v0hmprlaejhy2zfle8mhd', //wallet for initial sends
         'terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6', //deployer
         'terra1zdyrrxk6ps5x7gumte0ykwfu6lndgchvgh5l2y', //wallet LUV admin
+        'terra12ddw3xr5af4maw99qag6a320p7acfkra7qsztt', //partners wallet
     ];
     const ok = whiteList.indexOf(a as string) > -1;
     res.status(200).send(ok);

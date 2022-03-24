@@ -1,0 +1,122 @@
+{
+  "contracts": [
+    {
+      "title": "LOOP/UST",
+      "id": 1646803435132,
+      "tabTitle": "loop",
+      "messages": [
+        1646803445106,
+        1646803780686,
+        1646803854178,
+        1646815160296
+      ],
+      "contractAddress": "terra1swgnlreprmfjxf2trul495uh4yphpkqucls8fv"
+    },
+    {
+      "title": "LOOP/UST Farm LP token",
+      "id": 1646804981932,
+      "tabTitle": "fLP",
+      "messages": [
+        1646804988126,
+        1646825183782
+      ],
+      "contractAddress": "terra17hcsl0903qpg0fxf0m5xaj24gd2a0hzp2jj2d5"
+    },
+    {
+      "title": "LOOP/UST LP token",
+      "id": 1646804448770,
+      "tabTitle": "LP",
+      "messages": [
+        1646804456618,
+        1646809360566
+      ],
+      "contractAddress": "terra1chestqf8qj0jgvl0aa3ke2jutk940htytrmy0n"
+    }
+  ],
+  "messages": [
+    {
+      "contractId": 1646804448770,
+      "type": "EXECUTE",
+      "title": "Stake LP",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1646804456618,
+      "message": "{\n  \"send\": {\n    \"amount\": \"500\",\n    \"contract\": \"terra12n2txu6aw9x2ckm9ace9qyj6geruhtlzzeyh6f\",\n    \"msg\": \"eyJzdGFrZSI6e319\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646803435132,
+      "type": "QUERY",
+      "title": "Total staked",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1646803445106,
+      "message": "{\n  \"query_total_staked\": {\n    \"staked_token\": \"terra1chestqf8qj0jgvl0aa3ke2jutk940htytrmy0n\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646803435132,
+      "type": "QUERY",
+      "title": "Staked by user",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1646803780686,
+      "message": "{\n  \"query_staked_by_user\": {\n    \"wallet\": \"terra104a3t0jgjkxw6wtv3amg6hg3uzuruqvad2eh7d\",\n    \"staked_token\": \"terra1chestqf8qj0jgvl0aa3ke2jutk940htytrmy0n\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646804448770,
+      "type": "QUERY",
+      "title": "Balance",
+      "collapsed": false,
+      "renderMode": "JSON",
+      "id": 1646809360566,
+      "message": "{\n  \"balance\": {\n    \"address\": \"terra104a3t0jgjkxw6wtv3amg6hg3uzuruqvad2eh7d\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646804981932,
+      "type": "EXECUTE",
+      "title": "Unstake",
+      "collapsed": false,
+      "renderMode": "JSON",
+      "id": 1646804988126,
+      "message": "{\n  \"send\": {\n    \"amount\": \"43634643\",\n    \"contract\": \"terra1swgnlreprmfjxf2trul495uh4yphpkqucls8fv\",\n    \"msg\": \"eyJ1bnN0YWtlX2FuZF9jbGFpbSI6e319\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646804981932,
+      "type": "QUERY",
+      "title": "new query message",
+      "collapsed": false,
+      "renderMode": "JSON",
+      "id": 1646825183782,
+      "message": "{\n  \"balance\": {\n    \"address\": \"terra104a3t0jgjkxw6wtv3amg6hg3uzuruqvad2eh7d\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646803435132,
+      "type": "QUERY",
+      "title": "Reward per day",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1646815160296,
+      "message": "{\n  \"query_stakeable_info\": {}\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1646803435132,
+      "type": "QUERY",
+      "title": "Pending reward",
+      "collapsed": false,
+      "renderMode": "JSON",
+      "id": 1646803854178,
+      "message": "{\n  \"query_user_reward_in_pool\": {\n    \"wallet\": \"terra104a3t0jgjkxw6wtv3amg6hg3uzuruqvad2eh7d\",\n    \"pool\": {\n      \"token\": {\n        \"contract_addr\": \"terra1chestqf8qj0jgvl0aa3ke2jutk940htytrmy0n\"\n      }\n    }\n  }\n}",
+      "coins": []
+    }
+  ],
+  "params": [],
+  "isReadonly": false,
+  "title": "LOOP mainnet",
+  "version": "1.0.0"
+}

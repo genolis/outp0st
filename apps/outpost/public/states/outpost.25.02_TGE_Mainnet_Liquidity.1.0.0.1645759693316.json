@@ -1,0 +1,141 @@
+{
+    "messages": [
+        {
+            "contractId": 1645075773844,
+            "type": "DOC",
+            "title": "Switch to liquidity wallet terra1...3x202q",
+            "collapsed": true,
+            "id": 1645075941679,
+            "message": "{\n  \"balance\": {\n    \"address\": \"terra1ejksjvfvzpcqzg88nfd82hx2cv7g7lj9gjz669\"\n  }\n}",
+            "coins": [],
+            "renderMode": "JSON",
+            "description": "LW wallet - terra1y2av6mjk6qjrr3v3r4rpfh86vcle70g03x202q or terra1...3x202q"
+        },
+        {
+            "contractId": 1645076218244,
+            "type": "QUERY",
+            "title": "check pool",
+            "collapsed": true,
+            "id": 1645078239630,
+            "message": "{\n  \"pool\": {}\n}",
+            "coins": [],
+            "renderMode": "FORM"
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "EXECUTE",
+            "title": "increase allowance",
+            "collapsed": true,
+            "id": 1645077728208,
+            "message": "{\n    \"increase_allowance\": {\n        \"spender\": \"terra1hmcd4kwafyydd4mjv2rzhcuuwnfuqc2prkmlhj\",\n        \"amount\": \"5000000000000\",\n        \"expires\": {\n            \"never\": {}\n        }\n    }\n}",
+            "coins": [],
+            "renderMode": "JSON"
+        },
+        {
+            "contractId": 1645076218244,
+            "type": "EXECUTE",
+            "title": "Provide liquidity 5kk LUV and 200k UST",
+            "collapsed": true,
+            "id": 1645077379182,
+            "message": "{\n  \"provide_liquidity\": {\n    \"assets\": [\n      {\n        \"info\" : {\n            \"token\": {\n                \"contract_addr\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\"\n            }\n        },\n        \"amount\": \"5000000000000\"\n      },\n      {\n        \"info\" : {\n            \"native_token\": {\n                \"denom\": \"uusd\"\n            }\n        },\n        \"amount\": \"200000000000\"\n      }\n    ]\n  }\n}",
+            "coins": [
+                {
+                    "denom": "uusd",
+                    "input": 200000
+                }
+            ],
+            "renderMode": "JSON"
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "DOC",
+            "title": "Switch to ...mhd wallet",
+            "collapsed": true,
+            "renderMode": "JSON",
+            "id": 1645757691560,
+            "coins": []
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "EXECUTE",
+            "title": "Send 7.5M LUV to trustpad and nftpad",
+            "collapsed": true,
+            "renderMode": "JSON",
+            "id": 1645757755060,
+            "message": "{\n        \"transfer\": {\n            \"amount\": \"7500000000000\",\n            \"recipient\": \"terra17df2j5nrdzhgzfs0g36u2r2xvl4646fct029fk\"\n        }\n    }",
+            "coins": []
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "DOC",
+            "title": "Switch to liquidity wallet",
+            "collapsed": true,
+            "renderMode": "JSON",
+            "id": 1645759444446
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "EXECUTE_MULTI",
+            "title": "Send 10% S&P TGE ~18 933 333.4",
+            "collapsed": true,
+            "renderMode": "JSON",
+            "id": 1645758057946,
+            "multiType": "TRANSFER_LUV",
+            "message": "[\n    {\n        \"address\": \"terra17u89k0xdupnnedejurvpsmfj6g2u69934a0s4d\",\n        \"amount\": \"333333333000\"\n    },\n    {\n        \"address\": \"terra18hv6kkdww8hum882zee0ea8kc0zd7h43ptzx6w\",\n        \"amount\": \"1222666700000\"\n    },\n    {\n        \"address\": \"terra1yuhtwklr5xruqvmjnr64mlt4lpgpzhp4np80sv\",\n        \"amount\": \"390666670000\"\n    },\n    {\n        \"address\": \"terra12a49vma59w8rmcqggwvcc8ufgpnavhmvj9n9rp\",\n        \"amount\": \"2000000000000\"\n    },\n    {\n        \"address\": \"terra1yu8wnyzp0r9j5k2rrd4rv7hj0peqhdu9xl9yjh\",\n        \"amount\": \"1333333333000\"\n    },\n    {\n        \"address\": \"terra19qmuv0agnsunxtaf7785ju497kfy2jnkfnkalj\",\n        \"amount\": \"133333333000\"\n    },\n    {\n        \"address\": \"terra1wvsugzhszkstexl0v6fv86c9ryjy8xm6u9t2fk\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1f9awpltvezcp54n5sk9nhy64nkpepr3sxgpdlp\",\n        \"amount\": \"240000000000\"\n    },\n    {\n        \"address\": \"terra1eyshkv3wyvu6pd06nw70pmcghpgxqzf7gctmx8\",\n        \"amount\": \"413333333000\"\n    },\n    {\n        \"address\": \"terra124wu9vdfw85tqldqjyjgszaca3clc4enhvsk5l\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra10w38a7vctkn94pmpjdeflk8y6frns6yajdxsf9\",\n        \"amount\": \"600000000000\"\n    },\n    {\n        \"address\": \"terra130htgvnkxfrcctkslsg63z22ppag5507uzmjxk\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1kml5p8et0j7zhqptxla74nf0gfsumcy7vd5y77\",\n        \"amount\": \"786666667000\"\n    },\n    {\n        \"address\": \"terra107te8xn86w6umgwv7s8tqmldkehc2s4kw5effw\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1e6m3jymsgetz5vyvkvujejqufanpq8mg3pn6x7\",\n        \"amount\": \"1280000000000\"\n    },\n    {\n        \"address\": \"terra1glxyh484nypmgujv4qe6ueh6k8t5ld7u2deff2\",\n        \"amount\": \"400000000000\"\n    },\n    {\n        \"address\": \"terra1yztkk2rnsax56wmtj8uyqpvktj8ah87d0h6cdn\",\n        \"amount\": \"400000000000\"\n    },\n    {\n        \"address\": \"terra1cuj2qr5kqvc2g9sgycym0dy0kmpv9geez40anf\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra198h8gl8hepnt3zkxa8l0zmpw0pqep7fexrmee7\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1k74sl0z89m5cw3ale5wywdnr042z8peacgsm0h\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1u3yvjwyeudfd7680rr4w0x8ur2egeumgtkev5r\",\n        \"amount\": \"133333333000\"\n    },\n    {\n        \"address\": \"terra1r2nnfsv8d5pzpssnez6zp7nag2e0nnmd0l04n9\",\n        \"amount\": \"53333333000\"\n    },\n    {\n        \"address\": \"terra1l6wkxyh0ueprhv7apygdfvt6c25vqk050a9zx9\",\n        \"amount\": \"933333333000\"\n    },\n    {\n        \"address\": \"terra1ku7wxh507xhl5nqu7kzzk82lnk2gjd4qcrr2qq\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1wplgq82jm98eum4v4mxews7mvw9qs64w0ae28j\",\n        \"amount\": \"533333333000\"\n    },\n    {\n        \"address\": \"terra1mkhgwtzw8nnuske2tzye9ndjj6hfegun2sjq05\",\n        \"amount\": \"133333333000\"\n    },\n    {\n        \"address\": \"terra1x5qzmtf9nny2hu7rqdgscnjk4yz8ehft0y9l8e\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1y0hy0aqvdwq0sf3dsulprzzjrqw8af9trwm3g0\",\n        \"amount\": \"133333333000\"\n    },\n    {\n        \"address\": \"terra199smgvvj6f457uwwvd72xvxjc6mq5e6phwx6se\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1ca9syrranfggfaljtkdt4l555hgdg8c08fzv3s\",\n        \"amount\": \"1333333333000\"\n    },\n    {\n        \"address\": \"terra18zljjw77pe84tvhclqgrhxvgzpnxj4k96sf77v\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1x3e2umywlx83yhxmltye2sgmut3ux3rpm7efk7\",\n        \"amount\": \"51600000000\"\n    },\n    {\n        \"address\": \"terra19fwdegt2a6p0cnzf2pyn2qdsuwu2l8zfpj32ec\",\n        \"amount\": \"200000000000\"\n    },\n    {\n        \"address\": \"terra1wag5t6d5v5reqsrhmevqu8htmvwmfwnnjtt427\",\n        \"amount\": \"26666667000\"\n    },\n    {\n        \"address\": \"terra1kxyulqeqye6rmrdqf00j03dfw9c3g06fe57e5x\",\n        \"amount\": \"80000000000\"\n    },\n    {\n        \"address\": \"terra1t6ythsj2tt7afsy52prnmen4mwuj5kczg48ecj\",\n        \"amount\": \"53333333000\"\n    },\n    {\n        \"address\": \"terra1v7leq7qd2khq8pawjr76ltcx5gcppkjqza3h9k\",\n        \"amount\": \"400000000000\"\n    },\n    {\n        \"address\": \"terra1ny3gwwuxnsdd40444vg6mhskea8uz3e3dmt6wu\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1hyh3r7fpdw54x4zfg3es56rdza56dkw2g87vpm\",\n        \"amount\": \"53333333000\"\n    },\n    {\n        \"address\": \"terra1qdtmdnpzvvdj3wgyxtmw4se7tggayesf3za64k\",\n        \"amount\": \"266666667000\"\n    },\n    {\n        \"address\": \"terra1jsz3xp0qxce6zczlkfdpm645dlhdz9lklq6d2p\",\n        \"amount\": \"12666700000\"\n    },\n    {\n        \"address\": \"terra10x2y2v5lxekctkaczjv5yw6axkc4368eryatj7\",\n        \"amount\": \"2533300000\"\n    },\n    {\n        \"address\": \"terra1phvuun64q2qyv6shn6lnf7g0lqqhs84hyh03c6\",\n        \"amount\": \"15200000000\"\n    },\n    {\n        \"address\": \"terra1fc9q70k7s55yje6nukd90hhvxv3llgfmcazxvx\",\n        \"amount\": \"16466700000\"\n    },\n    {\n        \"address\": \"terra1esldh6ydj8cu2uxscczxrefv80j5jpevwdc9rl\",\n        \"amount\": \"10133300000\"\n    },\n    {\n        \"address\": \"terra1jp4j0ceehr2ex0hpuu0y2hq6fmpxqw8rpwevew\",\n        \"amount\": \"6333300000\"\n    },\n    {\n        \"address\": \"terra1kxjhlz5c2upgae9kc79vaytjw9sqcvzlr0jtxv\",\n        \"amount\": \"151733400000\"\n    }\n]",
+            "coins": []
+        },
+        {
+            "contractId": 1645075773844,
+            "type": "EXECUTE_MULTI",
+            "title": "Send 10M to AMM",
+            "collapsed": false,
+            "renderMode": "JSON",
+            "id": 1645759478862,
+            "multiType": "TRANSFER_LUV",
+            "message": "[\n    {\n        \"address\": \"terra1507p98ymqj8p983fxsl4ggjexrdd3waf4wapv4\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1ph88gfm0044uqk5ndwa7et0hua8p0a8l8pqr3g\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra13zev659upmehq7z4vdts0nnse97thc6n60vm4r\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1xy9y5z0dapk73slcd5n3am5vstwggyfslpuqw6\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1lafea6t8dhs4uwyzx37a9zmvy4cvtkll9tnf5c\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1hswk9kw0kz4le5s8qp2da7986rms7x6yh9kwgq\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1emrl0np59sczadftfcvn030p8xpnr9aaxmuf69\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1c80j3p3dkta2pmc6scchca8fsc8pchfp30nmck\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra1py83ncdwz8l7kw2wsrpcej0zu3xx48fll3rsth\",\n        \"amount\": \"1000000000000\"\n    },\n    {\n        \"address\": \"terra13s0ha3zx4nl6agtpf67h85wkrr2vtykyrn86s5\",\n        \"amount\": \"1000000000000\"\n    }\n]"
+        }
+    ],
+    "contracts": [
+        {
+            "title": "LP",
+            "id": 1645076263502,
+            "tabTitle": "LP",
+            "messages": [],
+            "contractAddress": "terra1qq6g0kds9zn97lvrukf2qxf6w4sjt0k9jhcdty",
+            "collapsed": true
+        },
+        {
+            "title": "LUV",
+            "id": 1645075773844,
+            "tabTitle": "LUV",
+            "messages": [
+                1645075941679, 1645077728208, 1645757691560, 1645757755060,
+                1645758057946, 1645759444446, 1645759478862
+            ],
+            "binUrl": "not needed",
+            "codeId": -1,
+            "contractAddress": "terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6",
+            "collapsed": true,
+            "description": "Increase allowance - before providing to liquidity to pair address."
+        },
+        {
+            "title": "Pair",
+            "id": 1645076218244,
+            "tabTitle": "Pair",
+            "messages": [1645077379182, 1645078239630],
+            "contractAddress": "terra1hmcd4kwafyydd4mjv2rzhcuuwnfuqc2prkmlhj",
+            "description": "* Third step - provide liquidity\n\nInfo:\n* LUV token - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* Pair address - \t\nterra1hmcd4kwafyydd4mjv2rzhcuuwnfuqc2prkmlhj\n* LP Token - terra1qq6g0kds9zn97lvrukf2qxf6w4sjt0k9jhcdty\n* LW wallet - terra1y2av6mjk6qjrr3v3r4rpfh86vcle70g03x202q or terra1...3x202q"
+        }
+    ],
+    "params": [
+        {
+            "title": "stateUrl",
+            "type": "STRING",
+            "value": "/states/outpost.25.02_TGE_Mainnet_Liquidity.1.0.0.1645759693316.json",
+            "id": 1
+        }
+    ],
+    "title": "25.02 TGE Mainnet Liquidity",
+    "version": "1.0.0",
+    "isReadonly": true
+}

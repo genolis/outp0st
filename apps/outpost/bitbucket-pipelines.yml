@@ -1,0 +1,95 @@
+image: atlassian/default-image:3
+
+pipelines:
+    custom: #branches:
+        deploy_react_aws_user_defined:
+            - variables: #current lunaverse.io bucket and distribution
+                  - name: Bucket
+                    default: terraadmin.uniconsoftware.com.au
+                  - name: Distribution
+                    default: ELUIGAKSI9XKO
+            - step:
+                  caches:
+                      - node
+                  name: Build
+                  script:
+                      - npm install
+                      - REACT_APP_ENVIRONMENT=production npm run build
+                  artifacts:
+                      - build/**
+                  clone:
+                      enabled: true
+                      depth: 1
+                      lfs: false
+            - step:
+                  name: Deploy to S3
+                  deployment: production
+                  script:
+                      - pipe: atlassian/aws-s3-deploy:0.2.4
+                        variables:
+                            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            S3_BUCKET: $Bucket
+                            ACL: 'public-read'
+                            LOCAL_PATH: 'build'
+                  clone:
+                      enabled: true
+                      lfs: false
+                      depth: 1
+            - step:
+                  name: Invalidate Cloudfront Cache
+                  script:
+                      - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+                        variables:
+                            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            DISTRIBUTION_ID: $Distribution
+                  clone:
+                      enabled: true
+                      lfs: false
+                      depth: 1
+        deploy_react_aws:
+            - step:
+                  name: Build
+                  caches:
+                      - node
+                  script:
+                      - npm install
+                      - REACT_APP_ENVIRONMENT=production npm run build
+                  artifacts:
+                      - build/**
+                  clone:
+                      enabled: true
+                      depth: 1
+                      lfs: false
+            - step:
+                  name: Deploy to S3
+                  deployment: production
+                  script:
+                      - pipe: atlassian/aws-s3-deploy:0.2.4
+                        variables:
+                            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            S3_BUCKET: $PRODUCTION_REACT_BUCKET_NAME
+                            ACL: 'public-read'
+                            LOCAL_PATH: 'build'
+                  clone:
+                      enabled: true
+                      lfs: false
+                      depth: 1
+            - step:
+                  name: Invalidate Cloudfront Cache
+                  script:
+                      - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+                        variables:
+                            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            DISTRIBUTION_ID: $PRODUCTION_REACT_DISTRIBUTION_ID
+                  clone:
+                      enabled: true
+                      lfs: false
+                      depth: 1

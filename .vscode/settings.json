@@ -1,9 +1,13 @@
 {
-    // only use words from .cspell.json
-    "cSpell.userWords": [],
-    "cSpell.enabled": true,
-    "editor.formatOnSave": true,
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "typescript.enablePromptUseWorkspaceTsdk": true,
-    "eslint.nodePath": "./packages/config/eslint-preset.json"
+  // only use words from .cspell.json
+  "cSpell.userWords": [],
+  "cSpell.enabled": true,
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": "./packages/config/eslint-preset.json",
+  "prettier.configPath": "./packages/config/prettier.config.js",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
 }

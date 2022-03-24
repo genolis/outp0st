@@ -1,11 +1,11 @@
 import { Collapse } from '@mui/material';
+import { Contract } from '@outpost/core';
 import Tooltip from 'components/display/Tooltip';
 // import Tx from "txs/Tx"
 import { Form } from 'components/form';
 import { ExternalLink, FinderLink } from 'components/general';
 import { Grid } from 'components/layout';
 import { useStoreContract } from 'outpost/hooks/useStoreContract';
-import { Contract } from 'outpost/state/model';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { FC } from 'react';
 import TxContext from 'txs/TxContext';

@@ -1,10 +1,10 @@
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { ContractMessage } from '@outpost/core';
 import { isDenomTerraNative, readDenom } from '@terra.kitchen/utils';
 import { FormGroup, FormItem, Input, Select } from 'components/form';
 import { Button } from 'components/general';
 import { useBankBalance } from 'data/queries/bank';
-import { ContractMessage } from 'outpost/state/model';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { CoinInput, getPlaceholder } from 'txs/utils';
 import { sortCoins } from 'utils/coin';

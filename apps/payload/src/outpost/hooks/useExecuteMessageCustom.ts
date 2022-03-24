@@ -1,12 +1,12 @@
-import { useCallback, useMemo } from 'react';
-import { useAddress } from 'data/wallet';
+import { Contract, ContractMessage } from '@outpost/core';
 import { Coins } from '@terra-money/terra.js';
-import { Contract, ContractMessage } from '../state/model';
-import { validateMsg, parseJSON } from 'utils/data';
-import { getCoins } from 'txs/utils';
-import { useOutpostState } from '../state/useOutpostState';
-import { getInitialGasDenom } from 'txs/Tx';
 import { useBankBalance } from 'data/queries/bank';
+import { useAddress } from 'data/wallet';
+import { useCallback, useMemo } from 'react';
+import { getInitialGasDenom } from 'txs/Tx';
+import { getCoins } from 'txs/utils';
+import { parseJSON, validateMsg } from 'utils/data';
+import { useOutpostState } from '../state/useOutpostState';
 
 export function useExecuteMessageCustom(
   message: ContractMessage,
@@ -14,8 +14,8 @@ export function useExecuteMessageCustom(
     address: string,
     contractAddress: string,
     exec_msg: any,
-    coins: Coins
-  ) => any[]
+    coins: Coins,
+  ) => any[],
 ): any {
   const { getContract } = useOutpostState();
   const bankBalance = useBankBalance();
@@ -40,7 +40,7 @@ export function useExecuteMessageCustom(
   }, [address, contractAddress, msg, initialGasDenom, createMessagesFn]);
   const estimationTxValues = useMemo(
     () => [msg, contractAddress],
-    [msg, contractAddress]
+    [msg, contractAddress],
   );
   const createTx = createTxInsta;
   const tx = {

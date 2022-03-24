@@ -16,6 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "noImplicitAny": false
   }
 }

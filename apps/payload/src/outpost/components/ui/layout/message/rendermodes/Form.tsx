@@ -1,6 +1,6 @@
+import { ContractMessage } from '@outpost/core';
 import Form from '@rjsf/core';
 import { FormItem, Input } from 'components/form';
-import { ContractMessage } from 'outpost/state/model';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { toInput } from 'txs/utils';
 import { parseJSON } from 'utils/data';

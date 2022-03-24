@@ -1,4 +1,4 @@
-import { Contract } from './model';
+import { Contract } from '@outpost/core';
 
 export const CONSTANTS: CONSTType = {
   version: '1.0.0',
@@ -7,21 +7,21 @@ export const CONSTANTS: CONSTType = {
       updateKey: 'codeId',
       logType: 'store_code',
       attrKey: 'code_id',
-      isInt: true
+      isInt: true,
     },
     INSTA: {
       updateKey: 'contractAddress',
       logType: 'instantiate_contract',
       attrKey: 'contract_address',
-      isInt: false
+      isInt: false,
     },
     EXECUTE: {
       updateKey: 'additionalContractAddress',
       logType: '',
       attrKey: '',
-      isInt: false
-    }
-  }
+      isInt: false,
+    },
+  },
 };
 
 export interface CONSTType {

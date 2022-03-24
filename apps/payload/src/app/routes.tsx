@@ -1,58 +1,51 @@
+/* auth */
+import Auth from 'auth/modules/Auth';
+import AddNetworkPage from 'auth/networks/AddNetworkPage';
+import ManageNetworksPage from 'auth/networks/ManageNetworksPage';
+import Outpost from 'outpost/Main';
+import Contract from 'pages/contract/Contract';
+/* menu */
+import Dashboard from 'pages/dashboard/Dashboard';
+import Governance from 'pages/gov/Governance';
+import ProposalDetails from 'pages/gov/ProposalDetails';
+import History from 'pages/history/History';
+/* labs */
+import Labs from 'pages/labs/Labs';
+import PostMultisigTxPage from 'pages/multisig/PostMultisigTxPage';
+import SignMultisigTxPage from 'pages/multisig/SignMultisigTxPage';
+import NFT from 'pages/nft/NFT';
+/* 404 */
+import NotFound from 'pages/NotFound';
+import Stake from 'pages/stake/Stake';
+/* details */
+import ValidatorDetails from 'pages/stake/ValidatorDetails';
+import Wallet from 'pages/wallet/Wallet';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useRoutes } from 'react-router-dom';
-
-import { ReactComponent as WalletIcon } from 'styles/images/menu/Wallet.svg';
-import { ReactComponent as NFTIcon } from 'styles/images/menu/NFT.svg';
-import { ReactComponent as HistoryIcon } from 'styles/images/menu/History.svg';
-import { ReactComponent as SwapIcon } from 'styles/images/menu/Swap.svg';
-import { ReactComponent as StakeIcon } from 'styles/images/menu/Stake.svg';
-import { ReactComponent as GovernanceIcon } from 'styles/images/menu/Governance.svg';
 import { ReactComponent as ContractIcon } from 'styles/images/menu/Contract.svg';
-
-/* menu */
-import Dashboard from 'pages/dashboard/Dashboard';
-import Wallet from 'pages/wallet/Wallet';
-import NFT from 'pages/nft/NFT';
-import History from 'pages/history/History';
-import Stake from 'pages/stake/Stake';
-import Governance from 'pages/gov/Governance';
-import Contract from 'pages/contract/Contract';
-import Outpost from 'outpost/Main';
-
-/* details */
-import ValidatorDetails from 'pages/stake/ValidatorDetails';
-import ProposalDetails from 'pages/gov/ProposalDetails';
-
+import { ReactComponent as GovernanceIcon } from 'styles/images/menu/Governance.svg';
+import { ReactComponent as HistoryIcon } from 'styles/images/menu/History.svg';
+import { ReactComponent as NFTIcon } from 'styles/images/menu/NFT.svg';
+import { ReactComponent as StakeIcon } from 'styles/images/menu/Stake.svg';
+import { ReactComponent as SwapIcon } from 'styles/images/menu/Swap.svg';
+import { ReactComponent as WalletIcon } from 'styles/images/menu/Wallet.svg';
+import AnchorEarnTx from 'txs/earn/AnchorEarnTx';
+import DepositTx from 'txs/gov/DepositTx';
+import SubmitProposalTx from 'txs/gov/SubmitProposalTx';
+import VoteTx from 'txs/gov/VoteTx';
 /* txs */
 import SendTx from 'txs/send/SendTx';
-import TransferCW721Tx from 'txs/wasm/TransferCW721Tx';
-import SwapTx from 'txs/swap/SwapTx';
-import SwapMultipleTx from 'txs/swap/SwapMultipleTx';
 import StakeTx from 'txs/stake/StakeTx';
-import WithdrawRewardsTx from 'txs/stake/WithdrawRewardsTx';
 import WithdrawCommissionTx from 'txs/stake/WithdrawCommissionTx';
-import SubmitProposalTx from 'txs/gov/SubmitProposalTx';
-import DepositTx from 'txs/gov/DepositTx';
-import VoteTx from 'txs/gov/VoteTx';
-import StoreCodeTx from 'txs/wasm/StoreCodeTx';
-import InstantiateContractTx from 'txs/wasm/InstantiateContractTx';
+import WithdrawRewardsTx from 'txs/stake/WithdrawRewardsTx';
+import SwapMultipleTx from 'txs/swap/SwapMultipleTx';
+import SwapTx from 'txs/swap/SwapTx';
 import ExecuteContractTx from 'txs/wasm/ExecuteContractTx';
+import InstantiateContractTx from 'txs/wasm/InstantiateContractTx';
 import MigrateContractTx from 'txs/wasm/MigrateContractTx';
-import AnchorEarnTx from 'txs/earn/AnchorEarnTx';
-import SignMultisigTxPage from 'pages/multisig/SignMultisigTxPage';
-import PostMultisigTxPage from 'pages/multisig/PostMultisigTxPage';
-
-/* auth */
-import Auth from 'auth/modules/Auth';
-import ManageNetworksPage from 'auth/networks/ManageNetworksPage';
-import AddNetworkPage from 'auth/networks/AddNetworkPage';
-
-/* labs */
-import Labs from 'pages/labs/Labs';
-
-/* 404 */
-import NotFound from 'pages/NotFound';
+import StoreCodeTx from 'txs/wasm/StoreCodeTx';
+import TransferCW721Tx from 'txs/wasm/TransferCW721Tx';
 
 const ICON_SIZE = { width: 20, height: 20 };
 
@@ -105,7 +98,7 @@ export const useNav = () => {
     {
       path: '/outpost',
       element: <Outpost />,
-      title: 'Lunaverse',
+      title: 'Outpost',
       icon: <img src="/logo.png" alt="lv_logo" style={ICON_SIZE} />,
     },
   ];

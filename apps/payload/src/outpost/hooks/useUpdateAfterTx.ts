@@ -1,11 +1,14 @@
+import { Contract } from '@outpost/core';
 import { latestTxState, useTxInfo } from 'data/queries/tx';
 import { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import { CONSTANTS, TXType } from '../state/constants';
-import { Contract } from '../state/model';
 import { useOutpostState } from '../state/useOutpostState';
 
-export function useUpdateAfterTx(contract: Contract, constantKey: keyof TXType) {
+export function useUpdateAfterTx(
+  contract: Contract,
+  constantKey: keyof TXType,
+) {
   const { updateContract } = useOutpostState();
   const { updateKey, logType, attrKey, isInt } = CONSTANTS.TX[constantKey];
 
@@ -17,7 +20,7 @@ export function useUpdateAfterTx(contract: Contract, constantKey: keyof TXType) 
     if (!isSuccess || !updateKey || !logType || !attrKey) return;
     const cleanData = data as any;
     const logs = cleanData.logs.find(
-      (x: any) => Object.keys(x.eventsByType).indexOf(logType!) !== -1
+      (x: any) => Object.keys(x.eventsByType).indexOf(logType!) !== -1,
     );
 
     const entry = logs?.eventsByType[logType];
@@ -30,5 +33,14 @@ export function useUpdateAfterTx(contract: Contract, constantKey: keyof TXType) 
       if (value === contract[updateKey]) return;
       updateContract({ ...contract, [updateKey]: value });
     }
-  }, [data, isSuccess, updateContract, contract, updateKey, isInt, logType, attrKey]);
+  }, [
+    data,
+    isSuccess,
+    updateContract,
+    contract,
+    updateKey,
+    isInt,
+    logType,
+    attrKey,
+  ]);
 }

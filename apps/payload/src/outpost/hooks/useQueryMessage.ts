@@ -1,11 +1,11 @@
-import { validateMsg, parseJSON } from "utils/data";
-import { useForm } from "react-hook-form";
-import { useGetContractQuery } from "data/queries/wasm";
-import { isEmpty } from "ramda";
-import { getErrorMessage } from "utils/error";
-import { useQuery } from "react-query";
-import { Contract, ContractMessage } from "../state/model";
-import { useOutpostState } from "../state/useOutpostState";
+import { Contract, ContractMessage } from '@outpost/core';
+import { useGetContractQuery } from 'data/queries/wasm';
+import { isEmpty } from 'ramda';
+import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
+import { parseJSON, validateMsg } from 'utils/data';
+import { getErrorMessage } from 'utils/error';
+import { useOutpostState } from '../state/useOutpostState';
 
 interface Values {
   msg: string;
@@ -18,7 +18,7 @@ export function useQueryMessage(message: ContractMessage) {
   const contract = getContract(message.contractId) as Contract;
   /* form */
   const form = useForm<Values>({
-    mode: "onChange",
+    mode: 'onChange',
     defaultValues: {
       msg: queryMsg,
     },
@@ -35,7 +35,7 @@ export function useQueryMessage(message: ContractMessage) {
   const address = contract?.contractAddress;
 
   const { data, error, ...state } = useQuery({
-    ...getContractQuery<object>(address, parseJSON(query || "{}")),
+    ...getContractQuery<object>(address, parseJSON(query || '{}')),
     enabled: !isEmpty(query),
     retry: false,
   });

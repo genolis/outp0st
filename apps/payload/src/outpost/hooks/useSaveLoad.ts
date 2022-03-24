@@ -1,70 +1,70 @@
-import { parseJSON } from "utils/data"
-import { Outpost } from "../state/model"
-import { useOutpostState } from "../state/useOutpostState"
-import { getLocalSetting, SettingKey } from "../utils/localStorage"
+import { Outpost } from '@outpost/core';
+import { parseJSON } from 'utils/data';
+import { useOutpostState } from '../state/useOutpostState';
+import { getLocalSetting, SettingKey } from '../utils/localStorage';
 
 export function useSaveLoad() {
-  const { updateState } = useOutpostState()
+  const { updateState } = useOutpostState();
   const saveState = () => {
-    const data = getLocalSetting<Outpost>(SettingKey.outpost)
+    const data = getLocalSetting<Outpost>(SettingKey.outpost);
 
     var dataStr =
-      "data:text/json;charset=utf-8," +
-      encodeURIComponent(JSON.stringify(data, null, 2))
-    var dlAnchorElem: any = document.getElementById("downloadAnchorElem")
-    dlAnchorElem.setAttribute("href", dataStr)
+      'data:text/json;charset=utf-8,' +
+      encodeURIComponent(JSON.stringify(data, null, 2));
+    var dlAnchorElem: any = document.getElementById('downloadAnchorElem');
+    dlAnchorElem.setAttribute('href', dataStr);
     dlAnchorElem.setAttribute(
-      "download",
-      `outpost.${data.title?.replaceAll(" ", "_")}.${
-        data.version || "1.0.0"
-      }.${Date.now()}.json`
-    )
-    dlAnchorElem.click()
-  }
+      'download',
+      `outpost.${data.title?.replaceAll(' ', '_')}.${
+        data.version || '1.0.0'
+      }.${Date.now()}.json`,
+    );
+    dlAnchorElem.click();
+  };
   const loadStateFromText = (lines: string, url?: string) => {
-    const newState = parseJSON(lines)
+    const newState = parseJSON(lines);
     if (!newState) {
-      console.error("cannot load state from text url:", url, lines)
-      return
+      console.error('cannot load state from text url:', url, lines);
+      return;
     }
     // TODO we should create startup hook call next line should go there
     //updateOrAddParam('stateUrl', url, OutpostParamsTypes.STRING);
-    updateState(newState)
-  }
+    updateState(newState);
+  };
   // https://stackoverflow.com/questions/7346563/loading-local-json-file
   const loadState = (file: File) => {
-    var fr: any
+    var fr: any;
     //console.log({ file });
 
-    if (typeof window.FileReader !== "function") {
-      alert("The file API isn't supported on this browser yet.")
-      return
+    if (typeof window.FileReader !== 'function') {
+      alert("The file API isn't supported on this browser yet.");
+      return;
     }
 
-    fr = new FileReader()
-    fr.onload = receivedText
-    fr.readAsText(file)
+    fr = new FileReader();
+    fr.onload = receivedText;
+    fr.readAsText(file);
 
     function receivedText(e: any) {
-      let lines = e.target.result
-      loadStateFromText(lines)
+      let lines = e.target.result;
+      loadStateFromText(lines);
     }
-  }
+  };
 
   const resetState = () => {
     const ok = window.confirm(
-      "Are you sure, you want to reset state? All work will be erased!"
-    )
+      'Are you sure, you want to reset state? All work will be erased!',
+    );
     if (ok) {
       updateState({
         contracts: [],
         messages: [],
-        title: "Outpost admin",
-        version: "1.0.0",
+        title: 'Outpost admin',
+        version: '1.0.0',
         params: [],
-      })
+      });
       //window.location.reload();
     }
-  }
-  return { saveState, loadState, resetState, loadStateFromText }
+  };
+  return { saveState, loadState, resetState, loadStateFromText };
 }

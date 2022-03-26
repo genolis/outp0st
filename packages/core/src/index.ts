@@ -6,4 +6,6 @@ export function bar(a: number, b: number): number {
   return a - b;
 }
 
-export * from './types/model';
+export * from './state';
+export * from './types';
+export * from './utils';

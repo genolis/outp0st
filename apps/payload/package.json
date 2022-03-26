@@ -14,6 +14,15 @@
     "s": "standard-changelog",
     "release": "standard-version"
   },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false,
+    "os": false,
+    "net": false,
+    "stream": false,
+    "tls": false
+  },
   "dependencies": {
     "@anchor-protocol/anchor.js": "^5.0.0",
     "@mui/icons-material": "^5.3.1",

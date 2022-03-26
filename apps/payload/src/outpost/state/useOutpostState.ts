@@ -1,6 +1,7 @@
 import {
   Contract,
   ContractMessage,
+  GetId,
   Outpost,
   OutpostParam,
   OutpostParamsTypes,
@@ -19,7 +20,7 @@ const outpostState = atom({
 });
 
 export const getId = () => {
-  return Date.now() + new Date().getMilliseconds();
+  return GetId();
 };
 
 export const useOutpostState = () => {

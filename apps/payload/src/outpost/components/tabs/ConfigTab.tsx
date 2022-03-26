@@ -1,6 +1,4 @@
 import { Button as Btn } from '@mui/material';
-import { DataGrid } from '@mui/x-data-grid';
-import { OutpostParam, OutpostParamsTypes } from '@outpost/core';
 import { FormItem, Input } from 'components/form';
 import { Button } from 'components/general';
 import { Card, Col } from 'components/layout';
@@ -9,6 +7,8 @@ import { useOutpostState } from 'outpost/state/useOutpostState';
 import styles from 'pages/gov/ProposalsByStatus.module.scss';
 import { FC, useEffect, useState } from 'react';
 import BtnGroup from '../ui/elements/BtnGroup';
+import StateList from './parts/StateList';
+import StorageConfig from './parts/StorageConfig';
 import Upload from './Upload';
 
 const ConfigTab: FC = () => {
@@ -16,10 +16,9 @@ const ConfigTab: FC = () => {
   const [file, setFile] = useState<File | undefined>();
   const [msg, setMsg] = useState('');
 
-  const { outpostApp, paramsCrud } = useOutpostState();
+  const { outpostApp } = useOutpostState();
   const title = outpostApp('get', 'title');
   const isReadonly = outpostApp('get', 'isReadonly');
-  const rows = (paramsCrud!.read() || []) as OutpostParam[];
 
   useEffect(() => {
     if (!file) return;
@@ -70,57 +69,9 @@ const ConfigTab: FC = () => {
               </FormItem>
             </div>
           </Card>
-          <Card title="App params" className={styles.link}>
-            <div style={{ width: '100%' }}>
-              <Btn
-                size="small"
-                onClick={() => {
-                  paramsCrud.create({
-                    id: 0,
-                    type: OutpostParamsTypes.STRING,
-                    title: 'New param',
-                    value: 'new value',
-                  });
-                }}
-              >
-                Add a row
-              </Btn>
-              <DataGrid
-                editMode={'row'}
-                rows={rows}
-                density="compact"
-                columns={[
-                  {
-                    field: 'title',
-                    headerName: 'Title',
-                    editable: true,
-                  },
-                  {
-                    field: 'value',
-                    headerName: 'value',
-                    editable: true,
-                  },
-                  {
-                    field: 'type',
-                    headerName: 'type',
-                    editable: true,
-                    type: 'singleSelect',
-                    valueOptions: [
-                      OutpostParamsTypes.STRING,
-                      OutpostParamsTypes.NUM,
-                    ],
-                  },
-                ]}
-                onCellEditCommit={params =>
-                  paramsCrud.update(params as unknown as OutpostParam)
-                }
-                pageSize={5}
-                rowsPerPageOptions={[5]}
-                disableSelectionOnClick
-                autoHeight
-              />
-            </div>
-          </Card>
+          {/* <ConfigParams /> */}
+          <StorageConfig />
+          <StateList />
         </section>
       </Col>
     </div>

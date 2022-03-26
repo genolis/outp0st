@@ -1,5 +1,6 @@
 import { Outpost } from '@outpost/core';
 import { parseJSON } from 'utils/data';
+import { getStateTitle } from 'utils/outpost';
 import { useOutpostState } from '../state/useOutpostState';
 import { getLocalSetting, SettingKey } from '../utils/localStorage';
 
@@ -15,9 +16,7 @@ export function useSaveLoad() {
     dlAnchorElem.setAttribute('href', dataStr);
     dlAnchorElem.setAttribute(
       'download',
-      `outpost.${data.title?.replaceAll(' ', '_')}.${
-        data.version || '1.0.0'
-      }.${Date.now()}.json`,
+      getStateTitle(data.title, data.version),
     );
     dlAnchorElem.click();
   };

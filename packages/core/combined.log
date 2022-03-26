@@ -3,3 +3,7 @@
 {"level":"info","message":"storeCode: storing code from path: ./artifacts/terraswap_token.wasm... done, id: 46384","service":"user-service"}
 {"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}
 {"codeId":46386,"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}
+{"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}
+{"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}
+{"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}
+{"level":"info","message":"storing code from path","service":"storeCode","wasmPath":"./artifacts/terraswap_token.wasm"}

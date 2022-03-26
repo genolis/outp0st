@@ -3,6 +3,7 @@ import { Outpost, OutpostSettings } from '@outpost/core';
 export enum SettingKey {
   outpost = 'outpost_state',
   outpostSettings = 'outpost_settings',
+  outpostStateManager = 'outpost_state_manager',
 }
 
 const DefaultOutpost: Outpost = { contracts: [], messages: [] };

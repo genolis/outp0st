@@ -32,7 +32,9 @@
     "@terra-money/terra.js": "^3.0.7",
     "dotenv": "^16.0.0",
     "handlebars": "^4.7.7",
+    "minimist": "^1.2.6",
     "nextjs-cors": "^2.1.0",
+    "web3.storage": "^4.0.0",
     "winston": "^3.6.0"
   }
 }

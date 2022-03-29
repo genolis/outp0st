@@ -70,6 +70,20 @@ export interface Outpost {
   isReadonly?: boolean;
 }
 
+export interface OutpostGlobal {
+  title: string;
+  local: Outpost;
+  test: Outpost;
+  main: Outpost;
+  current: OutpostCurrentState;
+}
+
+export enum OutpostCurrentState {
+  MAIN = 'main',
+  TEST = 'test',
+  LOCAL = 'local',
+}
+
 export interface OutpostSettings {
   stateLoadSwitcher: boolean;
 }

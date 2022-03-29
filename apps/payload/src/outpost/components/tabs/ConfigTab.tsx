@@ -7,6 +7,7 @@ import { useOutpostState } from 'outpost/state/useOutpostState';
 import styles from 'pages/gov/ProposalsByStatus.module.scss';
 import { FC, useEffect, useState } from 'react';
 import BtnGroup from '../ui/elements/BtnGroup';
+import { Environment } from './parts/Environment';
 import StateList from './parts/StateList';
 import StorageConfig from './parts/StorageConfig';
 import Upload from './Upload';
@@ -16,9 +17,7 @@ const ConfigTab: FC = () => {
   const [file, setFile] = useState<File | undefined>();
   const [msg, setMsg] = useState('');
 
-  const { outpostApp } = useOutpostState();
-  const title = outpostApp('get', 'title');
-  const isReadonly = outpostApp('get', 'isReadonly');
+  const { outpost, updateState } = useOutpostState();
 
   useEffect(() => {
     if (!file) return;
@@ -45,8 +44,10 @@ const ConfigTab: FC = () => {
               <FormItem label="State title">
                 {/* eslint-disable-next-line */}
                 <Input
-                  value={title}
-                  onChange={e => outpostApp('set', 'title', e.target.value)}
+                  value={outpost.title || ''}
+                  onChange={e =>
+                    updateState({ ...outpost, title: e.target.value })
+                  }
                 />
               </FormItem>
             </div>
@@ -54,14 +55,18 @@ const ConfigTab: FC = () => {
               <FormItem label="State readonly">
                 <BtnGroup>
                   <Btn
-                    variant={isReadonly ? 'contained' : 'outlined'}
-                    onClick={() => outpostApp('set', 'isReadonly', true)}
+                    variant={outpost.isReadonly ? 'contained' : 'outlined'}
+                    onClick={() =>
+                      updateState({ ...outpost, isReadonly: true })
+                    }
                   >
                     READ ONLY
                   </Btn>
                   <Btn
-                    variant={!isReadonly ? 'contained' : 'outlined'}
-                    onClick={() => outpostApp('set', 'isReadonly', false)}
+                    variant={!outpost.isReadonly ? 'contained' : 'outlined'}
+                    onClick={() =>
+                      updateState({ ...outpost, isReadonly: false })
+                    }
                   >
                     ALLOW EDIT
                   </Btn>
@@ -72,6 +77,7 @@ const ConfigTab: FC = () => {
           {/* <ConfigParams /> */}
           <StorageConfig />
           <StateList />
+          <Environment />
         </section>
       </Col>
     </div>

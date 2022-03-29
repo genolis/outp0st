@@ -1,6 +1,7 @@
 export interface StorageConfig {
   type?: 'web3.storage' | 'nft.storage';
   token?: string;
+  urlToSite?: string;
   id?: number;
 }
 

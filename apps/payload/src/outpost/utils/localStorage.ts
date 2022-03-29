@@ -1,4 +1,8 @@
-import { Outpost, OutpostSettings } from '@outpost/core';
+import {
+  OutpostCurrentState,
+  OutpostGlobal,
+  OutpostSettings,
+} from '@outpost/core';
 
 export enum SettingKey {
   outpost = 'outpost_state',
@@ -6,7 +10,13 @@ export enum SettingKey {
   outpostStateManager = 'outpost_state_manager',
 }
 
-const DefaultOutpost: Outpost = { contracts: [], messages: [] };
+const DefaultOutpost: OutpostGlobal = {
+  test: { contracts: [], messages: [] },
+  main: { contracts: [], messages: [] },
+  local: { contracts: [], messages: [] },
+  title: 'Default outpost state',
+  current: OutpostCurrentState.TEST,
+};
 
 const DefaultOutpostSettings: OutpostSettings = { stateLoadSwitcher: false };
 

@@ -14,8 +14,18 @@ const stateManager = atom({
   key: 'outpostStateManager',
   default: getLocalSetting<StateManager>(SettingKey.outpostStateManager) || {
     storageConfigs: [
-      { id: initId, type: 'web3.storage', token: '' },
-      { id: secondId, type: 'nft.storage', token: '' },
+      {
+        id: initId,
+        type: 'web3.storage',
+        token: '',
+        urlToSite: 'https://web3.storage/account/',
+      },
+      {
+        id: secondId,
+        type: 'nft.storage',
+        token: '',
+        urlToSite: 'https://nft.storage/files/',
+      },
     ],
     states: [],
     currenConfig: initId,

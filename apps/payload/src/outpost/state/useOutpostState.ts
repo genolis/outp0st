@@ -3,6 +3,8 @@ import {
   ContractMessage,
   GetId,
   Outpost,
+  OutpostCurrentState,
+  OutpostGlobal,
   OutpostParam,
   OutpostParamsTypes,
 } from '@outpost/core';
@@ -16,7 +18,7 @@ import { useCRUDFactory } from './useCRUDFactory';
 
 const outpostState = atom({
   key: 'outpostState',
-  default: getLocalSetting<Outpost>(SettingKey.outpost),
+  default: getLocalSetting<OutpostGlobal>(SettingKey.outpost),
 });
 
 export const getId = () => {
@@ -24,7 +26,7 @@ export const getId = () => {
 };
 
 export const useOutpostState = () => {
-  const [state, setState] = useRecoilState<Outpost>(outpostState);
+  const [state, setState] = useRecoilState<OutpostGlobal>(outpostState);
 
   //const validateName = (name: string) => !list.some((item) => item.name === name);
 
@@ -35,12 +37,20 @@ export const useOutpostState = () => {
     value?: any,
   ): undefined | any => {
     if (action === 'get') {
-      return state[key];
+      return state[state.current][key];
     } else if (action === 'set') {
-      updateState({ ...state, [key]: value });
+      updateState({ ...state[state.current], [key]: value });
     }
   };
 
+  const switchCurrentState = (env: OutpostCurrentState) => {
+    updateGlobalState({ ...state, current: env });
+  };
+
+  const updateGlobalState = (globalState: OutpostGlobal) => {
+    setState(globalState);
+    setLocalSetting(SettingKey.outpost, globalState);
+  };
   const updateState = (newState: Outpost) => {
     // https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
     const sortedContracts = [...newState.contracts].sort(
@@ -59,15 +69,20 @@ export const useOutpostState = () => {
       ...newState,
       contracts: [...sortedContracts],
     };
+
+    const globalState = {
+      ...state,
+      ...{ [state.current]: sortedState },
+    };
     // console.trace()
     // refactor? this to preserve state params like title, version, and other - which are not updated in things like removeContract and so on
-    const finalState = { ...state, ...sortedState };
-    setState(finalState);
-    setLocalSetting(SettingKey.outpost, finalState);
+    //const finalState = { ...state, ...sortedState };
+    setState(globalState);
+    setLocalSetting(SettingKey.outpost, globalState);
   };
 
   const paramsCrud = useCRUDFactory<Outpost, OutpostParam>(
-    state,
+    state[state.current],
     'params',
     updateState,
   );
@@ -167,14 +182,14 @@ export const useOutpostState = () => {
   };
 
   const getContracts = () => {
-    return state.contracts;
+    return state[state.current].contracts;
   };
   const addContract = (newItem: Contract) => {
     const id = getId();
     updateState({
-      ...state,
+      ...state[state.current],
       contracts: [
-        ...state.contracts,
+        ...state[state.current].contracts,
         {
           ...newItem,
           id,
@@ -186,9 +201,11 @@ export const useOutpostState = () => {
 
   const updateContract = (updated: Contract) => {
     updateState({
-      ...state,
+      ...state[state.current],
       contracts: [
-        ...state.contracts.filter(item => item.id !== updated.id),
+        ...state[state.current].contracts.filter(
+          item => item.id !== updated.id,
+        ),
         {
           ...updated,
         },
@@ -200,9 +217,9 @@ export const useOutpostState = () => {
     const updated = getContract(contractId);
     if (!updated) return;
     updateState({
-      ...state,
+      ...state[state.current],
       contracts: [
-        ...state.contracts,
+        ...state[state.current].contracts,
         {
           ...updated,
           messages: [...updated.messages, messageId],
@@ -215,9 +232,9 @@ export const useOutpostState = () => {
     const updated = getContract(contractId);
     if (!updated) return;
     updateState({
-      ...state,
+      ...state[state.current],
       contracts: [
-        ...state.contracts,
+        ...state[state.current].contracts,
         {
           ...updated,
           messages: updated.messages.filter(item => item !== messageId),
@@ -229,15 +246,15 @@ export const useOutpostState = () => {
   const removeContract = (id: number) => {
     const contractToRemoveMessagesIds = getContract(id)?.messages;
     updateState({
-      messages: state.messages.filter(
+      messages: state[state.current].messages.filter(
         item => contractToRemoveMessagesIds?.indexOf(item.id) === -1,
       ),
-      contracts: state.contracts.filter(item => item.id !== id),
+      contracts: state[state.current].contracts.filter(item => item.id !== id),
     });
   };
 
   const getContract = (id: number) => {
-    return state.contracts.find(item => item.id === id);
+    return state[state.current].contracts.find(item => item.id === id);
   };
 
   const addMessage = (newItem: ContractMessage) => {
@@ -246,14 +263,16 @@ export const useOutpostState = () => {
     if (!updated) return;
     updateState({
       contracts: [
-        ...state.contracts.filter(item => item.id !== newItem.contractId),
+        ...state[state.current].contracts.filter(
+          item => item.id !== newItem.contractId,
+        ),
         {
           ...updated,
           messages: [...updated.messages, id],
         },
       ],
       messages: [
-        ...state.messages,
+        ...state[state.current].messages,
         {
           ...newItem,
           id,
@@ -267,9 +286,9 @@ export const useOutpostState = () => {
     //removeContract(updated.id!);
     //console.log({ updated });
     updateState({
-      ...state,
+      ...state[state.current],
       messages: [
-        ...state.messages.filter(item => item.id !== updated.id),
+        ...state[state.current].messages.filter(item => item.id !== updated.id),
         {
           ...updated,
         },
@@ -278,10 +297,12 @@ export const useOutpostState = () => {
   };
 
   const getMessage = (id: number) => {
-    return state.messages.find(item => item.id === id);
+    return state[state.current].messages.find(item => item.id === id);
   };
   const getMessagesByContractId = (id: number) => {
-    return state.messages.map(item => (item.contractId === id ? item : false));
+    return state[state.current].messages.map(item =>
+      item.contractId === id ? item : false,
+    );
   };
   const removeMessage = (id: number) => {
     const messageToRemove = getMessage(id);
@@ -291,13 +312,15 @@ export const useOutpostState = () => {
     if (!updated) return;
     updateState({
       contracts: [
-        ...state.contracts.filter(item => item.id !== updated.id),
+        ...state[state.current].contracts.filter(
+          item => item.id !== updated.id,
+        ),
         {
           ...updated,
           messages: updated.messages.filter(item => item !== id),
         },
       ],
-      messages: state.messages.filter(item => item.id !== id),
+      messages: state[state.current].messages.filter(item => item.id !== id),
     });
   };
 
@@ -314,7 +337,7 @@ export const useOutpostState = () => {
     getMessage,
     removeMessage,
     getContracts,
-    outpost: state,
+    outpost: state[state.current],
     updateState,
     moveMessage,
     canMessageMove,
@@ -323,5 +346,8 @@ export const useOutpostState = () => {
     getParam,
     updateOrAddParam,
     removeParam,
+    switchCurrentState,
+    outpostGlobal: state,
+    updateGlobalState,
   };
 };

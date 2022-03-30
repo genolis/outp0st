@@ -1,5 +1,5 @@
 {
-  "name": "outpost-rover",
+  "name": "@outpost/rover",
   "version": "1.0.0",
   "description": "terra outpost cli",
   "main": "index.js",
@@ -9,6 +9,7 @@
     ]
   },
   "scripts": {
+    "dev": "tsc -w",
     "build": "tsc",
     "commit": "git-cz",
     "start:help": "ts-node ./src/bin/order.bin.ts -h",
@@ -20,7 +21,7 @@
     "semantic-release": "semantic-release"
   },
   "bin": {
-    "top": "./src/bin/order.bin.js"
+    "rover": "./dist/src/bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
   "dependencies": {
     "boxen": "^5.1.2",
     "commander": "^8.2.0",
+    "json-schema-faker": "^0.5.0-rcv.42",
     "jsonfile": "^6.1.0"
   },
   "devDependencies": {

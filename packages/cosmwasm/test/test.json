@@ -1,49 +1,63 @@
-[
-  {
-    "contract": {
-      "id": 1648632742592,
-      "title": "counter",
-      "tabTitle": "COU",
-      "messages": [
-        1648632742594,
-        1648632742596,
-        1648632742598,
-        1648632742598
-      ]
-    },
+{
+  "title": "Rover generated 12:35:50 PM",
+  "current": "local",
+  "local": {
+    "contracts": [
+      {
+        "id": 1648719345410,
+        "title": "counter",
+        "binUrl": "https://dweb.link/ipfs/bafybeievabals3hvgzxat6r2gaooapsbhzw3sfzsb2v5s7vru6raw7ejfm/artifacts/counter.wasm",
+        "tabTitle": "COU",
+        "messages": [
+          1648719345415,
+          1648719345420,
+          1648719345425,
+          1648719345429
+        ]
+      }
+    ],
     "messages": [
       {
-        "id": 1648632742594,
-        "contractId": 1648632742592,
+        "id": 1648719345415,
+        "contractId": 1648719345410,
         "collapsed": true,
         "type": "EXECUTE",
         "message": "{\n  \"increment\": {}\n}",
         "title": "increment"
       },
       {
-        "id": 1648632742596,
-        "contractId": 1648632742592,
+        "id": 1648719345420,
+        "contractId": 1648719345410,
         "collapsed": true,
         "type": "EXECUTE",
-        "message": "{\n  \"reset\": {\n    \"count\": 19245258\n  }\n}",
+        "message": "{\n  \"reset\": {\n    \"count\": 15915950\n  }\n}",
         "title": "reset"
       },
       {
-        "id": 1648632742598,
-        "contractId": 1648632742592,
+        "id": 1648719345425,
+        "contractId": 1648719345410,
         "collapsed": true,
         "type": "INSTA",
-        "message": "{\n  \"count\": 36148942\n}",
+        "message": "{\n  \"count\": -89560543\n}",
         "title": "count"
       },
       {
-        "id": 1648632742598,
-        "contractId": 1648632742592,
+        "id": 1648719345429,
+        "contractId": 1648719345410,
         "collapsed": true,
         "type": "QUERY",
         "message": "{\n  \"get_count\": {}\n}",
         "title": "get_count"
       }
-    ]
+    ],
+    "title": "[local] Rover generated 12:35:50 PM"
+  },
+  "test": {
+    "contracts": [],
+    "messages": []
+  },
+  "main": {
+    "contracts": [],
+    "messages": []
   }
-]
+}

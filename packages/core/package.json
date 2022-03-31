@@ -63,5 +63,8 @@
     "node": "16.4.1",
     "yarn": "1.22.10",
     "npm": "7.19.1"
+  },
+  "dependencies": {
+    "web3.storage": "^4.0.0"
   }
 }

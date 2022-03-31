@@ -1,11 +1,11 @@
-import { Outpost } from '@outpost/core';
+import { getDefaultGlobalState, Outpost } from '@outpost/core';
 import { parseJSON } from 'utils/data';
 import { getStateTitle } from 'utils/outpost';
 import { useOutpostState } from '../state/useOutpostState';
 import { getLocalSetting, SettingKey } from '../utils/localStorage';
 
 export function useSaveLoad() {
-  const { updateState } = useOutpostState();
+  const { updateGlobalState } = useOutpostState();
   const saveState = () => {
     const data = getLocalSetting<Outpost>(SettingKey.outpost);
 
@@ -28,7 +28,7 @@ export function useSaveLoad() {
     }
     // TODO we should create startup hook call next line should go there
     //updateOrAddParam('stateUrl', url, OutpostParamsTypes.STRING);
-    updateState(newState);
+    updateGlobalState(newState);
   };
   // https://stackoverflow.com/questions/7346563/loading-local-json-file
   const loadState = (file: File) => {
@@ -55,13 +55,7 @@ export function useSaveLoad() {
       'Are you sure, you want to reset state? All work will be erased!',
     );
     if (ok) {
-      updateState({
-        contracts: [],
-        messages: [],
-        title: 'Outpost admin',
-        version: '1.0.0',
-        params: [],
-      });
+      updateGlobalState(getDefaultGlobalState());
       //window.location.reload();
     }
   };

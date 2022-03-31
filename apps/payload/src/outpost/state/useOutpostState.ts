@@ -90,7 +90,7 @@ export const useOutpostState = () => {
   const getParam = ({ id, title }: { id?: number; title?: string }) => {
     if ((!id || id < 1) && !title) return;
     let value: OutpostParam | undefined;
-    const params = paramsCrud.read() as OutpostParam[];
+    const params = (paramsCrud.read() as OutpostParam[]) || [];
     if (title) value = params.find(x => x.title === title);
     else if (id) value = params.find(x => x.id === id);
     return value;

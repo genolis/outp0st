@@ -1,4 +1,4 @@
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import { latestTxState, useTxInfo } from 'data/queries/tx';
 import { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';

@@ -1,6 +1,6 @@
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { isDenomTerraNative, readDenom } from '@terra.kitchen/utils';
 import { FormGroup, FormItem, Input, Select } from 'components/form';
 import { Button } from 'components/general';

@@ -1,7 +1,7 @@
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Button } from '@mui/material';
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { Button as Btn } from 'components/general';
 import { Card } from 'components/layout';
 import { useRO } from 'outpost/hooks/useRO';

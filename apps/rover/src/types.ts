@@ -1,4 +1,4 @@
-import { OutpostCurrentState } from '@outpost/core';
+import { OutpostCurrentState } from '@outp0st/core';
 
 export interface RoverOptions {
   contractsPath: string;

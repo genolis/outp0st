@@ -1,5 +1,5 @@
 import { Button as Btn } from '@mui/material';
-import { OutpostCurrentState } from '@outpost/core';
+import { OutpostCurrentState } from '@outp0st/core';
 import { FormItem } from 'components/form';
 import { Button } from 'components/general';
 import { Card } from 'components/layout';

@@ -1,4 +1,4 @@
-import { ContractMessageRenderModes, GetId } from '@outpost/core';
+import { ContractMessageRenderModes, GetId } from '@outp0st/core';
 import fs from 'fs';
 import path from 'path';
 import { jsf } from './jsf';

@@ -1,4 +1,4 @@
-import { getDefaultGlobalState, Outpost } from '@outpost/core';
+import { getDefaultGlobalState, Outpost } from '@outp0st/core';
 import { parseJSON } from 'utils/data';
 import { getStateTitle } from 'utils/outpost';
 import { useOutpostState } from '../state/useOutpostState';

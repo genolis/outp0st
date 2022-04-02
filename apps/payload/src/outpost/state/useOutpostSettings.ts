@@ -1,4 +1,4 @@
-import { OutpostSettings } from '@outpost/core';
+import { OutpostSettings } from '@outp0st/core';
 import { atom, useRecoilState } from 'recoil';
 import {
   getLocalSetting,

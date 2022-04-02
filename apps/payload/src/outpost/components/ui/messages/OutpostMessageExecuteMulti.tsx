@@ -2,7 +2,7 @@ import {
   ContractExecuteMultiMessageTypes,
   ContractMessage,
   ContractMessageTypes,
-} from '@outpost/core';
+} from '@outp0st/core';
 import { MsgExecuteContract } from '@terra-money/terra.js';
 import { Button } from 'components/general';
 import { useExecuteMessageCustom } from 'outpost/hooks/useExecuteMessageCustom';

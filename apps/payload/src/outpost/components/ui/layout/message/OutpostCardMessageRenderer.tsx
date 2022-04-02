@@ -1,4 +1,4 @@
-import { ContractMessage, ContractMessageRenderModes } from '@outpost/core';
+import { ContractMessage, ContractMessageRenderModes } from '@outp0st/core';
 import Form from './rendermodes/Form';
 import JsonRender from './rendermodes/JsonRender';
 import Schema from './rendermodes/Schema';

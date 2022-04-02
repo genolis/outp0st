@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { useEffect } from 'react';
 import { useOutpostSettings } from '../state/useOutpostSettings';
 import { useOutpostState } from '../state/useOutpostState';

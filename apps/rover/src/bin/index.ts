@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { OutpostCurrentState, OutpostGlobal } from '@outpost/core';
+import { OutpostCurrentState, OutpostGlobal } from '@outp0st/core';
 import { Command } from 'commander';
 import 'dotenv/config';
 import fs from 'fs';

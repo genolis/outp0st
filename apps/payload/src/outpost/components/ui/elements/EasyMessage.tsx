@@ -1,6 +1,6 @@
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckIcon from '@mui/icons-material/Check';
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { useRO } from 'outpost/hooks/useRO';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { ReactNode } from 'react';

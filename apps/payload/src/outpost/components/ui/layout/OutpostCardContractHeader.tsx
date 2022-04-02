@@ -1,4 +1,4 @@
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import { Button } from 'components/general';
 import { Card } from 'components/layout';
 import { useRO } from 'outpost/hooks/useRO';

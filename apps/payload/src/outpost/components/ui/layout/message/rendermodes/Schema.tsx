@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { EditorInput, FormItem } from 'components/form';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { validateMsg } from 'outpost/utils';

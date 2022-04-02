@@ -2,7 +2,7 @@ import AddIcon from '@mui/icons-material/Add';
 import {
   ContractMessageRenderModes,
   ContractMessageTypes,
-} from '@outpost/core';
+} from '@outp0st/core';
 import { Button } from 'components/general';
 import { Grid } from 'components/layout';
 import { useOutpostState } from 'outpost/state/useOutpostState';

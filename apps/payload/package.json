@@ -91,6 +91,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/secp256k1": "^4.0.3",
     "@types/semver": "^7.3.9",
+    "@outp0st/tsconfig": "*",
     "react-error-overlay": "6.0.9",
     "react-scripts": "4.0.3",
     "source-map-explorer": "^2.5.2",

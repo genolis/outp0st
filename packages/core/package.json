@@ -44,6 +44,7 @@
     "@types/prompts": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "@outp0st/tsconfig": "*",
     "ava": "^3.15.0",
     "cspell": "^5.9.0",
     "esbuild": "^0.13.5",
@@ -63,8 +64,5 @@
     "node": "16.4.1",
     "yarn": "1.22.10",
     "npm": "7.19.1"
-  },
-  "dependencies": {
-    "web3.storage": "^4.0.0"
   }
 }

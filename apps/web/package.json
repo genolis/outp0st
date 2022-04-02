@@ -1,35 +1,43 @@
 {
-  "name": "swr-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
-    "debug": "NODE_OPTIONS='--inspect' next",
-    "start": "next start",
-    "build": "next build"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
-  "author": "Shu Ding",
-  "license": "Apache-2.0",
   "dependencies": {
-    "@reach/skip-nav": "^0.16.0",
-    "focus-visible": "^5.1.0",
-    "intersection-observer": "^0.10.0",
-    "markdown-to-jsx": "^6.11.4",
-    "next": "^12.1.0",
-    "nextra": "^2.0.0-alpha.44",
-    "nextra-theme-docs": "^2.0.0-alpha.44",
+    "@docusaurus/core": "2.0.0-beta.18",
+    "@docusaurus/preset-classic": "2.0.0-beta.18",
+    "@mdx-js/react": "^1.6.22",
+    "clsx": "^1.1.1",
+    "prism-react-renderer": "^1.3.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-intersection-observer": "^8.26.2"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.16"
+    "@docusaurus/module-type-aliases": "2.0.0-beta.18",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "typescript": "^4.6.3"
   },
-  "prettier": {
-    "embeddedLanguageFormatting": "off",
-    "htmlWhitespaceSensitivity": "strict"
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

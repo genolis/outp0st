@@ -1,5 +1,5 @@
 {
-    "extends": "tsconfig/outpost.json",
-    "include": ["src"],
-    "compilerOptions": { "baseUrl": "src" }
+  "extends": "@outp0st/tsconfig/outpost.json",
+  "include": ["src"],
+  "compilerOptions": { "baseUrl": "src" }
 }

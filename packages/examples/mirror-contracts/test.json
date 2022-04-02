@@ -1,0 +1,1325 @@
+{
+  "title": "Rover generated 6:45:58 AM",
+  "current": "local",
+  "local": {
+    "contracts": [
+      {
+        "id": 1648871158214,
+        "title": "mirror_admin_manager",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_admin_manager.wasm",
+        "tabTitle": "A_M",
+        "messages": [
+          1648871158215,
+          1648871158221,
+          1648871158223,
+          1648871158227,
+          1648871158227,
+          1648871158233,
+          1648871158235,
+          1648871158237
+        ]
+      },
+      {
+        "id": 1648871158240,
+        "title": "mirror_collateral_oracle",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_collateral_oracle.wasm",
+        "tabTitle": "C_O",
+        "messages": [
+          1648871158243,
+          1648871158247,
+          1648871158249,
+          1648871158253,
+          1648871158259,
+          1648871158261,
+          1648871158265,
+          1648871158267,
+          1648871158271,
+          1648871158273
+        ]
+      },
+      {
+        "id": 1648871158278,
+        "title": "mirror_collector",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_collector.wasm",
+        "tabTitle": "COL",
+        "messages": [
+          1648871158281,
+          1648871158283,
+          1648871158285,
+          1648871158287,
+          1648871158289,
+          1648871158291
+        ]
+      },
+      {
+        "id": 1648871158296,
+        "title": "mirror_community",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_community.wasm",
+        "tabTitle": "COM",
+        "messages": [
+          1648871158301,
+          1648871158303,
+          1648871158307,
+          1648871158309,
+          1648871158311,
+          1648871158315,
+          1648871158317
+        ]
+      },
+      {
+        "id": 1648871158324,
+        "title": "mirror_factory",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_factory.wasm",
+        "tabTitle": "FAC",
+        "messages": [
+          1648871158327,
+          1648871158333,
+          1648871158335,
+          1648871158339,
+          1648871158341,
+          1648871158347,
+          1648871158349,
+          1648871158353,
+          1648871158357,
+          1648871158361,
+          1648871158363
+        ]
+      },
+      {
+        "id": 1648871158374,
+        "title": "mirror_gov",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_gov.wasm",
+        "tabTitle": "GOV",
+        "messages": [
+          1648871158379,
+          1648871158383,
+          1648871158387,
+          1648871158391,
+          1648871158395,
+          1648871158399,
+          1648871158405,
+          1648871158409,
+          1648871158413,
+          1648871158417,
+          1648871158421,
+          1648871158425,
+          1648871158431,
+          1648871158435,
+          1648871158441,
+          1648871158447,
+          1648871158455,
+          1648871158463,
+          1648871158469
+        ]
+      },
+      {
+        "id": 1648871158490,
+        "title": "mirror_limit_order",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_limit_order.wasm",
+        "tabTitle": "L_O",
+        "messages": [
+          1648871158499,
+          1648871158507,
+          1648871158515,
+          1648871158521,
+          1648871158529,
+          1648871158533,
+          1648871158541,
+          1648871158545,
+          1648871158553,
+          1648871158559,
+          1648871158583,
+          1648871158589,
+          1648871158595
+        ]
+      },
+      {
+        "id": 1648871158612,
+        "title": "mirror_lock",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_lock.wasm",
+        "tabTitle": "LOC",
+        "messages": [
+          1648871158619,
+          1648871158625,
+          1648871158633,
+          1648871158639,
+          1648871158645,
+          1648871158651,
+          1648871158659
+        ]
+      },
+      {
+        "id": 1648871158676,
+        "title": "mirror_mint",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_mint.wasm",
+        "tabTitle": "MIN",
+        "messages": [
+          1648871158683,
+          1648871158691,
+          1648871158697,
+          1648871158705,
+          1648871158711,
+          1648871158719,
+          1648871158729,
+          1648871158739,
+          1648871158747,
+          1648871158755,
+          1648871158761,
+          1648871158769,
+          1648871158775,
+          1648871158783,
+          1648871158791,
+          1648871158799
+        ]
+      },
+      {
+        "id": 1648871158824,
+        "title": "mirror_oracle",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_oracle.wasm",
+        "tabTitle": "ORA",
+        "messages": [
+          1648871158833,
+          1648871158841,
+          1648871158849,
+          1648871158855,
+          1648871158863,
+          1648871158871,
+          1648871158879,
+          1648871158887
+        ]
+      },
+      {
+        "id": 1648871158910,
+        "title": "mirror_short_reward",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_short_reward.wasm",
+        "tabTitle": "S_R",
+        "messages": [
+          1648871158919
+        ]
+      },
+      {
+        "id": 1648871158942,
+        "title": "mirror_staking",
+        "binUrl": "https://dweb.link/ipfs/bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu/artifacts/mirror_staking.wasm",
+        "tabTitle": "STA",
+        "messages": [
+          1648871158951,
+          1648871158961,
+          1648871158971,
+          1648871158981,
+          1648871158991,
+          1648871158999,
+          1648871158009,
+          1648871158017,
+          1648871158027,
+          1648871158035,
+          1648871158045,
+          1648871158053,
+          1648871158065,
+          1648871158075,
+          1648871158085
+        ]
+      }
+    ],
+    "messages": [
+      {
+        "id": 1648871158215,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"admin_claim_period\": 74351966,\n  \"owner\": \"Ut dolore reprehenderit in exercitation\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158221,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_owner\": {\n    \"owner\": \"Ut in\"\n  }\n}",
+        "title": "[EXECUTE] update_owner",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158223,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"execute_migrations\": {\n    \"migrations\": [\n      [\n        \"Excepteur et\",\n        89342425,\n        \"mollit incididunt in eu\"\n      ]\n    ]\n  }\n}",
+        "title": "[EXECUTE] execute_migrations",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158227,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"authorize_claim\": {\n    \"authorized_addr\": \"reprehenderit\"\n  }\n}",
+        "title": "[EXECUTE] authorize_claim",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158227,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"claim_admin\": {\n    \"contract\": \"cupidatat fugiat voluptate eiusmod nostrud\"\n  }\n}",
+        "title": "[EXECUTE] claim_admin",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158233,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158235,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"migration_records\": {}\n}",
+        "title": "[QUERY] migration_records",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158237,
+        "contractId": 1648871158214,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"auth_records\": {}\n}",
+        "title": "[QUERY] auth_records",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158243,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_denom\": \"ex nulla Duis eu\",\n  \"mint_contract\": \"velit\",\n  \"owner\": \"anim nulla\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158247,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158249,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"register_collateral_asset\": {\n    \"asset\": {\n      \"token\": {\n        \"contract_addr\": \"consectetur\"\n      }\n    },\n    \"multiplier\": \"dolore id\",\n    \"price_source\": {\n      \"amm_pair\": {\n        \"pair_addr\": \"consequat magna nulla\"\n      }\n    }\n  }\n}",
+        "title": "[EXECUTE] register_collateral_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158253,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"revoke_collateral_asset\": {\n    \"asset\": {\n      \"token\": {\n        \"contract_addr\": \"nulla velit eiusmod incididunt\"\n      }\n    }\n  }\n}",
+        "title": "[EXECUTE] revoke_collateral_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158259,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_collateral_price_source\": {\n    \"asset\": {\n      \"token\": {\n        \"contract_addr\": \"enim consectetur\"\n      }\n    },\n    \"price_source\": {\n      \"native\": {\n        \"native_denom\": \"laboris dolor cupidatat\"\n      }\n    }\n  }\n}",
+        "title": "[EXECUTE] update_collateral_price_source",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158261,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_collateral_multiplier\": {\n    \"asset\": {\n      \"token\": {\n        \"contract_addr\": \"quis deserunt Lorem ut irure\"\n      }\n    },\n    \"multiplier\": \"magna amet ut Lorem nisi\"\n  }\n}",
+        "title": "[EXECUTE] update_collateral_multiplier",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158265,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158267,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"collateral_price\": {\n    \"asset\": \"non sit culpa\"\n  }\n}",
+        "title": "[QUERY] collateral_price",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158271,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"collateral_asset_info\": {\n    \"asset\": \"in qui dolor\"\n  }\n}",
+        "title": "[QUERY] collateral_asset_info",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158273,
+        "contractId": 1648871158240,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"collateral_asset_infos\": {}\n}",
+        "title": "[QUERY] collateral_asset_infos",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158281,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"anchor_market\": \"labore mollit eiusmod magna\",\n  \"aust_token\": \"ex commodo labore\",\n  \"base_denom\": \"Lorem\",\n  \"bluna_swap_denom\": \"et id\",\n  \"bluna_token\": \"dolore\",\n  \"distribution_contract\": \"cupidatat mollit aute\",\n  \"mirror_token\": \"proident irure qui ex\",\n  \"owner\": \"velit officia Ut sint cillum\",\n  \"terraswap_factory\": \"reprehenderit sed\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158283,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158285,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"convert\": {\n    \"asset_token\": \"eu eiusmod in ad\"\n  }\n}",
+        "title": "[EXECUTE] convert",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158287,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"distribute\": {}\n}",
+        "title": "[EXECUTE] distribute",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158289,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"luna_swap_hook\": {}\n}",
+        "title": "[EXECUTE] luna_swap_hook",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158291,
+        "contractId": 1648871158278,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158301,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"mirror_token\": \"Ut tempor dolor\",\n  \"owner\": \"sunt aliqua ut commodo aute\",\n  \"spend_limit\": \"id ipsum amet minim occaecat\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158303,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"mirror_token\": \"minim sint eiusmod enim amet\",\n  \"owner\": \"proident commodo\",\n  \"spend_limit\": \"enim esse\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158307,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158309,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"spend\": {\n    \"amount\": \"qui Ut\",\n    \"recipient\": \"laboris\"\n  }\n}",
+        "title": "[EXECUTE] spend",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158311,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158315,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"spend\": {\n    \"amount\": \"laborum dolore ea aliquip nisi\",\n    \"recipient\": \"amet Excepteur reprehenderit non veniam\"\n  }\n}",
+        "title": "[EXECUTE] spend",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158317,
+        "contractId": 1648871158296,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158327,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_denom\": \"consequat velit culpa dolor ea\",\n  \"distribution_schedule\": [\n    [\n      92654253,\n      48874104,\n      \"sunt esse officia\"\n    ],\n    [\n      54116257,\n      31067220,\n      \"eu id sint\"\n    ],\n    [\n      38812157,\n      85238656,\n      \"ad\"\n    ],\n    [\n      2690991,\n      60714366,\n      \"id commodo proident elit\"\n    ]\n  ],\n  \"token_code_id\": 80322168\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158333,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"post_initialize\": {\n    \"commission_collector\": \"aute commodo proident dolor\",\n    \"mint_contract\": \"dolore dolore\",\n    \"mirror_token\": \"commodo laboris dolore est Ut\",\n    \"oracle_contract\": \"laboris\",\n    \"owner\": \"non dolor\",\n    \"staking_contract\": \"eiusmod mollit\",\n    \"terraswap_factory\": \"et ullamco ea Lorem\"\n  }\n}",
+        "title": "[EXECUTE] post_initialize",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158335,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158339,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_weight\": {\n    \"asset_token\": \"proident qui cillum in do\",\n    \"weight\": 44362286\n  }\n}",
+        "title": "[EXECUTE] update_weight",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158341,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"whitelist\": {\n    \"name\": \"culpa id adipisicing cupidatat\",\n    \"oracle_proxy\": \"quis in\",\n    \"params\": {\n      \"auction_discount\": \"proident dolore non\",\n      \"min_collateral_ratio\": \"aute Excepteur sit ipsum in\"\n    },\n    \"symbol\": \"elit\"\n  }\n}",
+        "title": "[EXECUTE] whitelist",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158347,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"pass_command\": {\n    \"contract_addr\": \"aliquip in quis\",\n    \"msg\": \"cillum veniam elit\"\n  }\n}",
+        "title": "[EXECUTE] pass_command",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158349,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"revoke_asset\": {\n    \"asset_token\": \"nisi cillum voluptate\"\n  }\n}",
+        "title": "[EXECUTE] revoke_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158353,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"migrate_asset\": {\n    \"from_token\": \"incididunt dolor est\",\n    \"name\": \"qui\",\n    \"oracle_proxy\": \"mollit sit\",\n    \"symbol\": \"laborum laboris et labore\"\n  }\n}",
+        "title": "[EXECUTE] migrate_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158357,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"distribute\": {}\n}",
+        "title": "[EXECUTE] distribute",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158361,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158363,
+        "contractId": 1648871158324,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"distribution_info\": {}\n}",
+        "title": "[QUERY] distribution_info",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158379,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"admin_manager\": \"labore nisi ullamco cupidatat anim\",\n  \"auth_admin_poll_config\": {\n    \"proposal_deposit\": \"aliquip Lorem sed\",\n    \"quorum\": \"amet\",\n    \"threshold\": \"Ut nulla eu anim incididunt\",\n    \"voting_period\": 42698318\n  },\n  \"default_poll_config\": {\n    \"proposal_deposit\": \"velit non magna Duis\",\n    \"quorum\": \"ipsum nostrud\",\n    \"threshold\": \"dolor culpa sed ullamco laborum\",\n    \"voting_period\": 5169768\n  },\n  \"effective_delay\": 35996541,\n  \"migration_poll_config\": {\n    \"proposal_deposit\": \"in eu proident reprehenderit\",\n    \"quorum\": \"cillum labore\",\n    \"threshold\": \"non\",\n    \"voting_period\": 74512984\n  },\n  \"mirror_token\": \"Duis\",\n  \"poll_gas_limit\": 89552514,\n  \"snapshot_period\": 89276798,\n  \"voter_weight\": \"occaecat sit\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158383,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"receive\": {\n    \"amount\": \"et minim\",\n    \"msg\": \"commodo irure cupidatat\",\n    \"sender\": \"irure dolore fugiat Ut tempor\"\n  }\n}",
+        "title": "[EXECUTE] receive",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158387,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158391,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"cast_vote\": {\n    \"amount\": \"dolore sunt nostrud\",\n    \"poll_id\": 71362616,\n    \"vote\": \"yes\"\n  }\n}",
+        "title": "[EXECUTE] cast_vote",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158395,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"withdraw_voting_tokens\": {}\n}",
+        "title": "[EXECUTE] withdraw_voting_tokens",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158399,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"withdraw_voting_rewards\": {}\n}",
+        "title": "[EXECUTE] withdraw_voting_rewards",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158405,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"stake_voting_rewards\": {}\n}",
+        "title": "[EXECUTE] stake_voting_rewards",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158409,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"end_poll\": {\n    \"poll_id\": 45661043\n  }\n}",
+        "title": "[EXECUTE] end_poll",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158413,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"execute_poll\": {\n    \"poll_id\": 3676156\n  }\n}",
+        "title": "[EXECUTE] execute_poll",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158417,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"snapshot_poll\": {\n    \"poll_id\": 38445712\n  }\n}",
+        "title": "[EXECUTE] snapshot_poll",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158421,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"contract\": \"officia\",\n  \"msg\": \"aliqua tempor nostrud Excepteur\"\n}",
+        "title": "[EXECUTE] PollExecuteMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158425,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158431,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"state\": {}\n}",
+        "title": "[QUERY] state",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158435,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"staker\": {\n    \"address\": \"deserunt reprehenderit anim\"\n  }\n}",
+        "title": "[QUERY] staker",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158441,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"poll\": {\n    \"poll_id\": 86312584\n  }\n}",
+        "title": "[QUERY] poll",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158447,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"polls\": {}\n}",
+        "title": "[QUERY] polls",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158455,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"voter\": {\n    \"address\": \"laboris\",\n    \"poll_id\": 93824055\n  }\n}",
+        "title": "[QUERY] voter",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158463,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"voters\": {\n    \"poll_id\": 82569915\n  }\n}",
+        "title": "[QUERY] voters",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158469,
+        "contractId": 1648871158374,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"shares\": {}\n}",
+        "title": "[QUERY] shares",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158499,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158507,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158515,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"receive\": {\n    \"amount\": \"Duis occaecat\",\n    \"msg\": \"nisi aute nulla quis\",\n    \"sender\": \"esse fugiat\"\n  }\n}",
+        "title": "[EXECUTE] receive",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158521,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"submit_order\": {\n    \"ask_asset\": {\n      \"amount\": \"tempor est mollit sint incididunt\",\n      \"info\": {\n        \"token\": {\n          \"contract_addr\": \"anim sit commodo\"\n        }\n      }\n    },\n    \"offer_asset\": {\n      \"amount\": \"in nulla dolor aute\",\n      \"info\": {\n        \"native_token\": {\n          \"denom\": \"pariatur nulla\"\n        }\n      }\n    }\n  }\n}",
+        "title": "[EXECUTE] submit_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158529,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"cancel_order\": {\n    \"order_id\": 45669613\n  }\n}",
+        "title": "[EXECUTE] cancel_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158533,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"execute_order\": {\n    \"execute_asset\": {\n      \"amount\": \"occaecat eu\",\n      \"info\": {\n        \"native_token\": {\n          \"denom\": \"ad Lorem\"\n        }\n      }\n    },\n    \"order_id\": 44827125\n  }\n}",
+        "title": "[EXECUTE] execute_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158541,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"receive\": {\n    \"amount\": \"mollit\",\n    \"msg\": \"laboris ullamco nostrud veniam aliqua\",\n    \"sender\": \"dolore deserunt Lorem nostrud\"\n  }\n}",
+        "title": "[EXECUTE] receive",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158545,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"submit_order\": {\n    \"ask_asset\": {\n      \"amount\": \"incididunt id\",\n      \"info\": {\n        \"token\": {\n          \"contract_addr\": \"dolore consequat\"\n        }\n      }\n    },\n    \"offer_asset\": {\n      \"amount\": \"in cillum dolore aliqua\",\n      \"info\": {\n        \"native_token\": {\n          \"denom\": \"exercitation minim proident nisi culpa\"\n        }\n      }\n    }\n  }\n}",
+        "title": "[EXECUTE] submit_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158553,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"cancel_order\": {\n    \"order_id\": 2494481\n  }\n}",
+        "title": "[EXECUTE] cancel_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158559,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"execute_order\": {\n    \"execute_asset\": {\n      \"amount\": \"magna Duis irure officia Excepteur\",\n      \"info\": {\n        \"native_token\": {\n          \"denom\": \"Duis\"\n        }\n      }\n    },\n    \"order_id\": 54678726\n  }\n}",
+        "title": "[EXECUTE] execute_order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158583,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"order\": {\n    \"order_id\": 89276320\n  }\n}",
+        "title": "[QUERY] order",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158589,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"orders\": {}\n}",
+        "title": "[QUERY] orders",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158595,
+        "contractId": 1648871158490,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"last_order_id\": {}\n}",
+        "title": "[QUERY] last_order_id",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158619,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_denom\": \"ut Ut Lorem ea\",\n  \"lockup_period\": 68822284,\n  \"mint_contract\": \"eu minim quis est ut\",\n  \"owner\": \"anim ut Duis\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158625,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158633,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"lock_position_funds_hook\": {\n    \"position_idx\": \"aliquip veniam\",\n    \"receiver\": \"nulla enim mollit irure anim\"\n  }\n}",
+        "title": "[EXECUTE] lock_position_funds_hook",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158639,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"unlock_position_funds\": {\n    \"positions_idx\": [\n      \"ut magna consequat enim aute\",\n      \"mollit fugiat\",\n      \"reprehenderit ex veniam\"\n    ]\n  }\n}",
+        "title": "[EXECUTE] unlock_position_funds",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158645,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"release_position_funds\": {\n    \"position_idx\": \"cupidatat\"\n  }\n}",
+        "title": "[EXECUTE] release_position_funds",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158651,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158659,
+        "contractId": 1648871158612,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"position_lock_info\": {\n    \"position_idx\": \"commodo labore\"\n  }\n}",
+        "title": "[QUERY] position_lock_info",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158683,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_denom\": \"laboris tempor Lorem ad reprehenderit\",\n  \"collateral_oracle\": \"labore laborum\",\n  \"collector\": \"tempor laboris ea est do\",\n  \"lock\": \"reprehenderit eiusmod dolore\",\n  \"oracle\": \"cupidatat\",\n  \"owner\": \"amet nostrud\",\n  \"protocol_fee_rate\": \"reprehenderit quis proident minim\",\n  \"staking\": \"do ad\",\n  \"terraswap_factory\": \"qui dolor sed sunt aliquip\",\n  \"token_code_id\": 61155472\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158691,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"receive\": {\n    \"amount\": \"do amet qui\",\n    \"msg\": \"consequat irure Ut nisi\",\n    \"sender\": \"dolor cillum ut\"\n  }\n}",
+        "title": "[EXECUTE] receive",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158697,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158705,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_asset\": {\n    \"asset_token\": \"aute consequat id reprehenderit irure\"\n  }\n}",
+        "title": "[EXECUTE] update_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158711,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"register_asset\": {\n    \"asset_token\": \"sed anim proident Excepteur Lorem\",\n    \"auction_discount\": \"aliquip dolor sit\",\n    \"min_collateral_ratio\": \"cillum sed laborum cupidatat minim\"\n  }\n}",
+        "title": "[EXECUTE] register_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158719,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"register_migration\": {\n    \"asset_token\": \"tempor anim nisi\",\n    \"end_price\": \"id cupidatat\"\n  }\n}",
+        "title": "[EXECUTE] register_migration",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158729,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"trigger_i_p_o\": {\n    \"asset_token\": \"nostrud ut\"\n  }\n}",
+        "title": "[EXECUTE] trigger_i_p_o",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158739,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"open_position\": {\n    \"asset_info\": {\n      \"native_token\": {\n        \"denom\": \"laboris Ut est deserunt anim\"\n      }\n    },\n    \"collateral\": {\n      \"amount\": \"in\",\n      \"info\": {\n        \"token\": {\n          \"contract_addr\": \"sit eiusmod in\"\n        }\n      }\n    },\n    \"collateral_ratio\": \"consectetur aute officia\"\n  }\n}",
+        "title": "[EXECUTE] open_position",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158747,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"deposit\": {\n    \"collateral\": {\n      \"amount\": \"mollit\",\n      \"info\": {\n        \"token\": {\n          \"contract_addr\": \"amet aliqua minim elit\"\n        }\n      }\n    },\n    \"position_idx\": \"quis sint sit est ut\"\n  }\n}",
+        "title": "[EXECUTE] deposit",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158755,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"withdraw\": {\n    \"position_idx\": \"ad dolor consectetur\"\n  }\n}",
+        "title": "[EXECUTE] withdraw",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158761,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"mint\": {\n    \"asset\": {\n      \"amount\": \"esse sunt in ullamco\",\n      \"info\": {\n        \"token\": {\n          \"contract_addr\": \"adipisicing incididunt eu elit\"\n        }\n      }\n    },\n    \"position_idx\": \"cupidatat Ut amet qui\"\n  }\n}",
+        "title": "[EXECUTE] mint",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158769,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158775,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"asset_config\": {\n    \"asset_token\": \"mollit Ut\"\n  }\n}",
+        "title": "[QUERY] asset_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158783,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"position\": {\n    \"position_idx\": \"eiusmod\"\n  }\n}",
+        "title": "[QUERY] position",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158791,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"positions\": {}\n}",
+        "title": "[QUERY] positions",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158799,
+        "contractId": 1648871158676,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"next_position_idx\": {}\n}",
+        "title": "[QUERY] next_position_idx",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158833,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_asset\": \"nostrud\",\n  \"owner\": \"sed aute tempor\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158841,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158849,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"register_asset\": {\n    \"asset_token\": \"dolore enim reprehenderit\",\n    \"feeder\": \"aute laboris eiusmod non\"\n  }\n}",
+        "title": "[EXECUTE] register_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158855,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"feed_price\": {\n    \"prices\": [\n      [\n        \"cupidatat\",\n        \"adipisicing voluptate enim laborum\"\n      ],\n      [\n        \"Ut sed nostrud sit sunt\",\n        \"pariatur\"\n      ],\n      [\n        \"cupidatat\",\n        \"id ut in amet commodo\"\n      ],\n      [\n        \"aliqua id ullamco quis reprehenderit\",\n        \"pariatur id\"\n      ],\n      [\n        \"laborum cupidatat\",\n        \"laboris\"\n      ]\n    ]\n  }\n}",
+        "title": "[EXECUTE] feed_price",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158863,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158871,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"feeder\": {\n    \"asset_token\": \"cillum non deserunt\"\n  }\n}",
+        "title": "[QUERY] feeder",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158879,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"price\": {\n    \"base_asset\": \"ut voluptate proident\",\n    \"quote_asset\": \"in dolor ut veniam et\"\n  }\n}",
+        "title": "[QUERY] price",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158887,
+        "contractId": 1648871158824,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"prices\": {}\n}",
+        "title": "[QUERY] prices",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158919,
+        "contractId": 1648871158910,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"short_reward_weight\": {\n    \"premium_rate\": \"id elit sint in consequat\"\n  }\n}",
+        "title": "[QUERY] short_reward_weight",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158951,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"base_denom\": \"quis in adipisicing\",\n  \"mint_contract\": \"adipisicing cillum mollit\",\n  \"mirror_token\": \"sunt consectetur ipsum non\",\n  \"oracle_contract\": \"ea\",\n  \"owner\": \"in laboris ut dolor\",\n  \"premium_min_update_interval\": 17056353,\n  \"short_reward_contract\": \"Excepteur irure quis anim\",\n  \"terraswap_factory\": \"consequat in\"\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158961,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"receive\": {\n    \"amount\": \"Excepteur nostrud non in pariatur\",\n    \"msg\": \"ad ullamco irure dolore\",\n    \"sender\": \"ad sed enim officia\"\n  }\n}",
+        "title": "[EXECUTE] receive",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158971,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"update_config\": {}\n}",
+        "title": "[EXECUTE] update_config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158981,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"register_asset\": {\n    \"asset_token\": \"pariatur\",\n    \"staking_token\": \"elit voluptate do\"\n  }\n}",
+        "title": "[EXECUTE] register_asset",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158991,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"deprecate_staking_token\": {\n    \"asset_token\": \"do aute proident commodo culpa\",\n    \"new_staking_token\": \"adipisicing\"\n  }\n}",
+        "title": "[EXECUTE] deprecate_staking_token",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158999,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"unbond\": {\n    \"amount\": \"anim aliqua\",\n    \"asset_token\": \"enim est nulla anim exercitation\"\n  }\n}",
+        "title": "[EXECUTE] unbond",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158009,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"withdraw\": {}\n}",
+        "title": "[EXECUTE] withdraw",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158017,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"auto_stake\": {\n    \"assets\": [\n      {\n        \"amount\": \"mollit ipsum deserunt\",\n        \"info\": {\n          \"native_token\": {\n            \"denom\": \"labore\"\n          }\n        }\n      },\n      {\n        \"amount\": \"cillum ad\",\n        \"info\": {\n          \"native_token\": {\n            \"denom\": \"Ut qui ut velit\"\n          }\n        }\n      }\n    ]\n  }\n}",
+        "title": "[EXECUTE] auto_stake",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158027,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"auto_stake_hook\": {\n    \"asset_token\": \"pariatur dolore dolore enim proident\",\n    \"prev_staking_token_amount\": \"consequat magna elit sunt Duis\",\n    \"staker_addr\": \"dolor laboris anim eu\",\n    \"staking_token\": \"sit anim amet et\"\n  }\n}",
+        "title": "[EXECUTE] auto_stake_hook",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158035,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"adjust_premium\": {\n    \"asset_tokens\": [\n      \"magna labore\",\n      \"id proident\",\n      \"tempor adipisicing eu et\"\n    ]\n  }\n}",
+        "title": "[EXECUTE] adjust_premium",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158045,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"increase_short_token\": {\n    \"amount\": \"elit\",\n    \"asset_token\": \"ex officia dolore laboris id\",\n    \"staker_addr\": \"laboris Lorem eu adipisicing in\"\n  }\n}",
+        "title": "[EXECUTE] increase_short_token",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158053,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "EXECUTE",
+        "message": "{\n  \"decrease_short_token\": {\n    \"amount\": \"ullamco officia ipsum veniam Excepteur\",\n    \"asset_token\": \"enim aliquip eu et Excepteur\",\n    \"staker_addr\": \"adipisicing pariatur\"\n  }\n}",
+        "title": "[EXECUTE] decrease_short_token",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158065,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"config\": {}\n}",
+        "title": "[QUERY] config",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158075,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"pool_info\": {\n    \"asset_token\": \"nulla\"\n  }\n}",
+        "title": "[QUERY] pool_info",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648871158085,
+        "contractId": 1648871158942,
+        "collapsed": true,
+        "type": "QUERY",
+        "message": "{\n  \"reward_info\": {\n    \"staker_addr\": \"commodo\"\n  }\n}",
+        "title": "[QUERY] reward_info",
+        "renderMode": "JSON"
+      }
+    ],
+    "title": "[local] Rover generated 6:45:58 AM"
+  },
+  "test": {
+    "contracts": [],
+    "messages": []
+  },
+  "main": {
+    "contracts": [],
+    "messages": []
+  }
+}

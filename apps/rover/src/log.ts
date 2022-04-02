@@ -14,7 +14,7 @@ const banner =
 
 let msgs = [];
 
-export function showBanner(msg) {
+export function log(msg) {
   console.clear();
   msgs.push(msg);
   const messages = msgs.join('\n');

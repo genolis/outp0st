@@ -1,6 +1,6 @@
 {
-  "name": "@outpost/tsconfig",
-  "version": "0.0.0",
+  "name": "@outp0st/tsconfig",
+  "version": "1.0.0",
   "private": true,
   "main": "index.js",
   "files": [

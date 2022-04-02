@@ -1,30 +1,25 @@
-## Getting Started
+# [SWR website](https://swr.vercel.app)
 
-First, run the development server:
+The official website for [SWR](https://github.com/vercel/swr).
+
+The project uses [pnpm](https://pnpm.io), [Nextra](https://nextra.vercel.app) and deploys via [Vercel](https://vercel.com). To develop it locally, clone this repository and run the following command to start the local dev server:
 
 ```bash
-yarn dev
+pnpm install
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+And visit `localhost:3000` to preview your changes.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributing
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+When making a change, or creating a new page, please make sure to edit all language files. You can simply copy the content of the edited English document (or the edited paragraph) and apply it to other language files. And then, volunteers are welcome to help with any untranslated sections.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributors
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://github.com/vercel/swr-site/graphs/contributors
+- Simplified Chinese translation done by Fang Lu ([@huzhengen](https://github.com/huzhengen))
+- Spanish translation done by Markoz Peña ([@markozxuu](https://twitter.com/markozxuu))
+- Japanese translation done by uttk ([@uttk](https://github.com/uttk)), Tomohiro SHIOYA ([@shioyang](https://github.com/shioyang))
+- Korean translation done by SeulGi Choi ([@cs09g](https://github.com/cs09g))
+- Russian translation done by Valentin Politov ([@valentinpolitov](https://github.com/valentinpolitov))

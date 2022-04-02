@@ -1,30 +1,53 @@
-## Getting Started
+<p align="center">
+  <img src="public/screenshot.png" alt="Screenshot">
+</p>
 
-First, run the development server:
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
+  <img alt="License" src="https://img.shields.io/github/license/jkytoela/next-startd?style=for-the-badge&color=24B36B&labelColor=000000">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/jkytoela/next-startd?style=for-the-badge&color=24B36B&labelColor=000000">
+</p>
+<br>
 
-```bash
-yarn dev
-```
+A free Next.js TypeScript landing page template for SaaS products, online services and more.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a href="https://next-startd.vercel.app">Live demo</a>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- ⚡ **Next.js** — The React Framework
+- 🔥 **next-seo** — Manage SEO easily
+- 💡 **Twind** — The smallest, fastest, most feature complete Tailwind-in-JS solution in existence
+- 📏 **ESLint** — Pluggable JavaScript linter
+- 💖 **Prettier** — Opinionated Code Formatter
+- 🐶 **Husky** — Use git hooks with ease
+- 📄 **Commitizen** — Conventional commit messages CLI
+- 🚓 **Commitlint** — Lint commit messages
+- 🖌 **Renovate** — Dependency update tool
+- 🚫 **lint-staged** — Run linters against staged git files
+- 🗂 **Absolute import** — Import folders and files using the `@` prefix
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🚀 Getting started
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If you're logged in, easiest way to get started is to [click here](https://github.com/jkytoela/next-startd/generate).
 
-## Learn More
+Run the following commands inside the project folder:
 
-To learn more about Next.js, take a look at the following resources:
+1. `yarn`
+2. `yarn dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To view the project open `http://localhost:3000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+1. Fork this repository
+2. Create your branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Consider contributing to the original TypeScript Starter, which you can find [here](https://github.com/jpedroschmitz).
+
+**After your pull request is merged**, you can safely delete your branch.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.

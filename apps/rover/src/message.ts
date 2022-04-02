@@ -1,46 +1,76 @@
-import { GetId } from '@outpost/core';
+import { ContractMessageRenderModes, GetId } from '@outpost/core';
 import fs from 'fs';
 import path from 'path';
+import { jsf } from './jsf';
+import { log } from './log';
 import { getMessageType } from './utils';
 
 export function processMessageSchemas(
-  m: string,
-  x: string,
+  messageTitle: string,
+  contractTitle: string,
   schemasPath: string,
   messageIdPart: number,
-  log: (string) => void,
   contractId: number,
-  jsf: any,
 ) {
-  const filePath = path.join(schemasPath, m);
-  console.log({ filePath });
+  const filePath = path.join(schemasPath, messageTitle);
   const data = JSON.parse(fs.readFileSync(filePath, { encoding: 'utf8' }));
   let result;
-  if (data.anyOf) {
-    const anyOfMessages = data.anyOf;
+  if (data.anyOf || data.oneOf) {
+    const anyOfMessages = data.anyOf || data.oneOf;
+    const def = data.definitions;
     result = anyOfMessages.map(aom => {
-      messageIdPart++;
-      log(`processing ${aom.required[0]} message of ${x} contract`);
-      return {
-        id: GetId() + messageIdPart,
-        contractId: contractId,
-        collapsed: true,
-        type: getMessageType(m),
-        message: JSON.stringify(jsf.generate(aom), null, 2),
-        title: aom.required[0],
-      };
+      aom['definitions'] = def;
+      return generateMessage(
+        messageIdPart,
+        contractTitle,
+        aom.required[0],
+        contractId,
+        messageTitle,
+        aom,
+      );
     });
   } else {
-    log(`processing ${data.required[0]} message of ${x} contract`);
-    result = {
-      id: GetId() + messageIdPart,
-      contractId: contractId,
-      collapsed: true,
-      type: getMessageType(m),
-      message: JSON.stringify(jsf.generate(data), null, 2),
-      title: data.required[0],
-    };
+    result = generateMessage(
+      messageIdPart,
+      contractTitle,
+      getMessageSchemaTitle(data, messageTitle),
+      contractId,
+      messageTitle,
+      data,
+    );
   }
   messageIdPart++;
+  return result;
+}
+
+function generateMessage(
+  messageIdPart: number,
+  contractTitle: string,
+  messageSchemaTitle: string,
+  contractId: number,
+  messageTitle: string,
+  messageSchema: any,
+) {
+  messageIdPart++;
+  const t = getMessageType(messageTitle);
+  log(
+    `processing [${t}] ${messageSchemaTitle} message of ${contractTitle} contract`,
+  );
+
+  return {
+    id: GetId() + messageIdPart,
+    contractId: contractId,
+    collapsed: true,
+    type: t,
+    message: JSON.stringify(jsf.generate(messageSchema), null, 2),
+    title: `[${t}] ${messageSchemaTitle}`,
+    renderMode: ContractMessageRenderModes.JSON,
+  };
+}
+function getMessageSchemaTitle(data: any, messageTitle: string): string {
+  let result = `${messageTitle} - unk`;
+  if (data && data.title) result = data.title;
+  if ((!data || !data.title) && data.required && data.required.length > 0)
+    result = data.required[0];
   return result;
 }

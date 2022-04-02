@@ -1,51 +1,33 @@
 import { Contract, ContractMessage, GetId, getTabTitle } from '@outpost/core';
 import fs from 'fs';
-import jsf from 'json-schema-faker';
 import path from 'path';
+import { log } from './log';
 import { processMessageSchemas } from './message';
+import { RoverOptions } from './types';
 import { getOkMessages } from './utils';
-import { web3Upload } from './web3storage';
+import { getLink, web3Upload } from './web3storage';
 
 // TODO refactor id generation (guid?)
-export async function getContracts(
-  contractsPath: string,
-  web3storageToken: string,
-  artifactsPath: string,
-  log: any,
-) {
-  jsf.option({ requiredOnly: true });
-  const contracts = fs.readdirSync(contractsPath);
+export async function getContracts(options: RoverOptions) {
+  const contracts = fs.readdirSync(options.contractsPath);
   let contractIdPart = 0;
   let messageIdPart = 0;
   const result = await Promise.all(
     contracts.map(x =>
-      processContractsFolders(
-        x,
-        log,
-        contractsPath,
-        contractIdPart,
-        messageIdPart,
-        artifactsPath,
-        web3storageToken,
-        jsf,
-      ),
+      processContractsFolders(x, contractIdPart, messageIdPart, options),
     ),
   );
   return result;
 }
 
 export async function processContractsFolders(
-  x: string,
-  log: (string) => void,
-  contractsPath: string,
+  contractTitle: string,
   contractIdPart: number,
   messageIdPart: number,
-  artifactsPath: string,
-  web3storageToken: string,
-  jsf: any,
+  options: RoverOptions,
 ) {
-  log(`processing ${x} contract`);
-  const schemasPath = path.join(contractsPath, x, 'schema');
+  log(`processing ${contractTitle} contract`);
+  const schemasPath = path.join(options.contractsPath, contractTitle, 'schema');
   const contractId = GetId() + contractIdPart;
   contractIdPart++;
   const messageSchemas = fs.readdirSync(schemasPath);
@@ -53,31 +35,50 @@ export async function processContractsFolders(
     .map(m =>
       processMessageSchemas(
         m,
-        x,
+        contractTitle,
         schemasPath,
         messageIdPart,
-        log,
         contractId,
-        jsf,
       ),
     )
     .flat();
-  const wasmTitle = x + '.wasm';
-  const afp = path.join(contractsPath, x, artifactsPath);
-  log(`saving ${x} wasm to web3.storage`);
-  const url = await web3Upload({
-    token: web3storageToken,
-    type: 'wasm',
-    filepath: afp,
-    title: path.join(artifactsPath, wasmTitle),
-  });
+  const wasmTitle = contractTitle + '.wasm';
+  const afp = generateArtifactsPath(options, contractTitle);
+
+  let url: string;
+  if (!options.cid) {
+    log(`saving ${contractTitle} wasm to web3.storage`);
+    const uploaded = await web3Upload({
+      token: options.web3storageToken,
+      type: 'wasm',
+      filepath: afp,
+      title: path.join(options.artifactsPath, wasmTitle),
+    });
+    options.cid = uploaded.cid;
+    url = uploaded.link;
+  } else {
+    log(`getting link for ${contractTitle}.wasm using cid: ${options.cid}`);
+    url = getLink(path.join(options.artifactsPath, wasmTitle), options.cid);
+  }
   log(`${url}`);
   const contract: Contract = {
     id: contractId,
-    title: x,
+    title: contractTitle,
     binUrl: url,
-    tabTitle: getTabTitle(x),
+    tabTitle: getTabTitle(contractTitle),
     messages: messages.map(mx => mx.id),
   };
   return { contract, messages };
+}
+
+function generateArtifactsPath(options: RoverOptions, contractTitle: string) {
+  let result = '';
+  if (options.workspace) result = path.join(options.artifactsPath);
+  else
+    result = path.join(
+      options.contractsPath,
+      contractTitle,
+      options.artifactsPath,
+    );
+  return result;
 }

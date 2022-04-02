@@ -47,5 +47,5 @@ export async function web3Upload(params: Web3storageOptions) {
       ? await getFilesFromPath(filepath || '')
       : makeFileObjectsJson(title, json);
   const cid = await storeFiles(files, token);
-  return getLink(title || '', cid);
+  return { cid, link: getLink(title || '', cid) };
 }

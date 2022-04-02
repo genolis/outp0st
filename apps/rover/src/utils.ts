@@ -3,11 +3,22 @@ import fs from 'fs';
 import { web3Upload } from './web3storage';
 
 export function getOkMessages(messages: string[]) {
-  return messages.filter(
-    m =>
-      m.indexOf('instantiate') !== -1 ||
-      m.indexOf('query') !== -1 ||
-      m.indexOf('execute') !== -1,
+  return (
+    messages
+      .filter(
+        m =>
+          m.indexOf('instantiate') !== -1 ||
+          m.indexOf('query') !== -1 ||
+          m.indexOf('execute') !== -1,
+      )
+      // https://stackoverflow.com/questions/23921683/javascript-move-an-item-of-an-array-to-the-front
+      .sort(function (x, y) {
+        return x.indexOf('instantiate') !== -1
+          ? -1
+          : y.indexOf('instantiate') !== -1
+          ? 1
+          : 0;
+      })
   );
 }
 
@@ -28,12 +39,12 @@ export async function uploadAndGenerateUrl(
     json: globalState,
     title: 'rover_generated.json',
   });
-  return `${basePayloadUrl}/outpost?state=${stateUrl}#CONFIG`;
+  return `${basePayloadUrl}/outpost?state=${stateUrl.link}#CONFIG`;
 }
 
 export function tryReadJson(path: string) {
   try {
-    const jsonString = fs.readFileSync('./customer.json', {
+    const jsonString = fs.readFileSync(path, {
       encoding: 'utf-8',
     });
     return JSON.parse(jsonString);

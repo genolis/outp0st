@@ -5,7 +5,17 @@ export function GetId() {
 }
 
 export function getTabTitle(title: string) {
-  return title.slice(0, 3).toUpperCase();
+  let result = '';
+  let parts = title.split('_');
+  if (parts && parts.length > 2) {
+    parts.shift();
+    result = parts.map(x => x[0].toUpperCase()).join('_');
+  } else if (parts && parts.length === 2) {
+    result = parts[1].slice(0, 3).toUpperCase();
+  } else {
+    result = title.slice(0, 3).toUpperCase();
+  }
+  return result;
 }
 
 export function getDefaultGlobalState(title = 'Default Outpost payload title') {

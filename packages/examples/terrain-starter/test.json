@@ -1,56 +1,60 @@
 {
-  "title": "Rover generated 10:50:07 AM",
+  "title": "Rover generated 9:22:54 AM",
   "current": "local",
   "local": {
     "contracts": [
       {
-        "id": 1648799404218,
+        "id": 1648880568800,
         "title": "counter",
         "binUrl": "https://dweb.link/ipfs/bafybeievabals3hvgzxat6r2gaooapsbhzw3sfzsb2v5s7vru6raw7ejfm/artifacts/counter.wasm",
         "tabTitle": "COU",
         "messages": [
-          1648799404223,
-          1648799404230,
-          1648799404235,
-          1648799404239
+          1648880568801,
+          1648880568807,
+          1648880568807,
+          1648880568811
         ]
       }
     ],
     "messages": [
       {
-        "id": 1648799404223,
-        "contractId": 1648799404218,
+        "id": 1648880568801,
+        "contractId": 1648880568800,
+        "collapsed": true,
+        "type": "INSTA",
+        "message": "{\n  \"count\": 3554461\n}",
+        "title": "[INSTA] InstantiateMsg",
+        "renderMode": "JSON"
+      },
+      {
+        "id": 1648880568807,
+        "contractId": 1648880568800,
         "collapsed": true,
         "type": "EXECUTE",
         "message": "{\n  \"increment\": {}\n}",
-        "title": "increment"
+        "title": "[EXECUTE] increment",
+        "renderMode": "JSON"
       },
       {
-        "id": 1648799404230,
-        "contractId": 1648799404218,
+        "id": 1648880568807,
+        "contractId": 1648880568800,
         "collapsed": true,
         "type": "EXECUTE",
-        "message": "{\n  \"reset\": {\n    \"count\": -70099695\n  }\n}",
-        "title": "reset"
+        "message": "{\n  \"reset\": {\n    \"count\": -88005468\n  }\n}",
+        "title": "[EXECUTE] reset",
+        "renderMode": "JSON"
       },
       {
-        "id": 1648799404235,
-        "contractId": 1648799404218,
-        "collapsed": true,
-        "type": "INSTA",
-        "message": "{\n  \"count\": -6283944\n}",
-        "title": "count"
-      },
-      {
-        "id": 1648799404239,
-        "contractId": 1648799404218,
+        "id": 1648880568811,
+        "contractId": 1648880568800,
         "collapsed": true,
         "type": "QUERY",
         "message": "{\n  \"get_count\": {}\n}",
-        "title": "get_count"
+        "title": "[QUERY] get_count",
+        "renderMode": "JSON"
       }
     ],
-    "title": "[local] Rover generated 10:50:07 AM"
+    "title": "[local] Rover generated 9:22:54 AM"
   },
   "test": {
     "contracts": [],

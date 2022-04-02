@@ -28,6 +28,7 @@
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
     "@mui/x-data-grid": "^5.5.1",
+    "@outp0st/core": "^1.0.0",
     "@react-hook/debounce": "^4.0.0",
     "@rjsf/core": "^3.2.1",
     "@rjsf/material-ui": "^3.2.1",
@@ -70,8 +71,7 @@
     "secp256k1": "^4.0.3",
     "semver": "^7.3.5",
     "sentence-case": "^3.0.4",
-    "xss": "^1.0.10",
-    "@outp0st/core": "^1.0.0"
+    "xss": "^1.0.10"
   },
   "devDependencies": {
     "@emotion/react": "^11.7.1",

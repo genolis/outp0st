@@ -16,9 +16,7 @@ const defaultOptions: RoverOptions = {
   contractsPath: './contracts',
   artifactsPath: 'artifacts',
   basePayloadUrl: 'http://localhost:3000',
-  web3storageToken:
-    process.env.TOKEN_WEB3STORAGE ||
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA2MEZkRjhjODA0MDI3NDZkNTlmQmRhNDhFNEY3QzFkNDU0RTJFMTciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDgyOTEwNDYzMzIsIm5hbWUiOiJ0ZXN0In0.s4dWeJO3aZhn_xT5SpTgyPOUkiiewwy1CeP_pAX11lM',
+  web3storageToken: process.env.TOKEN_WEB3STORAGE,
   env: OutpostCurrentState.LOCAL,
   workspace: false,
 };

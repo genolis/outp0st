@@ -27,7 +27,7 @@ resource "vercel_project" "terra-outpost-auth-temp-real" {
 resource "vercel_project" "app-outp0st" {
   # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(payload)' )!
   name             = "app-outp0st"
-  build_command    = "cd ../.. && npx turbo run build"
+  build_command    = "cd ../.. && npx turbo run build --scope=outpost-payload --include-dependencies --no-deps"
   framework        = "create-react-app"
   install_command  = "npm install --prefix=../.."
   output_directory = "build/"
@@ -47,3 +47,23 @@ resource "vercel_env" "env_app-outp0st" {
   target     = ["production", "preview", "development"]
   team_id    = "genolis"
 }
+resource "vercel_env" "env_app-outp0st-eslint" {
+  project_id = vercel_project.app-outp0st.id // or use a hardcoded value of an existing project
+  type       = "plain"
+  key        = "DISABLE_ESLINT_PLUGIN"
+  value      = "true"
+  target     = ["production", "preview", "development"]
+  team_id    = "genolis"
+}
+
+resource "vercel_env" "env_app-outp0st-sass" {
+  project_id = vercel_project.app-outp0st.id // or use a hardcoded value of an existing project
+  type       = "plain"
+  key        = "SASS_PATH"
+  value      = "src/styles"
+  target     = ["production", "preview", "development"]
+  team_id    = "genolis"
+}
+
+
+

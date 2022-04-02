@@ -70,10 +70,10 @@ resource "vercel_env" "env_app-outp0st-sass" {
 resource "vercel_project" "docs-outp0st" {
   # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(docs)' )
   name             = "docs-outp0st"
-  build_command    = "pnpm build"
-  framework        = "nextjs"
-  install_command  = "pnpm install"
-  output_directory = ".next/"
+  build_command    = "npm run build"
+  framework        = "docusaurus-2"
+  install_command  = "npm install"
+  output_directory = "build/"
   root_directory   = "apps/docs"
   team_id          = "genolis"
   git_repository {
@@ -85,7 +85,7 @@ resource "vercel_project" "docs-outp0st" {
 resource "vercel_project" "web-outp0st" {
   # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(web)' )
   name             = "outp0st"
-  build_command    = "npm build"
+  build_command    = "npm run build"
   framework        = "docusaurus-2"
   install_command  = "npm install"
   output_directory = "build/"

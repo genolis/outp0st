@@ -1,56 +1,56 @@
 {
-  "title": "Rover generated 12:35:50 PM",
+  "title": "Rover generated 10:50:07 AM",
   "current": "local",
   "local": {
     "contracts": [
       {
-        "id": 1648719345410,
+        "id": 1648799404218,
         "title": "counter",
         "binUrl": "https://dweb.link/ipfs/bafybeievabals3hvgzxat6r2gaooapsbhzw3sfzsb2v5s7vru6raw7ejfm/artifacts/counter.wasm",
         "tabTitle": "COU",
         "messages": [
-          1648719345415,
-          1648719345420,
-          1648719345425,
-          1648719345429
+          1648799404223,
+          1648799404230,
+          1648799404235,
+          1648799404239
         ]
       }
     ],
     "messages": [
       {
-        "id": 1648719345415,
-        "contractId": 1648719345410,
+        "id": 1648799404223,
+        "contractId": 1648799404218,
         "collapsed": true,
         "type": "EXECUTE",
         "message": "{\n  \"increment\": {}\n}",
         "title": "increment"
       },
       {
-        "id": 1648719345420,
-        "contractId": 1648719345410,
+        "id": 1648799404230,
+        "contractId": 1648799404218,
         "collapsed": true,
         "type": "EXECUTE",
-        "message": "{\n  \"reset\": {\n    \"count\": 15915950\n  }\n}",
+        "message": "{\n  \"reset\": {\n    \"count\": -70099695\n  }\n}",
         "title": "reset"
       },
       {
-        "id": 1648719345425,
-        "contractId": 1648719345410,
+        "id": 1648799404235,
+        "contractId": 1648799404218,
         "collapsed": true,
         "type": "INSTA",
-        "message": "{\n  \"count\": -89560543\n}",
+        "message": "{\n  \"count\": -6283944\n}",
         "title": "count"
       },
       {
-        "id": 1648719345429,
-        "contractId": 1648719345410,
+        "id": 1648799404239,
+        "contractId": 1648799404218,
         "collapsed": true,
         "type": "QUERY",
         "message": "{\n  \"get_count\": {}\n}",
         "title": "get_count"
       }
     ],
-    "title": "[local] Rover generated 12:35:50 PM"
+    "title": "[local] Rover generated 10:50:07 AM"
   },
   "test": {
     "contracts": [],

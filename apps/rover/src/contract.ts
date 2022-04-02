@@ -42,7 +42,7 @@ export async function processContractsFolders(
       ),
     )
     .flat();
-  const wasmTitle = contractTitle + '.wasm';
+  const wasmTitle = (options.wasm_prefix || '') + contractTitle + '.wasm';
   const afp = generateArtifactsPath(options, contractTitle);
 
   let url: string;

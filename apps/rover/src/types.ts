@@ -9,4 +9,5 @@ export interface RoverOptions {
   workspace: boolean;
   // last uploaded cid, TODO: make array of ['uploaded artifacts hash': cid] and automatically check wether we need to upload more
   cid?: any;
+  wasm_prefix?: string;
 }

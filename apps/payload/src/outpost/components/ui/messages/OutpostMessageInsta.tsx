@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { FormItem, Input } from 'components/form';
 import { Button } from 'components/general';
 import Tx from 'outpost/components/Tx';

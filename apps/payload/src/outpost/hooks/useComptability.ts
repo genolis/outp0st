@@ -1,4 +1,4 @@
-import { ContractMessageRenderModes } from '@outpost/core';
+import { ContractMessageRenderModes } from '@outp0st/core';
 import { useEffect } from 'react';
 import { useOutpostState } from '../state/useOutpostState';
 

@@ -4,7 +4,7 @@ import {
   ContractMessage,
   ContractMessageRenderModes,
   ContractMessageTypes,
-} from '@outpost/core';
+} from '@outp0st/core';
 import { useRO } from 'outpost/hooks/useRO';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { FC, ReactNode } from 'react';

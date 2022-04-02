@@ -1,4 +1,4 @@
-import { StateManager, StateManagerService } from '@outpost/core';
+import { StateManager, StateManagerService } from '@outp0st/core';
 import { atom, useRecoilState } from 'recoil';
 import {
   getLocalSetting,

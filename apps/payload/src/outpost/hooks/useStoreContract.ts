@@ -1,4 +1,4 @@
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import { MsgStoreCode } from '@terra-money/terra.js';
 import { useAddress } from 'data/wallet';
 import { readFileUrl } from 'outpost/utils';

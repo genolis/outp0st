@@ -1,4 +1,4 @@
-import { ContractMessageTypes, OutpostGlobal } from '@outpost/core';
+import { ContractMessageTypes, OutpostGlobal } from '@outp0st/core';
 import fs from 'fs';
 import { web3Upload } from './web3storage';
 

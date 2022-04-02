@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { Button } from 'components/general';
 import { useExecuteMessage } from 'outpost/hooks/useExecuteMessage';
 import { validateMsg } from 'outpost/utils';

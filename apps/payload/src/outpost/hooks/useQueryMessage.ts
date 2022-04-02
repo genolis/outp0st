@@ -1,4 +1,4 @@
-import { Contract, ContractMessage } from '@outpost/core';
+import { Contract, ContractMessage } from '@outp0st/core';
 import { useGetContractQuery } from 'data/queries/wasm';
 import { isEmpty } from 'ramda';
 import { useForm } from 'react-hook-form';

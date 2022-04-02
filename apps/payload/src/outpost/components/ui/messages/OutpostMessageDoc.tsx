@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import MarkdownEditor from '../elements/MarkdownEditor';
 

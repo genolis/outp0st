@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import Form from '@rjsf/core';
 import { FormItem, Input } from 'components/form';
 import { useOutpostState } from 'outpost/state/useOutpostState';

@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { OutpostCurrentState } from '@outpost/core';
+import { OutpostCurrentState } from '@outp0st/core';
 import { ExtraActions, Page } from 'components/layout';
 import { OutpostTabs } from './components/OutpostTabs';
 import BtnGroup from './components/ui/elements/BtnGroup';

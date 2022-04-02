@@ -1,4 +1,4 @@
-import { Contract, ContractMessage } from '@outpost/core';
+import { Contract, ContractMessage } from '@outp0st/core';
 import { MsgInstantiateContract } from '@terra-money/terra.js';
 import { useBankBalance } from 'data/queries/bank';
 import { useAddress } from 'data/wallet';

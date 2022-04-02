@@ -7,7 +7,7 @@ import {
   OutpostGlobal,
   OutpostParam,
   OutpostParamsTypes,
-} from '@outpost/core';
+} from '@outp0st/core';
 import { atom, useRecoilState } from 'recoil';
 import {
   getLocalSetting,

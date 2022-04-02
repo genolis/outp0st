@@ -4,7 +4,7 @@ import {
   getDefaultGlobalState,
   OutpostCurrentState,
   OutpostGlobal,
-} from '@outpost/core';
+} from '@outp0st/core';
 
 export function generateGlobalState(
   env: OutpostCurrentState,

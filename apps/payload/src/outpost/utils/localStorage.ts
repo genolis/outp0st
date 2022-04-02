@@ -2,7 +2,7 @@ import {
   OutpostCurrentState,
   OutpostGlobal,
   OutpostSettings,
-} from '@outpost/core';
+} from '@outp0st/core';
 
 export enum SettingKey {
   outpost = 'outpost_state',

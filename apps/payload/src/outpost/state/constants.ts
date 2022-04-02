@@ -1,4 +1,4 @@
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 
 export const CONSTANTS: CONSTType = {
   version: '1.0.0',

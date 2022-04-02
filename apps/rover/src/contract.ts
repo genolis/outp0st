@@ -1,4 +1,4 @@
-import { Contract, ContractMessage, GetId, getTabTitle } from '@outpost/core';
+import { Contract, ContractMessage, GetId, getTabTitle } from '@outp0st/core';
 import fs from 'fs';
 import path from 'path';
 import { log } from './log';

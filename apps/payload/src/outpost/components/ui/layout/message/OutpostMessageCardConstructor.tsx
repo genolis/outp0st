@@ -1,4 +1,4 @@
-import { ContractMessage, ContractMessageTypes } from '@outpost/core';
+import { ContractMessage, ContractMessageTypes } from '@outp0st/core';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import React, { FC, Suspense } from 'react';
 import OutpostCardMessageBody from './OutpostCardMessageBody';

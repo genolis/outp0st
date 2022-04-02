@@ -1,6 +1,6 @@
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckIcon from '@mui/icons-material/Check';
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import { useRO } from 'outpost/hooks/useRO';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import EasyEdit, { Types } from 'react-easy-edit';

@@ -1,5 +1,5 @@
 import { Button as Btn, Button } from '@mui/material';
-import { GetId } from '@outpost/core';
+import { GetId } from '@outp0st/core';
 import { Card } from 'components/layout';
 import BtnGroup from 'outpost/components/ui/elements/BtnGroup';
 import { useOutpostState } from 'outpost/state/useOutpostState';

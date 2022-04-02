@@ -1,4 +1,4 @@
-import { ContractMessage } from '@outpost/core';
+import { ContractMessage } from '@outp0st/core';
 import { Fetching } from 'components/feedback';
 import { EditorInput, Form, FormItem, Submit } from 'components/form';
 import { Pre } from 'components/general';

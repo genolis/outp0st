@@ -1,5 +1,5 @@
 import { Collapse } from '@mui/material';
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import Tooltip from 'components/display/Tooltip';
 // import Tx from "txs/Tx"
 import { Form } from 'components/form';

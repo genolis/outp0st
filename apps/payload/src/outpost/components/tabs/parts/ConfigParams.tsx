@@ -1,6 +1,6 @@
 import { Button as Btn } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
-import { OutpostParam, OutpostParamsTypes } from '@outpost/core';
+import { OutpostParam, OutpostParamsTypes } from '@outp0st/core';
 import { Card } from 'components/layout';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import styles from 'pages/gov/ProposalsByStatus.module.scss';

@@ -1,4 +1,4 @@
-import { Contract } from '@outpost/core';
+import { Contract } from '@outp0st/core';
 import { Form, FormItem, Input } from 'components/form';
 import { Button } from 'components/general';
 import { Card } from 'components/layout';

@@ -1,5 +1,10 @@
-const withTM = require("next-transpile-modules")(["ui"]);
+module.exports = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [`@svgr/webpack`],
+    });
 
-module.exports = withTM({
-  reactStrictMode: true,
-});
+    return config;
+  },
+};

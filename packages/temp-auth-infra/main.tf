@@ -38,3 +38,12 @@ resource "vercel_project" "app-outp0st" {
     repo = "dimkk/terra-outpost-mono"
   }
 }
+
+resource "vercel_env" "env_app-outp0st" {
+  project_id = vercel_project.app-outp0st.id // or use a hardcoded value of an existing project
+  type       = "plain"
+  key        = "SKIP_PREFLIGHT_CHECK"
+  value      = "true"
+  target     = ["production", "preview", "development"]
+  team_id    = "genolis"
+}

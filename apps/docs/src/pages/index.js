@@ -1,26 +1,24 @@
-import React from 'react';
 import {
-  LightCta,
-  Section,
-  SectionTitle,
   Button,
-  Text,
-  TextBlock,
-  Hero,
-  SectionHeader,
-  LabelText,
-  TextBlocksGrid,
   Card,
   CardsGrid,
+  Hero,
+  LabelText,
+  Section,
+  SectionHeader,
+  SectionTitle,
+  Text,
+  TextBlock,
+  TextBlocksGrid,
 } from '@algolia/ui-library';
-import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-import showcaseProjects from './showcase-projects.json';
-import demoProjects from './demo-projects.json';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import React from 'react';
 import ApplyForm from '../components/ApplyForm.js';
 import { DocSearchLogo } from '../components/DocSearchLogo';
+import demoProjects from './demo-projects.json';
+import showcaseProjects from './showcase-projects.json';
 
 function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -196,7 +194,7 @@ function Home() {
               image={preview}
               imageProps={{ alt: `${name} demo` }}
             >
-              <LightCta withArrow href={href} rel="noreferrer" target="_blank">
+              {/* <LightCta withArrow href={href} rel="noreferrer" target="_blank">
                 <img
                   style={{
                     marginTop: '-2px',
@@ -207,7 +205,7 @@ function Home() {
                   alt={name}
                 />
                 Visit {name}
-              </LightCta>
+              </LightCta> */}
             </Card>
           ))}
         </CardsGrid>

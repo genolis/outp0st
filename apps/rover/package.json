@@ -1,5 +1,5 @@
 {
-  "name": "@outpost/rover",
+  "name": "@outp0st/rover",
   "version": "1.0.0",
   "description": "terra outpost cli",
   "main": "index.js",
@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/kreuzerk/node-command-line-starter#readme",
   "dependencies": {
+    "@outp0st/core": "^1.0.0",
     "boxen": "^5.1.2",
     "commander": "^8.2.0",
     "dotenv": "^16.0.0",

@@ -71,7 +71,7 @@
     "semver": "^7.3.5",
     "sentence-case": "^3.0.4",
     "xss": "^1.0.10",
-    "@outp0st/core": "*"
+    "@outp0st/core": "^1.0.0"
   },
   "devDependencies": {
     "@emotion/react": "^11.7.1",

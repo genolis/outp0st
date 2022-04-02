@@ -17,7 +17,7 @@
   "types": "./build/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": "> 14"
+    "node": ">= 14"
   },
   "publishConfig": {
     "access": "public"

@@ -25,7 +25,7 @@ resource "vercel_project" "terra-outpost-auth-temp-real" {
 }
 
 resource "vercel_project" "app-outp0st" {
-  # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(payload)' )!
+  # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(payload)' )
   name             = "app-outp0st"
   build_command    = "cd ../.. && npx turbo run build --scope=outpost-payload --include-dependencies --no-deps"
   framework        = "create-react-app"
@@ -68,13 +68,28 @@ resource "vercel_env" "env_app-outp0st-sass" {
 
 
 resource "vercel_project" "docs-outp0st" {
-  # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(docs)' )!
+  # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(docs)' )
   name             = "docs-outp0st"
   build_command    = "pnpm build"
   framework        = "nextjs"
   install_command  = "pnpm install"
   output_directory = ".next/"
   root_directory   = "apps/docs"
+  team_id          = "genolis"
+  git_repository {
+    type = "github"
+    repo = "dimkk/terra-outpost-mono"
+  }
+}
+
+resource "vercel_project" "web-outp0st" {
+  # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(web)' )
+  name             = "outp0st"
+  build_command    = "pnpm build"
+  framework        = "nextjs"
+  install_command  = "pnpm install"
+  output_directory = ".next/"
+  root_directory   = "apps/web"
   team_id          = "genolis"
   git_repository {
     type = "github"

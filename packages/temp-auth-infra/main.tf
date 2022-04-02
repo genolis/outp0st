@@ -27,7 +27,7 @@ resource "vercel_project" "terra-outpost-auth-temp-real" {
 resource "vercel_project" "app-outp0st" {
   # don't forget to set ignoret build step git log -1 --pretty=%B | ( ! grep '(payload)' )!
   name             = "app-outp0st"
-  build_command    = "cd ../.. && npx turbo run build --scope=outpost-payload"
+  build_command    = "cd ../.. && npx turbo run build"
   framework        = "create-react-app"
   install_command  = "npm install --prefix=../.."
   output_directory = "build/"

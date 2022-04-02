@@ -31,7 +31,7 @@ export const StorageConfig = () => {
             ))}
           </BtnGroup>
           <ExternalLink
-            href={getStorageConfigById(manager.currentConfigId).urlToSite}
+            href={getStorageConfigById(manager.currentConfigId)?.urlToSite}
           >
             Link to providers site
           </ExternalLink>

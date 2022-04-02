@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "terra outpost cli",
   "main": "index.js",
+  "private": "false",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"

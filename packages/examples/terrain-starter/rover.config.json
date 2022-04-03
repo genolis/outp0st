@@ -3,6 +3,5 @@
   "artifactsPath": "artifacts",
   "basePayloadUrl": "https://app-outp0st.vercel.app/",
   "env": "local",
-  "workspace": true,
-  "cid": "bafybeict6gvgf3ezhokntmibipoaduacuupy7zrhtrkiwqj4ec4vkg2pbu"
+  "workspace": false
 }

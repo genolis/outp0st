@@ -1,34 +1,34 @@
 {
-  "title": "Rover generated 9:22:54 AM",
+  "title": "Rover generated 9:24:42 AM",
   "current": "local",
   "local": {
     "contracts": [
       {
-        "id": 1648880568800,
+        "id": 1648967074816,
         "title": "counter",
         "binUrl": "https://dweb.link/ipfs/bafybeievabals3hvgzxat6r2gaooapsbhzw3sfzsb2v5s7vru6raw7ejfm/artifacts/counter.wasm",
         "tabTitle": "COU",
         "messages": [
-          1648880568801,
-          1648880568807,
-          1648880568807,
-          1648880568811
+          1648967074817,
+          1648967074823,
+          1648967074823,
+          1648967074827
         ]
       }
     ],
     "messages": [
       {
-        "id": 1648880568801,
-        "contractId": 1648880568800,
+        "id": 1648967074817,
+        "contractId": 1648967074816,
         "collapsed": true,
         "type": "INSTA",
-        "message": "{\n  \"count\": 3554461\n}",
+        "message": "{\n  \"count\": -71636794\n}",
         "title": "[INSTA] InstantiateMsg",
         "renderMode": "JSON"
       },
       {
-        "id": 1648880568807,
-        "contractId": 1648880568800,
+        "id": 1648967074823,
+        "contractId": 1648967074816,
         "collapsed": true,
         "type": "EXECUTE",
         "message": "{\n  \"increment\": {}\n}",
@@ -36,17 +36,17 @@
         "renderMode": "JSON"
       },
       {
-        "id": 1648880568807,
-        "contractId": 1648880568800,
+        "id": 1648967074823,
+        "contractId": 1648967074816,
         "collapsed": true,
         "type": "EXECUTE",
-        "message": "{\n  \"reset\": {\n    \"count\": -88005468\n  }\n}",
+        "message": "{\n  \"reset\": {\n    \"count\": 29431205\n  }\n}",
         "title": "[EXECUTE] reset",
         "renderMode": "JSON"
       },
       {
-        "id": 1648880568811,
-        "contractId": 1648880568800,
+        "id": 1648967074827,
+        "contractId": 1648967074816,
         "collapsed": true,
         "type": "QUERY",
         "message": "{\n  \"get_count\": {}\n}",
@@ -54,7 +54,7 @@
         "renderMode": "JSON"
       }
     ],
-    "title": "[local] Rover generated 9:22:54 AM"
+    "title": "[local] Rover generated 9:24:42 AM"
   },
   "test": {
     "contracts": [],

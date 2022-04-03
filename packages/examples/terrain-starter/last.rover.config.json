@@ -1,8 +1,8 @@
 {
   "contractsPath": "./contracts",
   "artifactsPath": "artifacts",
-  "basePayloadUrl": "http://localhost:3000",
-  "web3storageToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA2MEZkRjhjODA0MDI3NDZkNTlmQmRhNDhFNEY3QzFkNDU0RTJFMTciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDgyOTEwNDYzMzIsIm5hbWUiOiJ0ZXN0In0.s4dWeJO3aZhn_xT5SpTgyPOUkiiewwy1CeP_pAX11lM",
+  "basePayloadUrl": "https://app-outp0st.vercel.app/",
+  "web3storageToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA2MEZkRjhjODA0MDI3NDZkNTlmQmRhNDhFNEY3QzFkNDU0RTJFMTciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDg4ODI5ODIxMjAsIm5hbWUiOiJuZXctb3V0cG9zdCJ9.AfZmRo4qy0c98elYOJKJxx0Jzppesm6XY4vGVHNScA0",
   "env": "local",
   "workspace": false,
   "cid": "bafybeievabals3hvgzxat6r2gaooapsbhzw3sfzsb2v5s7vru6raw7ejfm"

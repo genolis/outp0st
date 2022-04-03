@@ -1,4 +1,8 @@
 {
+  "contractsPath": "./contracts",
+  "artifactsPath": "artifacts",
+  "basePayloadUrl": "https://app-outp0st.vercel.app/",
+  "env": "local",
   "workspace": true,
   "wasm_prefix": "anchor_",
   "cid": "bafybeighdoawktafkhdz2yxyecxvgr2cakeb6pibxqdpaukrk7p7m4igy4"

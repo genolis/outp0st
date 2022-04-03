@@ -5113,6 +5113,13 @@
     "to-factory" "^1.0.0"
     "zepto" "^1.2.0"
 
+"docusaurus2-dotenv@^1.4.0":
+  "integrity" "sha512-iWqem5fnBAyeBBtX75Fxp71uUAnwFaXzOmade8zAhN4vL3RG9m27sLSRwjJGVVgIkEo3esjGyCcTGTiCjfi+sg=="
+  "resolved" "https://registry.npmjs.org/docusaurus2-dotenv/-/docusaurus2-dotenv-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "dotenv-webpack" "1.7.0"
+
 "dom-converter@^0.2":
   "integrity" "sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA=="
   "resolved" "https://registry.npmjs.org/dom-converter/-/dom-converter-0.2.0.tgz"
@@ -5195,6 +5202,25 @@
   "version" "5.2.0"
   dependencies:
     "is-obj" "^2.0.0"
+
+"dotenv-defaults@^1.0.2":
+  "integrity" "sha512-6fPRo9o/3MxKvmRZBD3oNFdxODdhJtIy1zcJeUSCs6HCy4tarUpd+G67UTU9tF6OWXeSPqsm4fPAB+2eY9Rt9Q=="
+  "resolved" "https://registry.npmjs.org/dotenv-defaults/-/dotenv-defaults-1.1.1.tgz"
+  "version" "1.1.1"
+  dependencies:
+    "dotenv" "^6.2.0"
+
+"dotenv-webpack@1.7.0":
+  "integrity" "sha512-wwNtOBW/6gLQSkb8p43y0Wts970A3xtNiG/mpwj9MLUhtPCQG6i+/DSXXoNN7fbPCU/vQ7JjwGmgOeGZSSZnsw=="
+  "resolved" "https://registry.npmjs.org/dotenv-webpack/-/dotenv-webpack-1.7.0.tgz"
+  "version" "1.7.0"
+  dependencies:
+    "dotenv-defaults" "^1.0.2"
+
+"dotenv@^6.2.0":
+  "integrity" "sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-6.2.0.tgz"
+  "version" "6.2.0"
 
 "download@^6.2.2":
   "integrity" "sha512-DpO9K1sXAST8Cpzb7kmEhogJxymyVUd5qz/vCOSyvwtp2Klj2XcDt5YUuasgxka44SxF0q5RriKIwJmQHG2AuA=="
@@ -13922,7 +13948,7 @@
     "source-list-map" "^2.0.0"
     "source-map" "~0.6.1"
 
-"webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0", "webpack@^4.44.1", "webpack@>=2", "webpack@>=4.41.1", "webpack@3 || 4 || 5":
+"webpack@^1 || ^2 || ^3 || ^4", "webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.37.0 || ^5.0.0", "webpack@^4.4.0", "webpack@^4.44.1", "webpack@>=2", "webpack@>=4.41.1", "webpack@3 || 4 || 5":
   "integrity" "sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q=="
   "resolved" "https://registry.npmjs.org/webpack/-/webpack-4.46.0.tgz"
   "version" "4.46.0"

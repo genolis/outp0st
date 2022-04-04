@@ -1,39 +1,150 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url(fragments.css);
+@import url(searchbox.css);
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-font-size-base: 16px;
+  --ifm-code-font-size: 90%;
+  --ifm-background-color: var(--white);
+  --ifm-color-primary: var(--nebula-blue);
+  --ifm-footer-background-color: var(--moon-grey);
+  --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+html[data-theme='dark'] {
+  --ifm-font-base-color: #dee0f2;
+  --ifm-navbar-link-hover-color: #8b9dff;
+  --ifm-link-color: #8b9dff;
+  --ifm-menu-color-active: #8b9dff;
+  --ifm-background-color: #0a141c;
+  --ifm-footer-background-color: #0a141c;
+  --ifm-navbar-background-color: #21243d;
+  --ifm-menu-color-background-active: #21243d;
 }
 
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+.bg-analytics {
+  position: relative;
+}
+.bg-analytics::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url('../../static/img/assets/bg-analytics.svg');
+  background-size: cover;
+  background-position: center -300px;
 }
 
-[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+#hero {
+  background-image: linear-gradient(
+    var(--ifm-navbar-background-color),
+    var(--ifm-footer-background-color)
+  );
+}
+
+html[data-theme='dark'] #hero {
+  background-image: linear-gradient(
+    var(--ifm-background-color),
+    var(--ifm-navbar-background-color)
+  );
+}
+
+.docsearch-logo {
+  color: #21243d;
+}
+
+html[data-theme='dark'] .docsearch-logo {
+  color: #fff;
+}
+
+html[data-theme='dark'] div[class*='background-curves-Hero'] {
+  opacity: 0.4;
+}
+
+html[data-theme='dark'] .bg-analytics::after {
+  opacity: 0.1;
+}
+
+html[data-theme='dark'] .uil-bgc-white {
+  background-color: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] .uil-bgc-moon {
+  background-color: var(--ifm-navbar-background-color);
+}
+
+html[data-theme='dark'] .uil-color-solstice {
+  color: var(--ifm-font-base-color);
+}
+
+html[data-theme='dark'] .uil-color-telluric {
+  color: var(--ifm-font-base-color);
+}
+
+html[data-theme='dark'] .react-toggle-track {
+  background-color: var(--ifm-footer-background-color);
+}
+
+html[data-theme='dark'] img.ds-icon {
+  filter: invert();
+}
+
+html[data-theme='dark'] img.github__logo {
+  filter: none;
+}
+html:not([data-theme='dark']) img.github__logo {
+  filter: invert();
+}
+
+html[data-theme='dark'] [class*='light-Card'] {
+  -webkit-transition: -webkit-transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  background-image: radial-gradient(circle at 50% 0, #3a416f, #21243d);
+}
+
+.footer .footer__logo {
+  max-width: 6rem;
+}
+
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-src-theme-DocPage- {
+  background-color: var(--ifm-background-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--ifm-background-color) 95%,
+    var(--ifm-footer-background-color)
+  );
+  border: none;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+.ds-icon-heart {
+  margin-left: 1em;
+  margin-right: 1em;
+  animation: heartbeat 1s infinite;
+  transform-origin: center;
+}
+
+[class*='announcementBar_'] {
+  z-index: 1;
 }

@@ -12,6 +12,8 @@ module.exports = {
   baseUrl: '/',
   favicon: 'outpost/hatchful/favicon.png',
   organizationName: 'outp0st',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   projectName: 'outp0st',
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [

@@ -85,7 +85,7 @@ const OutpostCardContractBody: FC<COutpostCardContractBodyProps> = contract => {
             />
           </Grid>
 
-          {contract.binUrl && (
+          {(contract.binUrl || contract.codeId) && (
             <Collapse in={!contract.collapsed} timeout="auto" unmountOnExit>
               <Grid gap={4} className={styles.wrapper}>
                 {/* Do not translate this */}

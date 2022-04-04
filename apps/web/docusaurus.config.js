@@ -1,118 +1,180 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+module.exports = {
+  title: 'Outp0st',
+  tagline: 'Modern Terra dApp development experience for teams',
+  url: 'https://outp0st.vercel.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
+  favicon: 'outpost/hatchful/favicon.png',
+  organizationName: 'outp0st',
+  projectName: 'outp0st',
+  themes: ['@docusaurus/theme-live-codeblock'],
+  plugins: [
+    'my-loaders',
+    [
+      'docusaurus2-dotenv',
+      {
+        path: './.env', // The path to your environment variables.
+        safe: false, // If false ignore safe-mode, if true load './.env.example', if a string load that file as the sample
+        systemvars: true, // Set to true if you would rather load all system variables as well (useful for CI purposes)
+        silent: false, //  If true, all warnings will be suppressed
+        expand: false, // Allows your variables to be "expanded" for reusability within your .env file
+        defaults: false, //  Adds support for dotenv-defaults. If set to true, uses ./.env.defaults
+      },
+    ],
+  ], // loader required for .svg
+  themeConfig: {
+    algolia: {
+      appId: 'ZHDU6KMIP0',
+      apiKey: '0ae4d340c3561222aa86622a1b3e34b6',
+      indexName: 'outp0st-vercel',
+    },
+    navbar: {
+      logo: {
+        alt: 'Outp0st',
+        src: 'outpost/hatchful/logo_short.svg',
+        srcDark: 'outpost/hatchful/logo_short_inv.svg',
+      },
+      title: '',
+      hideOnScroll: false,
+      items: [
+        {
+          label: 'Live',
+          to: '#live',
+          position: 'left',
+        },
+        {
+          label: 'Documentation',
+          to: 'docs/overview',
+          position: 'right',
+        },
+        {
+          label: 'GitHub',
+          href: 'https://github.com/dimkk/terra-outpost-mono',
+          position: 'right',
+        },
+      ],
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    // announcementBar: {
+    //   id: 'supportus',
+    //   content:
+    //     '⭐️ If you like DocSearch, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/dimkk/terra-outpost-mono">GitHub</a>! ⭐️',
+    // },
+    footer: {
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Overview',
+              to: 'docs/overview',
+            },
+            {
+              label: 'Quick start',
+              to: 'docs/quickstart',
+            },
+            {
+              label: 'Examples',
+              to: 'docs/examples',
+            },
+            {
+              label: 'Payload',
+              to: 'docs/payload',
+            },
+            {
+              label: 'How to use',
+              to: 'docs/how-to-use.md',
+            },
+          ],
+        },
+        {
+          title: 'Outp0st',
+          items: [
+            {
+              label: 'Issues',
+              to: 'https://github.com/dimkk/terra-outpost-mono/issues',
+            },
+            {
+              label: 'Payload',
+              to: 'https://github.com/dimkk/terra-outpost-mono/tree/main/apps/payload',
+            },
+            {
+              label: 'Rover',
+              to: 'https://github.com/dimkk/terra-outpost-mono/tree/main/apps/rover',
+            },
+            {
+              label: 'Privacy',
+              to: 'https://www.algolia.com/policies/privacy/',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Apply',
+              to: 'apply',
+            },
+            {
+              label: 'Forum',
+              href: 'https://discourse.algolia.com/tags/docsearch',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/tXdr5mP',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'GitHub',
+              to: 'https://github.com/algolia/docsearch',
+            },
+            {
+              label: 'Twitter',
+              to: 'https://twitter.com/docsearch_',
+            },
+            {
+              label: 'Algolia Blog',
+              to: 'https://blog.algolia.com/',
+            },
+          ],
+        },
+      ],
+      logo: {
+        alt: 'Outp0st',
+        src: 'outpost/hatchful/logo_short.svg',
+      },
+      copyright: `Outp0st 2022-now • Built by Dimkk from genolis.com.au, powered by 
+        <a href="https://www.npmjs.com/package/@algolia/ui-library">
+          Algolia ui lib
+        </a>
+      `,
+    },
+  },
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
 };
-
-module.exports = config;

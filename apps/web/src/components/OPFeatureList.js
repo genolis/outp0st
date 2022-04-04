@@ -11,7 +11,7 @@ export function OPFeatureList() {
   return (
     <FeaturesCarousel>
       <Card
-        carouselImage="https://res.cloudinary.com/hilnmyskv/image/upload/v1601910581/Algolia_com_Website_assets/images/dynamic-search-re-ranking/increase.jpg"
+        carouselVideo="/outpost/demo_op_token.mp4"
         imageProps={{
           alt: 'yolo',
         }}
@@ -21,7 +21,7 @@ export function OPFeatureList() {
             Using terra station as a base we can ensure, that noone will know
             mainnet deployment wallets credentials except of you.
           </Text>
-          <LightCta href="#">
+          <LightCta href="https://app-outp0st.vercel.app/outpost?state=https://dweb.link/ipfs/bafybeidoqc36qpsk3bvolkcb2nywc42lkd5eiocuxcfmwcbqqokddemvei/outpost.Terra_token_demo.1.0.0.1649089305449.json#TOK">
             Checkout how you can deploy cw20 token on mainnet
           </LightCta>
         </TextBlock>
@@ -32,12 +32,14 @@ export function OPFeatureList() {
           alt: 'yolo',
         }}
       >
-        <TextBlock title="This is a title, oh yes">
+        <TextBlock title="Document your contracts like a pro">
           <Text>
-            This is some text oh yes This is some text oh yes This is some text
-            oh yes This is some text oh yes
+            You can document contract and it's messages using markdown inside
+            Outp0st/Payload(UI) module!
           </Text>
-          <LightCta href="#">This is some text</LightCta>
+          <LightCta href="#">
+            Check documented example of vesting contract
+          </LightCta>
         </TextBlock>
       </Card>
       <Card
@@ -46,12 +48,12 @@ export function OPFeatureList() {
           alt: 'yolo',
         }}
       >
-        <TextBlock title="This is a title, oh yes">
+        <TextBlock title="Share your work with teammates">
           <Text>
-            This is some text oh yes This is some text oh yes This is some text
-            oh yes This is some text oh yes
+            Make your contract work, document it and share your awesome code
+            with other teammates! Or, you can link it, right in your Github repo
           </Text>
-          <LightCta href="#">This is some text</LightCta>
+          {/* <LightCta href="#">Che</LightCta> */}
         </TextBlock>
       </Card>
     </FeaturesCarousel>

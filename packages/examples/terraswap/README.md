@@ -10,23 +10,23 @@ Uniswap-inspired automated market-maker (AMM) protocol powered by Smart Contract
 | [`terraswap_pair`](contracts/terraswap_pair)       |                                              |
 | [`terraswap_token`](contracts/terraswap_token)     | CW20 (ERC20 equivalent) token implementation |
 
-* terraswap_factory
+- terraswap_factory
 
-   Mainnet: `terra1ulgw0td86nvs4wtpsc80thv6xelk76ut7a7apj`
+  Mainnet: `terra1ulgw0td86nvs4wtpsc80thv6xelk76ut7a7apj`
 
-   Testnet: `terra18qpjm4zkvqnpjpw0zn0tdr8gdzvt8au35v45xf`
+  Testnet: `terra18qpjm4zkvqnpjpw0zn0tdr8gdzvt8au35v45xf`
 
-* terraswap_pair
+- terraswap_pair
 
-   Mainnet (CodeID): 4
+  Mainnet (CodeID): 4
 
-   Testnet (CodeID): 7869
+  Testnet (CodeID): 7869
 
-* terraswap_token
+- terraswap_token
 
-   Mainnet (CodeID): 3
+  Mainnet (CodeID): 3
 
-   Testnet (CodeID): 148
+  Testnet (CodeID): 148
 
 ## Running this contract
 
@@ -54,7 +54,7 @@ Or for a production-ready (compressed) build, run the following from the reposit
 docker run --rm -v "$(pwd)":/code \
   --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
   --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
-  cosmwasm/workspace-optimizer:0.10.2
+  cosmwasm/workspace-optimizer:0.11.5
 ```
 
 The optimized contracts are generated in the artifacts/ directory.

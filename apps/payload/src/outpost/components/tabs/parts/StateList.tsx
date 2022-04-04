@@ -9,7 +9,7 @@ import { getStateTitle, makeFileObjects, storeFiles } from 'utils/outpost';
 
 export const StateList = () => {
   const { manager, delState, upsertState } = useStateManager();
-  const { outpost } = useOutpostState();
+  const { outpostGlobal } = useOutpostState();
 
   return (
     <Card title="State list" className={styles.link}>
@@ -17,8 +17,11 @@ export const StateList = () => {
         <Btn
           size="small"
           onClick={async () => {
-            const stateTitle = getStateTitle(outpost.title, outpost.version);
-            const files = makeFileObjects(stateTitle, outpost);
+            const stateTitle = getStateTitle(
+              outpostGlobal.title,
+              outpostGlobal[outpostGlobal.current].version,
+            );
+            const files = makeFileObjects(stateTitle, outpostGlobal);
             const cid = await storeFiles(
               files,
               manager.storageConfigs.find(x => x.type === 'web3.storage')
@@ -27,8 +30,8 @@ export const StateList = () => {
             upsertState({
               id: GetId(),
               cid: cid,
-              title: outpost.title,
-              version: outpost.version,
+              title: outpostGlobal[outpostGlobal.current].title,
+              version: outpostGlobal[outpostGlobal.current].version,
               link: `https://dweb.link/ipfs/${cid}/${stateTitle}`,
             });
           }}

@@ -49,7 +49,7 @@ function Home() {
           <Text className="m-auto" style={{ maxWidth: '800px' }}>
             No one's to blame, but sharing wallet's memo or keys with developers
             is a bad practice, lack of documentation and modern UI tooling for
-            junior developers makes entry threshold is high, both for guys with
+            junior developers makes entry threshold high, both for guys with
             ideas and guys with ability to write code.
           </Text>
         </SectionHeader>
@@ -147,8 +147,8 @@ function Home() {
       </Section>
 
       <Section>
-        <SectionHeader title="Learn-as-you-type experience">
-          <Text className="m-auto" style={{ maxWidth: '800px' }}>
+        <SectionHeader title="Outp0st Payload anatomy - heart of the tool">
+          {/* <Text className="m-auto" style={{ maxWidth: '800px' }}>
             Documentation speaks to your users. Ideally, this conversation will
             be pleasant and efficient. Everyone visiting your documentation page
             has a different need: Some are exploring your product, some are
@@ -158,11 +158,11 @@ function Home() {
             DocSearch is designed to provide relevant search results at every
             level. Its structured layout give the users more context to
             understand the product.
-          </Text>
+          </Text> */}
         </SectionHeader>
         <img
-          src={useBaseUrl('img/assets/docsearch-ui-anatomy.png')}
-          alt="Anatomy of DocSearch UI"
+          src={useBaseUrl('outpost/OPWindow.png')}
+          alt="Anatomy of Payload"
         />
       </Section>
 

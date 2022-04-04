@@ -1,0 +1,7 @@
+{
+  "contractsPath": "./contracts",
+  "artifactsPath": "artifacts",
+  "basePayloadUrl": "https://app-outp0st.vercel.app/",
+  "env": "test",
+  "workspace": true
+}

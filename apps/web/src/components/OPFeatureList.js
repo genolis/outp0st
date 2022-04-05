@@ -30,7 +30,7 @@ export function OPFeatureList() {
         </TextBlock>
       </Card>
       <Card
-        carouselImage="https://res.cloudinary.com/hilnmyskv/image/upload/v1601910581/Algolia_com_Website_assets/images/dynamic-search-re-ranking/increase.jpg"
+        carouselImage="/outpost/OPDocs.png"
         imageProps={{
           alt: 'yolo',
         }}
@@ -46,7 +46,7 @@ export function OPFeatureList() {
         </TextBlock>
       </Card>
       <Card
-        carouselImage="https://res.cloudinary.com/hilnmyskv/image/upload/v1601910581/Algolia_com_Website_assets/images/dynamic-search-re-ranking/increase.jpg"
+        carouselVideo="/outpost/demo_op_share.mp4"
         imageProps={{
           alt: 'yolo',
         }}

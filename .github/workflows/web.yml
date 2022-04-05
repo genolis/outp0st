@@ -1,4 +1,4 @@
-name: Build and upload outp0st.io web
+name: 'web: build & deploy'
 
 on:
   push:

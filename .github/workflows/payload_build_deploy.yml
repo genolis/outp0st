@@ -1,4 +1,4 @@
-name: Build and upload app.outp0st.io payload
+name: 'payload: build & deploy'
 
 on:
   push:

@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: npm i
-      - run: npm i --prefix=apps/payload
+      - run: cd apps/payload && npm i && cd ../..
       - run: npm run build:payload
       - uses: jakejarvis/s3-sync-action@master
         with:

@@ -5,7 +5,7 @@
   "author": "Terra <engineering@terra.money> (https://terra.money) & dimkk <dimkk@Outlook.com>",
   "repository": "github:dimkk/terra-outpost",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",

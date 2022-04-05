@@ -2,15 +2,18 @@
   "name": "@outp0st/web",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://outp0st.vercel.app/",
+  "homepage": "https://outp0st.io",
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "dev": "docusaurus start",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "deploy": "yarn lint & docusaurus deploy",
     "lint": "yarn run textlint docs"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
   },
   "dependencies": {
     "@algolia/ui-library": "2.106.0",
@@ -40,6 +43,9 @@
     "textlint-rule-stop-words": "^1.0.17",
     "textlint-rule-terminology": "^1.1.30",
     "textlint-rule-write-good": "^1.6.2"
+  },
+  "devDependencies": {
+    "react-error-overlay": "6.0.9"
   },
   "browserslist": {
     "production": [

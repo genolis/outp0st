@@ -1,7 +1,5 @@
 import {
   Button,
-  Card,
-  CardsGrid,
   Hero,
   Section,
   SectionHeader,
@@ -15,7 +13,6 @@ import Layout from '@theme/Layout';
 import React from 'react';
 import { OPFeatureList } from '../components/OPFeatureList';
 import { Outp0stLogo } from '../components/Outp0stLogo';
-import demoProjects from './demo-projects.json';
 
 function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -55,98 +52,27 @@ function Home() {
         </SectionHeader>
       </Section>
 
-      {/* <Section background="white">
-        <SectionHeader title="Providing search to your favorite projects" />
-        <div
-          className="jc-between d-flex m-auto fx-wrap"
-          style={{ maxWidth: '800px' }}
-        >
-          {showcaseProjects.map(({ name, href, image }) => (
-            <div key={href} className="ta-center w-20p">
-              <a
-                href={href}
-                rel="noreferrer"
-                target="_blank"
-                alt={`Discover DocSearch on the ${name} documentation`}
-              >
-                <img
-                  className="h-50"
-                  src={useBaseUrl(image)}
-                  alt={`Discover DocSearch on the ${name} documentation`}
-                />
-                <LabelText font="hind" tag="p">
-                  {name}
-                </LabelText>
-              </a>
-            </div>
-          ))}
-
-          <div className="ta-center w-20p">
-            <a href={useBaseUrl('/apply')} rel="noreferrer" target="_blank">
-              <img
-                className="h-50"
-                src={useBaseUrl('img/logos/three-dots.svg')}
-                alt="Your project logo? Apply for DocSearch"
-              />
-              <LabelText font="hind" tag="p">
-                You?
-              </LabelText>
-            </a>
-          </div>
-        </div>
-      </Section> */}
-
-      {/* <Section background="white">
-        <div className="row">
-          <div className="col col--4 col--offset-1">
-            <img
-              className="d-block m-auto"
-              src={useBaseUrl('img/assets/illus-analytics.svg')}
-              alt="DocSearch Analytics"
-            />
-          </div>
-          <div className="col col--5 pt-48 mt-32">
-            <SectionTitle>Powerful Analytics with Algolia</SectionTitle>
-            <Text>
-              Follow your users' search behavior to get invaluable insights into
-              what they are doing and to improve their experience - and to help
-              them learn more about your product.
-            </Text>
-            <Text>
-              Use metrics such as Popular Queries, No Results, and Click
-              Position to better optimize your content.
-            </Text>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col col--5 pt-48 mt-32">
-            <SectionTitle>Powerful Analytics with Algolia</SectionTitle>
-            <Text>
-              Follow your users' search behavior to get invaluable insights into
-              what they are doing and to improve their experience - and to help
-              them learn more about your product.
-            </Text>
-            <Text>
-              Use metrics such as Popular Queries, No Results, and Click
-              Position to better optimize your content.
-            </Text>
-          </div>
-          <div className="col col--4 col--offset-1">
-            <img
-              className="d-block m-auto"
-              src={useBaseUrl('img/assets/illus-analytics.svg')}
-              alt="DocSearch Analytics"
-            />
-          </div>
-        </div>
-      </Section> */}
-
       <Section background="white">
-        {' '}
-        <OPFeatureList />
+        <SectionHeader title="Why?">
+          <Text className="m-auto" style={{ maxWidth: '800px' }}>
+            First of all - security concerns, we wanted a robust tools for
+            making Mainnet deployments as easy as possibile for stakeholders
+          </Text>
+          <Text className="m-auto" style={{ maxWidth: '800px' }}>
+            And second - communication, we wanted a 'single source of truth'
+            solution for deployments, documentation and interaction with each
+            other on blockchain specific themes
+          </Text>
+        </SectionHeader>
+        <img src={useBaseUrl('outpost/OPWhy1_1.png')} alt="OP why" />
       </Section>
 
       <Section>
+        <SectionHeader title="Some features" />
+        <OPFeatureList />
+      </Section>
+
+      <Section background="white">
         <SectionHeader title="Outp0st Payload anatomy - heart of the tool">
           {/* <Text className="m-auto" style={{ maxWidth: '800px' }}>
             Documentation speaks to your users. Ideally, this conversation will
@@ -169,43 +95,35 @@ function Home() {
       <Section background="white" id="how-it-works">
         <SectionHeader title="How it works" />
         <TextBlocksGrid numbered columnsPerRow={3}>
-          <TextBlock title="" label="Scraping">
+          <TextBlock title="Contract to UI" label="Config">
             <Text>
-              We built a website crawler designed to index every section of your
-              documentation.
-            </Text>
-            <Text>
-              Just send us the URL of your documentation, and we’ll run the
-              scraper every 24h so you’re always up-to-date.
-            </Text>
-          </TextBlock>
-          <TextBlock title="We configure your search" label="Configuration">
-            <Text>
-              You don’t need to configure any settings or even have an Algolia
-              account.
-            </Text>
-            <Text>
-              We take care of this automatically to ensure the best
-              documentation search experience.
+              Get the contract, it may be contract address, code id, compiled
+              wasm binary or sources. In case of source, you can use Rover - CLI
+              tool to generate Payload UI for futher adjustments. In other
+              cases, just head to{' '}
+              <a href="https://app.outp0st.io" target={'_blank'}>
+                Payload UI
+              </a>{' '}
+              add a tab via '+' and start using
             </Text>
           </TextBlock>
-          <TextBlock
-            title="You add docsearch.js to your docs"
-            label="Implementation"
-          >
+          <TextBlock title="Adjust your contracts and messages" label="Adjust">
             <Text>
-              We'll send you a script that integrates Algolia's autocomplete to
-              power your search.
+              Modify your contracts, your messages, use it to test in localterra
+              or testnet, copy your messages and contracts between environments,
+              document it, share it.
             </Text>
+          </TextBlock>
+          <TextBlock title="Mainnet deployment" label="Deploy">
             <Text>
-              You will receive the same speed, relevance, and best-in-class UX
-              as our paying customers.
+              Development, testing, documenting complete? You can now relax, and
+              deploy everything on mainnet!
             </Text>
           </TextBlock>
         </TextBlocksGrid>
       </Section>
 
-      <Section id="live">
+      {/* <Section id="live">
         <SectionHeader title="Try it live">
           <Text>
             We helped integrate DocSearch into several open source projects. Try
@@ -219,7 +137,7 @@ function Home() {
               image={preview}
               imageProps={{ alt: `${name} demo` }}
             >
-              {/* <LightCta withArrow href={href} rel="noreferrer" target="_blank">
+              <LightCta withArrow href={href} rel="noreferrer" target="_blank">
                 <img
                   style={{
                     marginTop: '-2px',
@@ -230,11 +148,11 @@ function Home() {
                   alt={name}
                 />
                 Visit {name}
-              </LightCta> */}
+              </LightCta>
             </Card>
           ))}
         </CardsGrid>
-      </Section>
+      </Section> */}
 
       {/* <Section>
         <SectionHeader title="Join the DocSearch program">

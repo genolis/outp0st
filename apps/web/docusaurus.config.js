@@ -55,11 +55,16 @@ module.exports = {
           href: 'https://github.com/dimkk/terra-outpost-mono',
           position: 'right',
         },
+        {
+          label: 'App ➡️',
+          href: 'https://app.outp0st.io',
+          position: 'right',
+        },
       ],
     },
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: true,
     },
     // announcementBar: {
@@ -115,48 +120,48 @@ module.exports = {
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Apply',
-              to: 'apply',
-            },
-            {
-              label: 'Forum',
-              href: 'https://discourse.algolia.com/tags/docsearch',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/tXdr5mP',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'GitHub',
-              to: 'https://github.com/algolia/docsearch',
-            },
-            {
-              label: 'Twitter',
-              to: 'https://twitter.com/docsearch_',
-            },
-            {
-              label: 'Algolia Blog',
-              to: 'https://blog.algolia.com/',
-            },
-          ],
-        },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Apply',
+        //       to: 'apply',
+        //     },
+        //     {
+        //       label: 'Forum',
+        //       href: 'https://discourse.algolia.com/tags/docsearch',
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discord.gg/tXdr5mP',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Social',
+        //   items: [
+        //     {
+        //       label: 'GitHub',
+        //       to: 'https://github.com/algolia/docsearch',
+        //     },
+        //     {
+        //       label: 'Twitter',
+        //       to: 'https://twitter.com/docsearch_',
+        //     },
+        //     {
+        //       label: 'Algolia Blog',
+        //       to: 'https://blog.algolia.com/',
+        //     },
+        //   ],
+        // },
       ],
       logo: {
         alt: 'Outp0st',
         src: 'outpost/hatchful/logo_short.svg',
       },
-      copyright: `Outp0st 2022-now • Built by Dimkk from genolis.com.au, powered by 
+      copyright: `Outp0st 2022-now • Built by dimkk @ <a href="https://genolis.com.au">genolis.com.au</a>, powered by 
         <a href="https://www.npmjs.com/package/@algolia/ui-library">
-          Algolia ui lib
+          algolia ui lib
         </a>
       `,
     },

@@ -23,7 +23,7 @@ export function OPFeatureList() {
           </Text>
           <LightCta
             target="_blank"
-            href="https://app-outp0st.vercel.app/outpost?state=https://dweb.link/ipfs/bafybeiejn6axqpboolnlngxkgmvzevcgxngrydmvgm6fqhilyq6ikecnwi/outpost.Rover_generated_6:32:12_PM.1.0.0.1649090170210.json#TOK"
+            href="https://app.outp0st.io/outpost?state=https://dweb.link/ipfs/bafybeiejn6axqpboolnlngxkgmvzevcgxngrydmvgm6fqhilyq6ikecnwi/outpost.Rover_generated_6:32:12_PM.1.0.0.1649090170210.json#TOK"
           >
             Checkout how you can deploy cw20 token on mainnet
           </LightCta>

@@ -6,7 +6,7 @@ title: Quickstart
 
 _TODO: make link generated using env variable to production payload url_
 
-1. Go to this [link](https://app-outp0st.vercel.app/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy%2Frover_generated.json#CONFIG)
+1. Go to this [link](https://app.outp0st.io/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy%2Frover_generated.json#CONFIG)
 2. It's [terrain's](https://github.com/iboss-ptk/terrain) starter project, if you want to check more complex examples, go to [this](/docs/examples) page
 3. Head to [next section](/docs/payload) to figure things out
 
@@ -19,7 +19,7 @@ _TODO: make link generated using env variable to production payload url_
 {
   "contractsPath": "./contracts", // where your contracts folders
   "artifactsPath": "artifacts", // where artficats
-  "basePayloadUrl": "https://app-outp0st.vercel.app/",
+  "basePayloadUrl": "https://app.outp0st.io/",
   "env": "local", // more options: test, main
   "workspace": false // if false - rover will look for artficats inside contracts folder, else outside
 }
@@ -63,7 +63,7 @@ Use link from output to check things out
 {
   "contractsPath": "./contracts",
   "artifactsPath": "artifacts",
-  "basePayloadUrl": "https://app-outp0st.vercel.app/",
+  "basePayloadUrl": "https://app.outp0st.io/",
   "env": "local", // more options: test, main
   "workspace": false // if false - rover will look for artficats inside contracts folder, else outside
 }

@@ -23,20 +23,13 @@
     "prettier": "^2.5.1",
     "standard-version": "^9.3.2",
     "tsconfig-paths": "^3.12.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "winston": "^3.6.0",
+    "dotenv": "^16.0.0"
   },
   "engines": {
     "npm": ">=8.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@8.6.0",
-  "dependencies": {
-    "@terra-money/terra.js": "^3.0.7",
-    "dotenv": "^16.0.0",
-    "handlebars": "^4.7.7",
-    "minimist": "^1.2.6",
-    "nextjs-cors": "^2.1.0",
-    "web3.storage": "^4.0.0",
-    "winston": "^3.6.0"
-  }
+  "packageManager": "npm@8.6.0"
 }

@@ -31,11 +31,11 @@ module.exports = {
     ],
   ], // loader required for .svg
   themeConfig: {
-    algolia: {
-      appId: 'ZHDU6KMIP0',
-      apiKey: '0ae4d340c3561222aa86622a1b3e34b6',
-      indexName: 'outp0st-vercel',
-    },
+    // algolia: {
+    //   appId: 'ZHDU6KMIP0',
+    //   apiKey: '0ae4d340c3561222aa86622a1b3e34b6',
+    //   indexName: 'outp0st-vercel',
+    // },
     navbar: {
       logo: {
         alt: 'Outp0st',
@@ -45,11 +45,6 @@ module.exports = {
       title: '',
       hideOnScroll: false,
       items: [
-        {
-          label: 'Live',
-          to: '#live',
-          position: 'left',
-        },
         {
           label: 'Documentation',
           to: 'docs/overview',

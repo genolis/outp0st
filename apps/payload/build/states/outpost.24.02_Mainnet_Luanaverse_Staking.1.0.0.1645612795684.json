@@ -1,0 +1,164 @@
+{
+    "messages": [
+        {
+            "contractId": 1645278192532,
+            "type": "EXECUTE",
+            "title": "Send 50498 to 0mo LUV",
+            "collapsed": true,
+            "id": 1645278221914,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"50498000000\",\n    \"recipient\": \"\"\n  }\n}"
+        },
+        {
+            "contractId": 1645278192532,
+            "type": "EXECUTE",
+            "title": "Send 104 497 to 3mo LUV",
+            "collapsed": true,
+            "id": 1645278613920,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"104497000000\",\n    \"recipient\": \"\"\n  }\n}"
+        },
+        {
+            "contractId": 1645278192532,
+            "type": "EXECUTE",
+            "title": "Send 218 995 to 6mo LUV",
+            "collapsed": true,
+            "id": 1645278648414,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"218995000000\",\n    \"recipient\": \"\"\n  }\n}"
+        },
+        {
+            "contractId": 1645278192532,
+            "type": "EXECUTE",
+            "title": "Send 493 990 to 12mo LUV",
+            "collapsed": true,
+            "id": 1645278693232,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"493990000000\",\n    \"recipient\": \"\"\n  }\n}"
+        },
+        {
+            "contractId": 1645278192532,
+            "type": "EXECUTE",
+            "title": "Send 3 471 920 to UST/LUV",
+            "collapsed": true,
+            "id": 1645278734922,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"3471920000000\",\n    \"recipient\": \"\"\n  }\n}"
+        },
+        {
+            "contractId": 1645276756228,
+            "type": "INSTA",
+            "title": "Instantiate mainnet",
+            "collapsed": true,
+            "id": 1645276864180,
+            "renderMode": "JSON",
+            "message": "{\n  \"owner\": \"terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\",\n  \"reward_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n  \"staking_token\": \"\",\n  \"burn_address\": \"terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00\",\n  \"distribution_schedule\": [\n    {\n      \"start_time\": 1645790400,\n      \"end_time\": 1650888000,\n      \"amount\": \"3471920000000\"\n    }\n  ],\n  \"submit_to_unbond_config\": {\n    \"lock_time\": 0\n  },\n  \"unbond_config\": [\n    {\n      \"minimum_time\": 0,\n      \"percentage_loss\": 0\n    }\n  ],\n  \"faction_name\": \"\",\n  \"fee_configuration\": [\n    {\n      \"operation\": \"instant_unbond\",\n      \"fee\": \"200000\"\n    }\n  ]\n}"
+        },
+        {
+            "contractId": 1645277608970,
+            "type": "INSTA",
+            "title": "Insta mainnet",
+            "collapsed": true,
+            "id": 1645277637256,
+            "renderMode": "JSON",
+            "message": "{\n    \"owner\": \"terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\",\n    \"reward_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"staking_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"burn_address\": \"terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00\",\n    \"distribution_schedule\": [\n        {\n            \"start_time\": 1645790400,\n            \"end_time\": 1650888000,\n            \"amount\": \"218995000000\"\n        }\n    ],\n    \"submit_to_unbond_config\": {\n        \"lock_time\": 15768000\n    },\n    \"unbond_config\": [\n        {\n            \"minimum_time\": 0,\n            \"percentage_loss\": 0\n        }\n    ],\n    \"faction_name\": \"\",\n    \"fee_configuration\": [\n        {\n            \"operation\": \"unbond\",\n            \"fee\": \"200000\"\n        },\n        {\n            \"operation\": \"withdraw\",\n            \"fee\": \"200000\"\n        }\n    ]\n}"
+        },
+        {
+            "contractId": 1645277763038,
+            "type": "INSTA",
+            "title": "Insta mainnet",
+            "collapsed": true,
+            "id": 1645277777422,
+            "renderMode": "JSON",
+            "message": "{\n    \"owner\": \"terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\",\n    \"reward_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"staking_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"burn_address\": \"terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00\",\n    \"distribution_schedule\": [\n        {\n            \"start_time\": 1645790400,\n            \"end_time\": 1650888000,\n            \"amount\": \"104497000000\"\n        }\n    ],\n    \"submit_to_unbond_config\": {\n        \"lock_time\": 7884000\n    },\n    \"unbond_config\": [\n        {\n            \"minimum_time\": 0,\n            \"percentage_loss\": 0\n        }\n    ],\n    \"faction_name\": \"\",\n    \"fee_configuration\": [\n        {\n            \"operation\": \"withdraw\",\n            \"fee\": \"200000\"\n        },\n        {\n            \"operation\": \"unbond\",\n            \"fee\": \"200000\"\n        }\n    ]\n}"
+        },
+        {
+            "contractId": 1645277932788,
+            "type": "INSTA",
+            "title": "Insta mainnet",
+            "collapsed": true,
+            "id": 1645277935022,
+            "renderMode": "JSON",
+            "message": "{\n  \"owner\": \"terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\",\n  \"reward_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n  \"staking_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n  \"burn_address\": \"terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00\",\n  \"distribution_schedule\": [\n    {\n      \"start_time\": 1645790400,\n      \"end_time\": 1650888000,\n      \"amount\": \"50498000000\"\n    }\n  ],\n  \"submit_to_unbond_config\": {\n    \"lock_time\": 0\n  },\n  \"unbond_config\": [\n    {\n      \"minimum_time\": 0,\n      \"percentage_loss\": 0\n    }\n  ],\n  \"faction_name\": \"\",\n  \"fee_configuration\": [\n      {\n        \"operation\": \"unbond\",\n        \"fee\": \"200000\"\n      },\n      {\n        \"operation\": \"withdraw\",\n        \"fee\": \"200000\"\n      }\n    ]\n}"
+        },
+        {
+            "contractId": 1645277297780,
+            "type": "INSTA",
+            "title": "Insta mainnet",
+            "collapsed": true,
+            "id": 1645277333432,
+            "renderMode": "JSON",
+            "message": "{\n    \"owner\": \"terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\",\n    \"reward_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"staking_token\": \"terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\",\n    \"burn_address\": \"terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00\",\n    \"distribution_schedule\": [\n        {\n            \"start_time\": 1645790400,\n            \"end_time\": 1650888000,\n            \"amount\": \"493990000000\"\n        }\n    ],\n    \"submit_to_unbond_config\": {\n        \"lock_time\": 31536000\n    },\n    \"unbond_config\": [\n        {\n            \"minimum_time\": 0,\n            \"percentage_loss\": 0\n        }\n    ],\n    \"faction_name\": \"\",\n    \"fee_configuration\": [\n        {\n            \"operation\": \"unbond\",\n            \"fee\": \"200000\"\n        },\n        {\n            \"operation\": \"withdraw\",\n            \"fee\": \"200000\"\n        }\n    ]\n}"
+        }
+    ],
+    "contracts": [
+        {
+            "title": "0mo LUV pool",
+            "id": 1645277932788,
+            "tabTitle": "0mo",
+            "messages": [1645277935022],
+            "codeId": 0,
+            "contractAddress": "--",
+            "description": "* 50498 LUV\n* 2mo\n\ninfo:\n* TGE - 1645790400 // Fri Feb 25 2022 12:00:00 GMT+0000\n* 2mo - 1650888000 // Mon Apr 25 2022 12:00:00 GMT+0000\n* owner - deployer - terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\n* reward token - luv - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* staking token - luv\n* fee - terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00"
+        },
+        {
+            "title": "12mo LUV pool",
+            "id": 1645277297780,
+            "tabTitle": "12mo",
+            "messages": [1645277333432],
+            "codeId": 0,
+            "contractAddress": "--",
+            "description": "* 493990 LUV\n* 2 mo\n\ninfo:\n* TGE - 1645790400 // Fri Feb 25 2022 12:00:00 GMT+0000\n* 2mo - 1650888000 // Mon Apr 25 2022 12:00:00 GMT+0000\n* owner - deployer - terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\n* reward token - luv - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* staking token - luv\n* fee - terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00"
+        },
+        {
+            "title": "3mo LUV pool",
+            "id": 1645277763038,
+            "tabTitle": "3mo",
+            "messages": [1645277777422],
+            "codeId": 0,
+            "contractAddress": "--",
+            "description": "* 104 497 LUV\n* 2mo\n\ninfo:\n* TGE - 1645790400 // Fri Feb 25 2022 12:00:00 GMT+0000\n* 2mo - 1650888000 // Mon Apr 25 2022 12:00:00 GMT+0000\n* owner - deployer - terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\n* reward token - luv - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* staking token - luv\n* fee - terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00"
+        },
+        {
+            "title": "6mo LUV pool",
+            "id": 1645277608970,
+            "tabTitle": "6mo",
+            "messages": [1645277637256],
+            "description": "* 218 995 LUV\n* 2 mo\n\ninfo:\n* TGE - 1645790400 // Fri Feb 25 2022 12:00:00 GMT+0000\n* 2mo - 1650888000 // Mon Apr 25 2022 12:00:00 GMT+0000\n* owner - deployer - terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\n* reward token - luv - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* staking token - luv\n* fee - terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00",
+            "codeId": 0,
+            "contractAddress": "--"
+        },
+        {
+            "title": "LUV transfers to pool",
+            "id": 1645278192532,
+            "tabTitle": "LUV",
+            "messages": [
+                1645278221914, 1645278613920, 1645278648414, 1645278693232,
+                1645278734922
+            ],
+            "contractAddress": "terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6"
+        },
+        {
+            "title": "LUV/UST Pool",
+            "id": 1645276756228,
+            "tabTitle": "LUV/UST",
+            "messages": [1645276864180],
+            "binUrl": "/artifacts/lunaverse_staking.wasm",
+            "codeId": 0,
+            "collapsed": true,
+            "contractAddress": "--",
+            "description": "* 3 471 920 LUV\n* 2 mo\n\nsteps:\n* instantiate 0mo, 12mo, 3mo, 6mo, LUV/UST\n* send LUVs to contract addresses from prev step\n\ninfo:\n* TGE - 1645790400 // Fri Feb 25 2022 12:00:00 GMT+0000\n* 2mo - 1650888000 // Mon Apr 25 2022 12:00:00 GMT+0000\n* owner - deployer - terra1xceljh7wfrd237339nfv8ak2qf687m2e2396s6\n* reward token - luv - terra15k5r9r8dl8r7xlr29pry8a9w7sghehcnv5mgp6\n* staking token - LP contract address from TERRASWAP part\n* fee - terra1sh5z5pr7fmf3vf29sqlg8ct30g02e2hcal6m00"
+        }
+    ],
+    "params": [
+        {
+            "title": "stateUrl",
+            "type": "STRING",
+            "value": "/states/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645612795684.json",
+            "id": 1
+        }
+    ],
+    "title": "24.02 Mainnet Luanaverse Staking",
+    "version": "1.0.0",
+    "isReadonly": true
+}

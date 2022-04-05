@@ -1,0 +1,78 @@
+{
+    "contracts": [
+        {
+            "title": "LUV Token",
+            "id": 1645252803208,
+            "tabTitle": "LUV",
+            "messages": [
+                1645255020106, 1645254166632, 1645254789348, 1645551068870,
+                1645255221574
+            ],
+            "binUrl": "/artifacts/terraswap_token.wasm",
+            "codeId": 0,
+            "contractAddress": "",
+            "collapsed": true
+        }
+    ],
+    "messages": [
+        {
+            "contractId": 1645252803208,
+            "type": "DOC",
+            "title": "Switch to terra...6z9ms account and hit F5!",
+            "collapsed": true,
+            "id": 1645255020106,
+            "description": "Switch to terra1ad9677rf3d0du43s48js0tlr48phnu4ar6z9ms account and hit F5!",
+            "coins": [],
+            "renderMode": "FORM"
+        },
+        {
+            "contractId": 1645252803208,
+            "type": "INSTA",
+            "title": "Instantiate 2B to terra...6z9ms",
+            "collapsed": true,
+            "id": 1645254166632,
+            "renderMode": "JSON",
+            "message": "{\n  \"name\": \"LUNAVERSE\",\n  \"symbol\": \"LUV\",\n  \"decimals\": 6,\n  \"initial_balances\": [\n    {\n      \"address\": \"terra1ad9677rf3d0du43s48js0tlr48phnu4ar6z9ms\",\n      \"amount\": \"2000000000000000\"\n    }\n  ]\n}",
+            "coins": []
+        },
+        {
+            "contractId": 1645252803208,
+            "type": "DOC",
+            "title": "Switch to terra...mhd account and hit F5!",
+            "collapsed": true,
+            "renderMode": "JSON",
+            "id": 1645551068870,
+            "description": "Switch to terra...mhd account and hit F5!"
+        },
+        {
+            "contractId": 1645252803208,
+            "type": "EXECUTE",
+            "title": "Send 2B to terra...mhd ",
+            "collapsed": true,
+            "id": 1645254789348,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"2000000000000000\",\n    \"recipient\": \"terra187th39ts5h0hmz8w4v0hmprlaejhy2zfle8mhd\" \n  }\n}",
+            "coins": []
+        },
+        {
+            "contractId": 1645252803208,
+            "type": "EXECUTE",
+            "title": "Send 80M to starterra(test2)",
+            "collapsed": true,
+            "id": 1645255221574,
+            "renderMode": "JSON",
+            "message": "{\n  \"transfer\": {\n    \"amount\": \"80000000000000\",\n    \"recipient\": \"terra1ylng8sxnkghx4grp3auvln6g5ugql7kw29d4h2\"\n  }\n}",
+            "coins": []
+        }
+    ],
+    "params": [
+        {
+            "title": "stateUrl",
+            "type": "STRING",
+            "value": "/states/outpost.TGE_Testnet_Initial_23.02.2022.1.0.0.1645551218023.json",
+            "id": 1
+        }
+    ],
+    "isReadonly": true,
+    "title": "TGE Testnet Initial 23.02.2022"
+}

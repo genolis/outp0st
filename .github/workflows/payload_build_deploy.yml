@@ -1,4 +1,4 @@
-name: Upload app.outp0st.io payload
+name: Build and upload app.outp0st.io payload
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'apps/payload/**/*'
+      - '!apps/payload/build/**/*'
 
 jobs:
   deploy:

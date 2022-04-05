@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:web": "turbo run build --scope=@outp0st/web",
     "dev": "turbo run dev --parallel",
     "dev:o": "turbo run dev --scope=outpost-payload",
     "lint": "turbo run lint",

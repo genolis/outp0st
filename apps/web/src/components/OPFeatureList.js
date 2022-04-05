@@ -21,7 +21,10 @@ export function OPFeatureList() {
             Using terra station as a base we can ensure, that noone will know
             mainnet deployment wallets credentials except of you.
           </Text>
-          <LightCta href="https://app-outp0st.vercel.app/outpost?state=https://dweb.link/ipfs/bafybeidoqc36qpsk3bvolkcb2nywc42lkd5eiocuxcfmwcbqqokddemvei/outpost.Terra_token_demo.1.0.0.1649089305449.json#TOK">
+          <LightCta
+            target="_blank"
+            href="https://app-outp0st.vercel.app/outpost?state=https://dweb.link/ipfs/bafybeiejn6axqpboolnlngxkgmvzevcgxngrydmvgm6fqhilyq6ikecnwi/outpost.Rover_generated_6:32:12_PM.1.0.0.1649090170210.json#TOK"
+          >
             Checkout how you can deploy cw20 token on mainnet
           </LightCta>
         </TextBlock>

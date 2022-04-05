@@ -166,10 +166,10 @@ function Home() {
         />
       </Section>
 
-      <Section>
+      <Section background="white" id="how-it-works">
         <SectionHeader title="How it works" />
         <TextBlocksGrid numbered columnsPerRow={3}>
-          <TextBlock title="We scrape your documentation" label="Scraping">
+          <TextBlock title="" label="Scraping">
             <Text>
               We built a website crawler designed to index every section of your
               documentation.

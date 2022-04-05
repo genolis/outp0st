@@ -1,4 +1,4 @@
-# Terra-outpost
+# Terra-outpost!
 
 ## Links to states
 
@@ -6,41 +6,41 @@
 
 ## Migration for 03.02
 
--   [LUV Staking migration](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/03.03/outpost.03.02_Mainnet_LUV_staking_migrate.1.0.0.1646301766322.json#Staking)
+- [LUV Staking migration](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/03.03/outpost.03.02_Mainnet_LUV_staking_migrate.1.0.0.1646301766322.json#Staking)
 
 ## Steps for 25.02
 
--   [TGE mainnet Liquidity](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.25.02_TGE_Mainnet_Liquidity.1.0.0.1645759693316.json#LUV)
--   [TGE mainnet Liquidity dev](http://localhost:3000/lunaverse?state=/states/outpost.25.02_TGE_Mainnet_Liquidity.1.0.0.1645759693316.json#LUV)
+- [TGE mainnet Liquidity](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.25.02_TGE_Mainnet_Liquidity.1.0.0.1645759693316.json#LUV)
+- [TGE mainnet Liquidity dev](http://localhost:3000/lunaverse?state=/states/outpost.25.02_TGE_Mainnet_Liquidity.1.0.0.1645759693316.json#LUV)
 
 ## Finished 24.02
 
--   [TGE mainnet LUV Vesting](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/2402/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645697897122.json#LUV)
+- [TGE mainnet LUV Vesting](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/2402/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645697897122.json#LUV)
 
--   [TGE mainnet LUV Staking](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/2402/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645699627835.json#LUV)
+- [TGE mainnet LUV Staking](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/2402/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645699627835.json#LUV)
 
 ### NEW CORRECT INSTINIATE
 
--   [TGE mainnet LUV init](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.TGE_Mainnet_Initial_24.02.2022.1.0.0.1645688728646.json#LUV)
+- [TGE mainnet LUV init](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.TGE_Mainnet_Initial_24.02.2022.1.0.0.1645688728646.json#LUV)
 
 ### vesting 24.02 CORRECT INSTINIATE
 
--   [TGE mainnet VESTING](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645692783696.json#V_Treasury)
--   [TGE mainnet VESTING dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645692783696.json#V_Treasury)
+- [TGE mainnet VESTING](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645692783696.json#V_Treasury)
+- [TGE mainnet VESTING dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_vesting.1.0.0.1645692783696.json#V_Treasury)
 
 ### terraswap 24.02 CORRECT INSTINIATE
 
--   [TGE mainnet TERRASWAP](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_Terraswap.1.0.0.1645612074053.json#Factory)
--   [TGE mainnet TERRASWAP dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_Terraswap.1.0.0.1645612074053.json#Factory)
+- [TGE mainnet TERRASWAP](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_Terraswap.1.0.0.1645612074053.json#Factory)
+- [TGE mainnet TERRASWAP dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Lunaverse_Terraswap.1.0.0.1645612074053.json#Factory)
 
 ### staking 24.02 CORRECT INSTINIATE
 
--   [TGE mainnet Staking](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645612795684.json#LUV/UST)
--   [TGE mainnet Staking dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645612795684.json#LUV/UST)
+- [TGE mainnet Staking](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645612795684.json#LUV/UST)
+- [TGE mainnet Staking dev](http://localhost:3000/lunaverse?state=/states/outpost.24.02_Mainnet_Luanaverse_Staking.1.0.0.1645612795684.json#LUV/UST)
 
 ### init 23.02
 
--   [TGE mainnet Init](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.TGE_Testnet_Initial_23.02.2022.1.0.0.1645551218023.json#LUV#1645255020106)
+- [TGE mainnet Init](https://terraadmin.uniconsoftware.com.au/lunaverse?state=/states/outpost.TGE_Testnet_Initial_23.02.2022.1.0.0.1645551218023.json#LUV#1645255020106)
 
 ### Staging (terra-outpost.vercel.app)
 

@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'apps/web'
+      - 'apps/payload'
 
 jobs:
   deploy:
@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: npm i
-      - run: npm i --prefix=apps/web
-      - run: npm run build:web
+      - run: npm i --prefix=apps/payload
+      - run: npm run build:payload
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
-          AWS_S3_BUCKET: ${{ secrets.WEB_S3 }}
+          AWS_S3_BUCKET: ${{ secrets.PAYLOAD_S3 }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION }}

@@ -9,6 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:web": "turbo run build --scope=@outp0st/web",
+    "build:payload": "turbo run build --scope=@outp0st/payload --scope=outpost-payload --include-dependencies --no-deps",
     "dev": "turbo run dev --parallel",
     "dev:o": "turbo run dev --scope=outpost-payload",
     "lint": "turbo run lint",

@@ -1,4 +1,4 @@
-name: Upload outp0st.io site
+name: Upload outp0st.io web
 
 on:
   push:

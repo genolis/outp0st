@@ -9,7 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:web": "turbo run build --scope=@outp0st/web",
-    "build:payload": "SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true turbo run build --scope=@outp0st/payload --scope=outpost-payload --include-dependencies --no-deps",
+    "build:payload": "SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true turbo run build --scope=@outp0st/payload --scope=outpost-payload --include-dependencies --no-deps",
     "dev": "turbo run dev --parallel",
     "dev:o": "turbo run dev --scope=outpost-payload",
     "lint": "turbo run lint",

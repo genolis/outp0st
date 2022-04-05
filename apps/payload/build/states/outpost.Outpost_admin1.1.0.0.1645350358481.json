@@ -1,0 +1,47 @@
+{
+  "messages": [
+    {
+      "contractId": 1645347112082,
+      "type": "QUERY",
+      "title": "new query message",
+      "collapsed": false,
+      "renderMode": "JSON",
+      "id": 1645347158392,
+      "coins": []
+    },
+    {
+      "contractId": 1645347112082,
+      "type": "QUERY",
+      "title": "new query message",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1645353556098
+    },
+    {
+      "contractId": 1645347112082,
+      "type": "QUERY",
+      "title": "new query message",
+      "collapsed": true,
+      "renderMode": "JSON",
+      "id": 1645353554630
+    }
+  ],
+  "contracts": [
+    {
+      "title": "tesfa",
+      "id": 1645347112082,
+      "tabTitle": "fsafas",
+      "messages": [1645347158392, 1645353554630, 1645353556098]
+    }
+  ],
+  "params": [
+    {
+      "title": "stateUrl",
+      "type": "STRING",
+      "value": "/artifacts/outpost.Outpost_admin1.1.0.0.1645350358481.json",
+      "id": 1
+    }
+  ],
+  "title": "Outpost admin1",
+  "version": "1.0.0"
+}

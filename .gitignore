@@ -71,3 +71,5 @@ terraform.rc
 # Crash log files
 crash.log
 crash.*.log
+
+!apps/payload/build

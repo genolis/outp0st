@@ -1,0 +1,125 @@
+{
+  "contracts": [
+    {
+      "title": "Factory",
+      "id": 1645075738754,
+      "tabTitle": "Factory",
+      "messages": [
+        1645075757976,
+        1645076692366
+      ],
+      "contractAddress": "terra18qpjm4zkvqnpjpw0zn0tdr8gdzvt8au35v45xf",
+      "collapsed": false,
+      "description": "* This is the second step after you created LUV contract - use create pair message to get contract address"
+    },
+    {
+      "title": "LP",
+      "id": 1645076263502,
+      "tabTitle": "LP",
+      "messages": [],
+      "contractAddress": "terra12a9ky2lsr0xeh0j6gzs2klvqc5jqw95jx6msnr",
+      "collapsed": true
+    },
+    {
+      "title": "LUV",
+      "id": 1645075773844,
+      "tabTitle": "LUV",
+      "messages": [
+        1645075839396,
+        1645075941679,
+        1645077728208,
+        1645078284990
+      ],
+      "binUrl": "https://luv-bin-messages-public.s3.ap-southeast-2.amazonaws.com/16022022/terraswap_token.wasm",
+      "codeId": 44517,
+      "contractAddress": "terra187tkq5jkanwmqw77yt5rfte6sv796qfds0352r",
+      "collapsed": true,
+      "description": "* this is the first step - create LUV token, instantiate, send to pair contract, increase allowance"
+    },
+    {
+      "title": "Pair",
+      "id": 1645076218244,
+      "tabTitle": "Pair",
+      "messages": [
+        1645077379182,
+        1645078239630
+      ],
+      "contractAddress": "terra1yf0w484khpj78n3x3wa3996d7g5j877zktrum4",
+      "description": "* Third step - provide liquidity"
+    }
+  ],
+  "messages": [
+    {
+      "contractId": 1645075738754,
+      "type": "QUERY",
+      "title": "https://finder.terra.money/testnet/tx/EEF2546973C3F3C81522DDABF3ED567D398071E0C7569AFDAE30366B86681F53",
+      "collapsed": true,
+      "id": 1645076692366
+    },
+    {
+      "contractId": 1645075773844,
+      "type": "INSTA",
+      "title": "Insta",
+      "collapsed": true,
+      "id": 1645075839396,
+      "message": "{\n  \"name\": \"LUNAVERSE\",\n  \"symbol\": \"LUV\",\n  \"decimals\": 6,\n  \"initial_balances\": [\n    {\n      \"address\": \"terra1ejksjvfvzpcqzg88nfd82hx2cv7g7lj9gjz669\",\n      \"amount\": \"2000000000000\"\n    }\n  ]\n}"
+    },
+    {
+      "contractId": 1645075773844,
+      "type": "QUERY",
+      "title": "check balance",
+      "collapsed": true,
+      "id": 1645075941679,
+      "message": "{\n  \"balance\": {\n    \"address\": \"terra1ejksjvfvzpcqzg88nfd82hx2cv7g7lj9gjz669\"\n  }\n}"
+    },
+    {
+      "contractId": 1645075773844,
+      "type": "EXECUTE",
+      "title": "increase allowance",
+      "collapsed": true,
+      "id": 1645077728208,
+      "message": "{\n    \"increase_allowance\": {\n        \"spender\": \"terra1yf0w484khpj78n3x3wa3996d7g5j877zktrum4\",\n        \"amount\": \"123123123\",\n        \"expires\": {\n\n            \"never\": {}\n        }\n    }\n}"
+    },
+    {
+      "contractId": 1645076218244,
+      "type": "QUERY",
+      "title": "check pool",
+      "collapsed": false,
+      "id": 1645078239630,
+      "message": "{\n  \"pool\": {}\n}"
+    },
+    {
+      "contractId": 1645076218244,
+      "type": "EXECUTE",
+      "title": "Provide liquidity",
+      "collapsed": false,
+      "id": 1645077379182,
+      "message": "{\n  \"provide_liquidity\": {\n    \"assets\": [\n      {\n        \"info\" : {\n            \"token\": {\n                \"contract_addr\": \"terra187tkq5jkanwmqw77yt5rfte6sv796qfds0352r\"\n            }\n        },\n        \"amount\": \"1000000\"\n      },\n      {\n        \"info\" : {\n            \"native_token\": {\n                \"denom\": \"uusd\"\n            }\n        },\n        \"amount\": \"1000000\"\n      }\n    ]\n  }\n}",
+      "coins": [
+        {
+          "denom": "uusd",
+          "input": 1
+        }
+      ]
+    },
+    {
+      "contractId": 1645075773844,
+      "type": "EXECUTE",
+      "title": "send LUV to Pair contract",
+      "collapsed": false,
+      "id": 1645078284990,
+      "message": "{\n        \"transfer\": {\n            \"amount\": \"20000000\",\n            \"recipient\": \"terra1yf0w484khpj78n3x3wa3996d7g5j877zktrum4\"\n        }\n    }",
+      "coins": []
+    },
+    {
+      "contractId": 1645075738754,
+      "type": "EXECUTE",
+      "title": "Create pair",
+      "collapsed": false,
+      "id": 1645075757976,
+      "message": "{\n  \"create_pair\": {\n    \"asset_infos\": [\n      {\n        \"token\": {\n          \"contract_addr\": \"terra187tkq5jkanwmqw77yt5rfte6sv796qfds0352r\"\n        }\n      },\n      {\n        \"native_token\": {\n          \"denom\": \"uusd\"\n        }\n      }\n    ]\n  }\n}",
+      "coins": []
+    }
+  ],
+  "title": "Terraswap things"
+}

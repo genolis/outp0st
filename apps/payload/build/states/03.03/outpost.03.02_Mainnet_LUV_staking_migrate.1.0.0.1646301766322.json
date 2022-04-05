@@ -1,0 +1,18 @@
+{
+  "contracts": [
+    {
+      "title": "New staking binary",
+      "id": 1646301230848,
+      "tabTitle": "Staking",
+      "messages": [],
+      "binUrl": "/artifacts/03022022-staking/lunaverse_staking.wasm",
+      "collapsed": true,
+      "description": "- Click show button above\n- Submit code to terra, recieve code id (above)\n- copy this number to (CTRL + C)\n- migrate 0mo - [link](/contract/migrate/terra1w9rrcug5w2ef825j44dyh0jpz8rmz43wkcug70) - insert code Id (CTRL + V), and {} as message\n- migrate 12mo - [link](/contract/migrate/terra1r8f057xlzmwj2kw8khlar8njkst6xphr5hfr8r) - insert code Id (CTRL + V), and {} as message\n- migrate 3mo - [link](/contract/migrate/terra1y2xrqxede0jjuwtackghwx7dawczh7qcpfyp94) - insert code Id (CTRL + V), and {} as message\n- migrate 6mo - [link](/contract/migrate/terra17mjrumnvexrvn5wsj0waduw2zq4pfxa0uvn0tg) - insert code Id (CTRL + V), and {} as message\n- migrate UST/LUV - [link](/contract/migrate/terra1jprduh6mc5tamy08pvw4c7wh7m7gcu2ej0c407) - insert code Id (CTRL + V), and {} as message\n\nDONE!\n"
+    }
+  ],
+  "messages": [],
+  "params": [],
+  "isReadonly": false,
+  "title": "03.02 Mainnet LUV staking migrate",
+  "version": "1.0.0"
+}

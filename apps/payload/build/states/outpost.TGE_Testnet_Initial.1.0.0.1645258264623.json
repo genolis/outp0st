@@ -1,0 +1,110 @@
+{
+  "contracts": [
+    {
+      "title": "LUV Token",
+      "id": 1645252803208,
+      "tabTitle": "LUV",
+      "messages": [
+        1645254166632, 1645254789348, 1645255020106, 1645255221574,
+        1645256472098, 1645256623298, 1645257304166, 1645257953978
+      ],
+      "binUrl": "/artifacts/terraswap_token.wasm",
+      "codeId": 45329,
+      "contractAddress": "terra12u75akjvsjmkhutfnec8cwjan0pflyel50ann5",
+      "collapsed": true
+    }
+  ],
+  "messages": [
+    {
+      "contractId": 1645252803208,
+      "type": "DOC",
+      "title": "Switch to test account and hit F5!",
+      "collapsed": true,
+      "id": 1645255020106,
+      "description": "Switch to test account and hit F5!",
+      "coins": [],
+      "renderMode": "FORM"
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "INSTA",
+      "title": "Instantiate with amount 2B to test2",
+      "collapsed": true,
+      "id": 1645254166632,
+      "renderMode": "JSON",
+      "message": "{\n  \"name\": \"LUNAVERSE\",\n  \"symbol\": \"LUV\",\n  \"decimals\": 6,\n  \"initial_balances\": [\n    {\n      \"address\": \"terra14nc9wr5kagqyu34j7aqvwyq4802ke6hwcwhyyj\",\n      \"amount\": \"2000000000000000\"\n    }\n  ]\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE",
+      "title": "Send 2B to test",
+      "collapsed": true,
+      "id": 1645254789348,
+      "renderMode": "JSON",
+      "message": "{\n  \"transfer\": {\n    \"amount\": \"2000000000000000\",\n    \"recipient\": \"terra1gvlyeg5z6zx8fdmv2gs4kscl3w62d756kw7sn4\" \n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE",
+      "title": "Send 80M to starterra(test2)",
+      "collapsed": true,
+      "id": 1645255221574,
+      "renderMode": "JSON",
+      "message": "{\n  \"transfer\": {\n    \"amount\": \"80000000000000\",\n    \"recipient\": \"terra14nc9wr5kagqyu34j7aqvwyq4802ke6hwcwhyyj\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE",
+      "title": "Send 7.5M to Nftpad and trustpad (test2)",
+      "collapsed": true,
+      "id": 1645256472098,
+      "renderMode": "JSON",
+      "message": "{\n  \"transfer\": {\n    \"amount\": \"7500000000000\",\n    \"recipient\": \"terra14nc9wr5kagqyu34j7aqvwyq4802ke6hwcwhyyj\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE_MULTI",
+      "title": "Send 19.2M to multiple recipients (test, test2, test3)",
+      "collapsed": true,
+      "id": 1645257304166,
+      "multiType": "LUV",
+      "renderMode": "JSON",
+      "message": "[\n    {\n        \"address\": \"terra1gvlyeg5z6zx8fdmv2gs4kscl3w62d756kw7sn4\",\n        \"amount\": \"6400000000000\"\n    },\n    {\n        \"address\": \"terra14nc9wr5kagqyu34j7aqvwyq4802ke6hwcwhyyj\",\n        \"amount\": \"6400000000000\"\n    },\n    {\n        \"address\": \"terra18p4s8phhhq3r3prmwvf0s4lf0qfh5c73pgjnk7\",\n        \"amount\": \"6400000000000\"\n    }\n]",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE",
+      "title": "Send 12.5M to treasury",
+      "collapsed": true,
+      "id": 1645256623298,
+      "renderMode": "JSON",
+      "message": "{\n  \"transfer\": {\n    \"amount\": \"12000000000000\",\n    \"recipient\": \"terra14nc9wr5kagqyu34j7aqvwyq4802ke6hwcwhyyj\"\n  }\n}",
+      "coins": []
+    },
+    {
+      "contractId": 1645252803208,
+      "type": "EXECUTE",
+      "title": "Fund admin account (test3)",
+      "collapsed": true,
+      "id": 1645257953978,
+      "renderMode": "JSON",
+      "message": "{\n  \"transfer\": {\n    \"amount\": \"1682664667000000\",\n    \"recipient\": \"terra18p4s8phhhq3r3prmwvf0s4lf0qfh5c73pgjnk7\"\n  }\n}",
+      "coins": []
+    }
+  ],
+  "params": [
+    {
+      "title": "stateUrl",
+      "type": "STRING",
+      "value": "/states/outpost.TGE_Testnet_Initial.1.0.0.1645258264623.json",
+      "id": 1
+    }
+  ],
+  "isReadonly": true,
+  "title": "TGE Testnet Initial"
+}

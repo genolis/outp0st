@@ -1,6 +1,6 @@
 {
   "name": "@outp0st/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "terra outpost core lib",
   "keywords": [
     "typescript",
@@ -25,7 +25,7 @@
   "scripts": {
     "setup": "node -r ./esbuild-hook ./scripts/setup",
     "dev": "nodemon -w src/**/*.ts -r ./esbuild-hook ./scripts/build",
-    "build": "yarn clean && yarn type:dts && yarn type:build",
+    "build": "yarn type:dts && yarn type:build",
     "clean": "node -r ./esbuild-hook ./scripts/clean",
     "type:dts": "tsc --emitDeclarationOnly",
     "type:check": "tsc --noEmit",

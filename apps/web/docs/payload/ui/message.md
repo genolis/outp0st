@@ -2,7 +2,9 @@
 title: Message
 ---
 
-## Header
+## Description
+
+### Instantiate
 
 ![Payload header](/outpost/OPHeader.png 'Payload header')
 

@@ -2,15 +2,10 @@
 title: State storage and share
 ---
 
-## Concept
-
-- UI is based on Terra station and its API
-- It operates using state, check state json [examples](/docs/examples)
-- State is stored in localstorage of your browser
-- You can download/upload state
-- You can upload and share state using IPFS storage providers (web3.storage for now)
-- WARNING: Do not use your mainnet credentials in Payload provided by third party
-
 ## Overview
 
-![Payload overview](/outpost/OPWindow.png 'Payload anatomy')
+![Payload config storage](/outpost/OPConfigStorage.png)
+
+- Storage options - get token [here](https://web3.storage/tokens/), paste it
+- Now you can save current state to IPFS, share it's link or check JSON
+  > More storage providers will be available

@@ -7,7 +7,7 @@
   "license": "MIT",
   "version": "1.1.1",
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
@@ -71,11 +71,13 @@
     "secp256k1": "^4.0.3",
     "semver": "^7.3.5",
     "sentence-case": "^3.0.4",
+    "web3.storage": "^4.0.0",
     "xss": "^1.0.10"
   },
   "devDependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@outp0st/tsconfig": "*",
     "@types/classnames": "^2.3.1",
     "@types/crypto-js": "^4.1.0",
     "@types/jest": "^27.4.0",
@@ -91,7 +93,6 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/secp256k1": "^4.0.3",
     "@types/semver": "^7.3.9",
-    "@outp0st/tsconfig": "*",
     "react-error-overlay": "6.0.9",
     "react-scripts": "4.0.3",
     "source-map-explorer": "^2.5.2",

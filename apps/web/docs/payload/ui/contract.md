@@ -4,19 +4,16 @@ title: Contract
 
 ## Description
 
-![Payload header](/outpost/OPHeader.png 'Payload header')
+![Payload contract](/outpost/OPContract.png 'Payload contract')
 
-1. Title - you can modify it in [Config tab](/docs/payload/config/anatomy)
-2. Tabs with contracts - click on this tabs to see what's inside
-3. [Config tab](/docs/payload/config/anatomy) and new tab form
-4. Envs - you can switch your environments here, useful when you got different contracts addresses or other parameters based on environment
+1. Title - you can modify it - just click on it!
+2. Controls - show, hide submit button with simulation, remove tab with contracts (CAUTION: It will delete contract and all messages attached to it)
+3. Params
+   1. BinUrl: link to contract compiled wasm binary - click to paste it, then you can submit to store it and automatically obtain Code ID
+   <video width="100%" controls>
+     <source src="/outpost/demo_code_id.mp4" type="video/mp4" />
+   </video>
+   2. Code id: you can edit it here, or obtain as mentioned above, correct code id and correct instantiate message is enough to recieve contract address automatically, more on that [here](/docs/payload/ui/message)
+4. Store contract- if BinUrl is ok - it will automatically make simulation request, to show gas fees or errors (not enough UST, for example). You can hide with controls.
 
-### New tab from
-
-![New tab form](/outpost/OPNewTabForm.png)
-
-## Contract
-
-## Messages
-
-## Message
+   > _TODO: update issues link_ Outp0st is in early days of development, so sometimes you will encounter errors - it's harmless, just hit F5 - most likely it would be ok, but if not - contact us via [issues](https://github.com).

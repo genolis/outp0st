@@ -8,7 +8,30 @@
 module.exports = {
   docs: {
     'Getting Started': ['overview', 'quickstart', 'examples'],
-    Modules: ['payload', 'rover', 'hub'],
+    Modules: [
+      {
+        Payload: [
+          'payload/anatomy',
+          {
+            Interface: [
+              'payload/ui/header',
+              'payload/ui/contract',
+              'payload/ui/messages',
+              'payload/ui/message',
+            ],
+          },
+          {
+            Config: [
+              'payload/config/anatomy',
+              'payload/config/state',
+              'payload/config/settings',
+              'payload/config/storage',
+            ],
+          },
+        ],
+      },
+      'rover',
+    ],
     'Guides and FAQ': ['how-to-use', 'faq'],
     Roadmap: ['roadmap'],
   },

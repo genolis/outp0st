@@ -1,37 +1,16 @@
 ---
-title: Payload
+title: State settings
 ---
 
 ## Concept
 
-- UI is based on Terra station repo
+- UI is based on Terra station and its API
 - It operates using state, check state json [examples](/docs/examples)
 - State is stored in localstorage of your browser
-- State contains no security related information
 - You can download/upload state
 - You can upload and share state using IPFS storage providers (web3.storage for now)
 - WARNING: Do not use your mainnet credentials in Payload provided by third party
 
-## Main ui anatomy
+## Overview
 
-### Header
-
-### Contract
-
-### Message
-
-### Messages
-
-## Config
-
-### Current state manipulations
-
-### Load state fron json
-
-### State settings
-
-### Storage options
-
-### State list
-
-### Environments manipulations
+![Payload overview](/outpost/OPWindow.png 'Payload anatomy')

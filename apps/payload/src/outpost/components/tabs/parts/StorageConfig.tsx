@@ -1,27 +1,28 @@
-import { Button as Btn } from '@mui/material';
 import { FormItem, Input } from 'components/form';
 import { ExternalLink } from 'components/general';
 import { Card } from 'components/layout';
-import BtnGroup from 'outpost/components/ui/elements/BtnGroup';
 import { useStateManager } from 'outpost/state/useStateManager';
 import styles from 'pages/gov/ProposalsByStatus.module.scss';
 
 export const StorageConfig = () => {
   // FULL REFACTOR here.
-  const { manager, updateManager, updateStorageToken, getStorageConfigById } =
-    useStateManager();
+  const { manager, updateStorageToken } = useStateManager();
+
+  // console.log(manager.storageConfigs[0].id === manager.currentConfigId);
+
+  // useEffect(() => {
+  //   updateManager({ ...manager });
+  // }, []);
 
   return (
     <Card title="Storage options" className={styles.link}>
       <div style={{ marginTop: '20px' }}>
         <FormItem label="Variants">
-          <BtnGroup>
+          {/* <BtnGroup>
             {manager.storageConfigs.map(c => (
               <Btn
                 key={c.id}
-                variant={
-                  c.id === manager.currentConfigId ? 'contained' : 'outlined'
-                }
+                variant={'contained'}
                 onClick={() =>
                   updateManager({ ...manager, currentConfigId: c.id || 0 })
                 }
@@ -29,11 +30,9 @@ export const StorageConfig = () => {
                 {c.type}
               </Btn>
             ))}
-          </BtnGroup>
-          <ExternalLink
-            href={getStorageConfigById(manager.currentConfigId)?.urlToSite}
-          >
-            Link to providers site
+          </BtnGroup> */}
+          <ExternalLink href={manager.storageConfigs[0].urlToSite}>
+            Obtain token here ➡️
           </ExternalLink>
         </FormItem>
       </div>

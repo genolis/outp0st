@@ -2,23 +2,25 @@
 title: Message
 ---
 
-## Description
+## Instantiate/Execute
 
-### Instantiate
+![Payload message](/outpost/OPMessage.png)
 
-![Payload header](/outpost/OPHeader.png 'Payload header')
+_Sometimes, we can't submit message - check the error message (often, it's not that informative 😞)_
 
-1. Title - you can modify it in [Config tab](/docs/payload/config/anatomy)
-2. Tabs with contracts - click on this tabs to see what's inside
-3. [Config tab](/docs/payload/config/anatomy) and new tab form
-4. Envs - you can switch your environments here, useful when you got different contracts addresses or other parameters based on environment
+> For Instantiate message - after successfull action - contract address will be added automatically
 
-### New tab from
+<video width="100%" controls>
+     <source src="/outpost/demo_instant.mp4" type="video/mp4" />
+</video>
 
-![New tab form](/outpost/OPNewTabForm.png)
+## Query
 
-## Contract
+![Message query](/outpost/OPMessageQuery.png)
 
-## Messages
+## Doc
 
-## Message
+![Message doc](/outpost/OPMessageDoc.png)
+
+1. You can create Doc type message to document next step, or to indicate action
+2. Click on Description text, to open/close markdown editor

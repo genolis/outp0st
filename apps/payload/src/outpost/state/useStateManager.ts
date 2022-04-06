@@ -8,7 +8,7 @@ import {
 import { getId } from './useOutpostState';
 
 const initId = getId();
-const secondId = initId + 1;
+// const secondId = initId + 1;
 
 const stateManager = atom({
   key: 'outpostStateManager',
@@ -20,12 +20,12 @@ const stateManager = atom({
         token: '',
         urlToSite: 'https://web3.storage/account/',
       },
-      {
-        id: secondId,
-        type: 'nft.storage',
-        token: '',
-        urlToSite: 'https://nft.storage/files/',
-      },
+      // {
+      //   id: secondId,
+      //   type: 'nft.storage',
+      //   token: '',
+      //   urlToSite: 'https://nft.storage/files/',
+      // },
     ],
     states: [],
     currenConfig: initId,

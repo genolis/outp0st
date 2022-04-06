@@ -75,9 +75,9 @@ const ConfigTab: FC = () => {
             </div>
           </Card>
           {/* <ConfigParams /> */}
+          <Environment />
           <StorageConfig />
           <StateList />
-          <Environment />
         </section>
       </Col>
     </div>

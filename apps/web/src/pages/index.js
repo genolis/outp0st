@@ -36,23 +36,10 @@ function Home() {
       />
 
       <Section>
-        <SectionHeader title="Unique dApp development tool">
-          <Text className="m-auto" style={{ maxWidth: '800px' }}>
-            We're kind of scratching our own itch here. As developers, we spend
-            a lot of time communicating with teammates and stakeholders, while
-            developing our smart contracts, preparing for a TGE event or daily
-            operations.
-          </Text>
-          <Text className="m-auto" style={{ maxWidth: '800px' }}>
-            No one's to blame, but sharing wallet's memo or keys with developers
-            is a bad practice, lack of documentation and modern UI tooling for
-            junior developers makes entry threshold high, both for guys with
-            ideas and guys with ability to write code.
-          </Text>
-        </SectionHeader>
+        <SectionHeader title="Unique dApp development tool"></SectionHeader>
       </Section>
 
-      <Section background="white">
+      <Section background="white" style={{ textAlign: 'center' }}>
         <SectionHeader title="Why?">
           <Text className="m-auto" style={{ maxWidth: '800px' }}>
             First of all - security concerns, we wanted a robust tools for
@@ -64,7 +51,11 @@ function Home() {
             other on blockchain specific themes
           </Text>
         </SectionHeader>
-        <img src={useBaseUrl('outpost/OPWhy1_1.png')} alt="OP why" />
+        <img
+          className="m-auto"
+          src={useBaseUrl('outpost/OPWhy2.png')}
+          alt="OP why"
+        />
       </Section>
 
       <Section>
@@ -73,19 +64,7 @@ function Home() {
       </Section>
 
       <Section background="white">
-        <SectionHeader title="Outp0st Payload anatomy - heart of the tool">
-          {/* <Text className="m-auto" style={{ maxWidth: '800px' }}>
-            Documentation speaks to your users. Ideally, this conversation will
-            be pleasant and efficient. Everyone visiting your documentation page
-            has a different need: Some are exploring your product, some are
-            trying to get started, and some are stuck and need help.
-          </Text>
-          <Text className="m-auto" style={{ maxWidth: '800px' }}>
-            DocSearch is designed to provide relevant search results at every
-            level. Its structured layout give the users more context to
-            understand the product.
-          </Text> */}
-        </SectionHeader>
+        <SectionHeader title="Outp0st Payload anatomy - heart of the tool"></SectionHeader>
         <img
           src={useBaseUrl('outpost/OPWindow.png')}
           alt="Anatomy of Payload"
@@ -122,50 +101,6 @@ function Home() {
           </TextBlock>
         </TextBlocksGrid>
       </Section>
-
-      {/* <Section id="live">
-        <SectionHeader title="Try it live">
-          <Text>
-            We helped integrate DocSearch into several open source projects. Try
-            it live.
-          </Text>
-        </SectionHeader>
-        <CardsGrid columnsPerRow={demoProjects.length}>
-          {demoProjects.map(({ name, href, logo, preview }) => (
-            <Card
-              key={name}
-              image={preview}
-              imageProps={{ alt: `${name} demo` }}
-            >
-              <LightCta withArrow href={href} rel="noreferrer" target="_blank">
-                <img
-                  style={{
-                    marginTop: '-2px',
-                    marginRight: '12px',
-                  }}
-                  className={'h-30 va-middle'}
-                  src={useBaseUrl(logo)}
-                  alt={name}
-                />
-                Visit {name}
-              </LightCta>
-            </Card>
-          ))}
-        </CardsGrid>
-      </Section> */}
-
-      {/* <Section>
-        <SectionHeader title="Join the DocSearch program">
-          <Text>
-            We’ll get back to you with everything you need to integrate your new
-            search into your website.
-          </Text>
-          <Text>Oh, and did we mention it's FREE?</Text>
-          <Text>No commitment. No subscription. Everything is on us!</Text>
-        </SectionHeader>
-
-        <ApplyForm />
-      </Section> */}
     </>
   );
 }

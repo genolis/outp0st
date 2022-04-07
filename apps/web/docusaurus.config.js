@@ -30,6 +30,8 @@ module.exports = {
     ],
   ], // loader required for .svg
   themeConfig: {
+    autoCollapseSidebarCategories: false,
+    hideableSidebar: false,
     // algolia: {
     //   appId: 'ZHDU6KMIP0',
     //   apiKey: '0ae4d340c3561222aa86622a1b3e34b6',
@@ -51,7 +53,7 @@ module.exports = {
         },
         {
           label: 'GitHub',
-          href: 'https://github.com/dimkk/terra-outpost-mono',
+          href: 'https://github.com/genolis/outp0st',
           position: 'right',
         },
         {
@@ -69,7 +71,7 @@ module.exports = {
     // announcementBar: {
     //   id: 'supportus',
     //   content:
-    //     '⭐️ If you like DocSearch, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/dimkk/terra-outpost-mono">GitHub</a>! ⭐️',
+    //     '⭐️ If you like DocSearch, give it a star on <a target="_blank" rel="noopener noreferrer" href="">GitHub</a>! ⭐️',
     // },
     footer: {
       links: [
@@ -85,16 +87,12 @@ module.exports = {
               to: 'docs/quickstart',
             },
             {
-              label: 'Examples',
-              to: 'docs/examples',
-            },
-            {
               label: 'Payload',
-              to: 'docs/payload',
+              to: 'docs/payload/anatomy',
             },
             {
-              label: 'How to use',
-              to: 'docs/how-to-use.md',
+              label: 'Rover',
+              to: 'docs/rover',
             },
           ],
         },
@@ -103,39 +101,39 @@ module.exports = {
           items: [
             {
               label: 'Issues',
-              to: 'https://github.com/dimkk/terra-outpost-mono/issues',
+              to: '/issues',
             },
             {
               label: 'Payload',
-              to: 'https://github.com/dimkk/terra-outpost-mono/tree/main/apps/payload',
+              to: '/tree/main/apps/payload',
             },
             {
               label: 'Rover',
-              to: 'https://github.com/dimkk/terra-outpost-mono/tree/main/apps/rover',
+              to: '/tree/main/apps/rover',
             },
             {
-              label: 'Privacy',
+              label: 'Disclaimer and privacy',
               to: 'https://www.algolia.com/policies/privacy/',
             },
           ],
         },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Apply',
-        //       to: 'apply',
-        //     },
-        //     {
-        //       label: 'Forum',
-        //       href: 'https://discourse.algolia.com/tags/docsearch',
-        //     },
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discord.gg/tXdr5mP',
-        //     },
-        //   ],
-        // },
+        {
+          title: 'Genolis',
+          items: [
+            {
+              label: 'Web site',
+              to: 'https://genolis.com.au/',
+            },
+            {
+              label: 'Blockchain page',
+              href: 'https://genolis.com.au/services/blockchain-development/',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/unicon-software',
+            },
+          ],
+        },
         // {
         //   title: 'Social',
         //   items: [
@@ -158,10 +156,7 @@ module.exports = {
         alt: 'Outp0st',
         src: 'outpost/hatchful/logo_short.svg',
       },
-      copyright: `Outp0st 2022-now • Built by dimkk @ <a href="https://genolis.com.au">genolis.com.au</a>, powered by 
-        <a href="https://www.npmjs.com/package/@algolia/ui-library">
-          algolia ui lib
-        </a>
+      copyright: `Outp0st 2022-now • Built by <a href="mailto:dima.v@genolis.com.au">dimkk</a> @ <a href="https://genolis.com.au">genolis.com.au</a>
       `,
     },
   },

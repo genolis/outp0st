@@ -6,33 +6,50 @@
  */
 
 module.exports = {
-  docs: {
-    'Getting Started': ['overview', 'quickstart', 'examples'],
-    Modules: [
-      {
-        Payload: [
-          'payload/anatomy',
-          {
-            Interface: [
-              'payload/ui/header',
-              'payload/ui/contract',
-              'payload/ui/messages',
-              'payload/ui/message',
-            ],
-          },
-          {
-            Config: [
-              'payload/config/anatomy',
-              'payload/config/state',
-              'payload/config/settings',
-              'payload/config/storage',
-            ],
-          },
-        ],
-      },
-      'rover',
-    ],
-    'Guides and FAQ': ['how-to-use', 'faq'],
-    Roadmap: ['roadmap'],
-  },
+  docs: [
+    {
+      type: 'category',
+      collapsed: false,
+      label: 'Getting Started',
+      items: ['overview', 'quickstart', 'examples'],
+    },
+    {
+      type: 'category',
+      collapsed: false,
+      label: 'Modules',
+      items: [
+        {
+          type: 'category',
+          collapsed: false,
+          label: 'Payload',
+          items: [
+            'payload/anatomy',
+            {
+              type: 'category',
+              collapsed: false,
+              label: 'Interface',
+              items: [
+                'payload/ui/header',
+                'payload/ui/contract',
+                'payload/ui/messages',
+                'payload/ui/message',
+              ],
+            },
+            {
+              type: 'category',
+              collapsed: false,
+              label: 'Config',
+              items: [
+                'payload/config/anatomy',
+                'payload/config/state',
+                'payload/config/settings',
+                'payload/config/storage',
+              ],
+            },
+          ],
+        },
+        'rover',
+      ],
+    },
+  ],
 };

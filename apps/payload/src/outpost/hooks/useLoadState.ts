@@ -23,7 +23,6 @@ export function useLoadState() {
       loadStateFromText(state, stateUrl);
       updateSettings({ stateLoadSwitcher: !settings.stateLoadSwitcher });
     }
-    // debugger;
     if (!stateUrl) return;
     ls(stateUrl);
     // eslint-disable-next-line

@@ -74,7 +74,6 @@ export const useOutpostState = () => {
       ...state,
       ...{ [state.current]: sortedState },
     };
-    // console.trace()
     // refactor? this to preserve state params like title, version, and other - which are not updated in things like removeContract and so on
     //const finalState = { ...state, ...sortedState };
     setState(globalState);
@@ -146,8 +145,6 @@ export const useOutpostState = () => {
   };
 
   const moveMessage = (direction: 'up' | 'down', msg: ContractMessage) => {
-    //debugger;
-
     move(
       direction,
       msg,
@@ -168,7 +165,6 @@ export const useOutpostState = () => {
   };
 
   const canMessageMove = (direction: 'up' | 'down', msg: ContractMessage) => {
-    //debugger;
     return move(
       direction,
       msg,

@@ -1,5 +1,16 @@
 {
   "name": "@outp0st/ui",
+  "description": "UI package for outp0st",
+  "homepage": "https://outp0st.io",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts",
+    "cli"
+  ],
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",

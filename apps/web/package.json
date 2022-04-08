@@ -1,8 +1,22 @@
 {
   "name": "@outp0st/web",
+  "description": "Web page and docs for outp0st project",
+  "homepage": "https://outp0st.io",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts",
+    "cli",
+    "web",
+    "algolia",
+    "docusaurus"
+  ],
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://outp0st.io",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "npm run dev",

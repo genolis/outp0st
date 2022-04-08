@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/base-cli.json",
+  "extends": "@outp0st/tsconfig/base-cli.json",
   "include": ["src"],
   "exclude": ["**/*.spec.ts"],
   "compilerOptions": { "outDir": "dist", "skipLibCheck": true }

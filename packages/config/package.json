@@ -1,6 +1,17 @@
 {
   "name": "@outp0st/config",
   "version": "0.0.0",
+  "description": "Eslint and prettier configs package for outp0st",
+  "homepage": "https://outp0st.io",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts",
+    "cli"
+  ],
   "main": "index.js",
   "license": "MIT",
   "files": [

@@ -7,8 +7,6 @@ import { Card } from 'components/layout';
 import { useRO } from 'outpost/hooks/useRO';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { FC } from 'react';
-import { EasyMessage } from '../../elements/EasyMessage';
-import { MessageAnchor } from '../../elements/MessageAnchor';
 import styles from '../OutpostCardContractBody.module.scss';
 
 interface OutpostCardMessageHeaderProps {
@@ -24,18 +22,18 @@ const OutpostCardMessageHeader: FC<OutpostCardMessageHeaderProps> = ({
     updateMessage,
     moveMessage,
     canMessageMove,
-    getContract,
+    //getContract,
   } = useOutpostState();
-  const contract = getContract(message.contractId);
+  //const contract = getContract(message.contractId);
   const ro = useRO();
   return (
     <div>
       <Card
-        title={
-          <MessageAnchor mId={message.id} tabTitle={contract?.tabTitle}>
-            <EasyMessage message={message} messageProp={'title'} />
-          </MessageAnchor>
-        }
+        // title={
+        //   <MessageAnchor mId={message.id} tabTitle={contract?.tabTitle}>
+        //     <EasyMessage message={message} messageProp={'title'} />
+        //   </MessageAnchor>
+        // }
         extra={
           <div>
             {!ro && canMessageMove('up', message) && (

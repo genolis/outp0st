@@ -5,8 +5,6 @@ import {
   Outpost,
   OutpostCurrentState,
   OutpostGlobal,
-  OutpostParam,
-  OutpostParamsTypes,
 } from '@outp0st/core';
 import { atom, useRecoilState } from 'recoil';
 import {
@@ -14,7 +12,6 @@ import {
   setLocalSetting,
   SettingKey,
 } from '../utils/localStorage';
-import { useCRUDFactory } from './useCRUDFactory';
 
 const outpostState = atom({
   key: 'outpostState',
@@ -80,45 +77,45 @@ export const useOutpostState = () => {
     setLocalSetting(SettingKey.outpost, globalState);
   };
 
-  const paramsCrud = useCRUDFactory<Outpost, OutpostParam>(
-    state[state.current],
-    'params',
-    updateState,
-  );
+  // const paramsCrud = useCRUDFactory<Outpost, OutpostParam>(
+  //   state[state.current],
+  //   'params',
+  //   updateState,
+  // );
 
-  const getParam = ({ id, title }: { id?: number; title?: string }) => {
-    if ((!id || id < 1) && !title) return;
-    let value: OutpostParam | undefined;
-    const params = (paramsCrud.read() as OutpostParam[]) || [];
-    if (title) value = params.find(x => x.title === title);
-    else if (id) value = params.find(x => x.id === id);
-    return value;
-  };
+  // const getParam = ({ id, title }: { id?: number; title?: string }) => {
+  //   if ((!id || id < 1) && !title) return;
+  //   let value: OutpostParam | undefined;
+  //   const params = (paramsCrud.read() as OutpostParam[]) || [];
+  //   if (title) value = params.find(x => x.title === title);
+  //   else if (id) value = params.find(x => x.id === id);
+  //   return value;
+  // };
 
-  const updateOrAddParam = (
-    title: string,
-    value: any,
-    type: OutpostParamsTypes,
-  ) => {
-    const param = getParam({ title });
-    if (!param) {
-      paramsCrud.create({
-        id: 0,
-        title: title,
-        value: value,
-        type: type,
-      });
-    } else {
-      paramsCrud.update({ ...param, value: value });
-    }
-  };
+  // const updateOrAddParam = (
+  //   title: string,
+  //   value: any,
+  //   type: OutpostParamsTypes,
+  // ) => {
+  //   const param = getParam({ title });
+  //   if (!param) {
+  //     paramsCrud.create({
+  //       id: 0,
+  //       title: title,
+  //       value: value,
+  //       type: type,
+  //     });
+  //   } else {
+  //     paramsCrud.update({ ...param, value: value });
+  //   }
+  // };
 
-  const removeParam = ({ id, title }: { id?: number; title?: string }) => {
-    if ((!id || id < 1) && !title) return;
-    let param = getParam({ id, title });
-    if (!param) return;
-    paramsCrud.del(param);
-  };
+  // const removeParam = ({ id, title }: { id?: number; title?: string }) => {
+  //   if ((!id || id < 1) && !title) return;
+  //   let param = getParam({ id, title });
+  //   if (!param) return;
+  //   paramsCrud.del(param);
+  // };
 
   const move = (
     direction: 'up' | 'down',
@@ -338,10 +335,10 @@ export const useOutpostState = () => {
     moveMessage,
     canMessageMove,
     outpostApp,
-    paramsCrud,
-    getParam,
-    updateOrAddParam,
-    removeParam,
+    // paramsCrud,
+    // getParam,
+    // updateOrAddParam,
+    // removeParam,
     switchCurrentState,
     outpostGlobal: state,
     updateGlobalState,

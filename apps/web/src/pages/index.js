@@ -37,6 +37,43 @@ function Home() {
 
       <Section>
         <SectionHeader title="Unique dApp development tool"></SectionHeader>
+        <TextBlocksGrid hasVisibleGrid columnsPerRow={3}>
+          <TextBlock title="Ease of deployment">
+            <Text>
+              Deploy contracts to Mainnet, Testnet or Localterra at the click of
+              the button
+            </Text>
+          </TextBlock>
+          <TextBlock title="Security">
+            <Text>
+              Secure access to Mainnet deployment wallets within the team
+            </Text>
+          </TextBlock>
+          <TextBlock title="Reduce errors">
+            <Text>
+              Reduce human factor and communication errors by eliminating the
+              use of deployment scripts
+            </Text>
+          </TextBlock>
+          <TextBlock title="Collaboration">
+            <Text>
+              Increase transparency and collaboration between technical and
+              non-technical team members
+            </Text>
+          </TextBlock>
+          <TextBlock title="Easy TGE">
+            <Text>
+              Take the stress out of the TGE activities, while providing secure
+              and robust communication
+            </Text>
+          </TextBlock>
+          <TextBlock title="Visualise your dApp">
+            <Text>
+              Visualise your contracts, messages and add documentation to each
+              one of them - with one CLI command
+            </Text>
+          </TextBlock>
+        </TextBlocksGrid>
       </Section>
 
       <Section background="white" style={{ textAlign: 'center' }}>
@@ -80,7 +117,10 @@ function Home() {
               wasm binary or sources. In case of source, you can use Rover - CLI
               tool to generate Payload UI for futher adjustments. In other
               cases, just head to{' '}
-              <a href="https://app.outp0st.io" target={'_blank'}>
+              <a
+                href="https://outp0st.io/docs/payload/ui/header#new-tab-from"
+                target={'_blank'}
+              >
                 Payload UI
               </a>{' '}
               add a tab via '+' and start using

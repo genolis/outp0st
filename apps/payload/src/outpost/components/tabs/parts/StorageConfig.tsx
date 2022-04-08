@@ -8,8 +8,6 @@ export const StorageConfig = () => {
   // FULL REFACTOR here.
   const { manager, updateStorageToken } = useStateManager();
 
-  // console.log(manager.storageConfigs[0].id === manager.currentConfigId);
-
   // useEffect(() => {
   //   updateManager({ ...manager });
   // }, []);

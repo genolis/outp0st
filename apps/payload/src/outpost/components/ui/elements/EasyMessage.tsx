@@ -50,7 +50,6 @@ export function EasyMessage({
         <EasyEdit
           type={type ? type : Types.TEXT}
           onSave={(value: string | SelectOption) => {
-            ////console.log({ value });
             // const val = messageProp === 'type' ? (value as SelectOption).value : value;
             updateMessage({
               ...message,

@@ -24,6 +24,8 @@ function Home() {
         background="orbInside"
         title={<Outp0stLogo width="50%" />}
         subtitle={siteConfig.tagline}
+        image="/outpost/hero_image.png"
+        imageProps={{ style: { maxWidth: '700px', left: '40%' } }}
         cta={[
           <Button
             primary

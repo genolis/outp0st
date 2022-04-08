@@ -1,10 +1,16 @@
 {
-  "name": "outpost-payload",
+  "name": "@outp0st/payload",
   "description": "A web application to interact with Terra Core in more user friendly way",
-  "homepage": "https://terra-outpost.vercel.app",
-  "author": "Terra <engineering@terra.money> (https://terra.money) & dimkk <dimkk@Outlook.com>",
-  "repository": "github:dimkk/terra-outpost",
-  "license": "MIT",
+  "homepage": "https://app.outp0st.io",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts"
+  ],
+  "license": "CC-BY-NC",
   "version": "1.1.1",
   "scripts": {
     "dev": "PORT=3001 react-scripts start",

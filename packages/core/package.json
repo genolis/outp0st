@@ -1,17 +1,17 @@
 {
   "name": "@outp0st/core",
   "version": "1.0.1",
-  "description": "terra outpost core lib",
-  "keywords": [
-    "typescript",
-    "library",
-    "starter",
-    "template"
-  ],
-  "homepage": "",
-  "bugs": "",
+  "description": "Core js/ts package for outp0st",
+  "homepage": "https://outp0st.io",
   "author": "dimkk <dima.v@genolis.com.au>",
-  "repository": "",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts",
+    "cli"
+  ],
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",
   "types": "./build/index.d.ts",

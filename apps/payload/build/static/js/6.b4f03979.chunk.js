@@ -1,0 +1,2 @@
+(this["webpackJsonp@outp0st/payload"]=this["webpackJsonp@outp0st/payload"]||[]).push([[6],{2067:function(t,e,a){"use strict";a.r(e),a.d(e,"default",(function(){return p}));var s=a(2),n=a(89),c=a(845),i=a(0);function p(t){var e=t.message,a=Object(n.b)().updateMessage;return Object(i.jsx)("div",{children:Object(i.jsx)(c.a,{val:e.description,updateFn:function(t){a(Object(s.a)(Object(s.a)({},e),{},{description:t}))}})})}}}]);
+//# sourceMappingURL=6.b4f03979.chunk.js.map

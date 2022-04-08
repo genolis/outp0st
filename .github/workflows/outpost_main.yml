@@ -1,0 +1,21 @@
+name: Outpost ci
+
+on: [push, pull_request]
+
+jobs:
+  main:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest] #someday - , windows-latest]
+    steps:
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
+      # - run: yarn format:check

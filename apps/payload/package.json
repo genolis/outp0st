@@ -13,9 +13,9 @@
   "license": "CC-BY-NC",
   "version": "1.1.1",
   "scripts": {
-    "dev": "PORT=3001 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "s": "standard-changelog",
     "release": "standard-version"

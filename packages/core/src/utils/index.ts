@@ -1,4 +1,4 @@
-import { OutpostCurrentState } from 'types';
+import { OutpostCurrentState } from '../types';
 
 export function GetId() {
   return Date.now() + new Date().getMilliseconds();
@@ -18,7 +18,9 @@ export function getTabTitle(title: string) {
   return result;
 }
 
-export function getDefaultGlobalState(title = 'Default Outpost payload title') {
+export function getDefaultGlobalState(
+  title = 'Default Outpost payload title!',
+) {
   return {
     title: title,
     current: OutpostCurrentState.LOCAL,

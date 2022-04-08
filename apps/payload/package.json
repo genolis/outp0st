@@ -33,7 +33,6 @@
     "@anchor-protocol/anchor.js": "^5.0.0",
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
-    "@mui/x-data-grid": "^5.5.1",
     "@outp0st/core": "^1.0.0",
     "@react-hook/debounce": "^4.0.0",
     "@rjsf/core": "^3.2.1",

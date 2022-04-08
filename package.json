@@ -1,5 +1,15 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "outp0st",
+  "description": "Monorepo for outp0st project",
+  "homepage": "https://outp0st.io",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts"
+  ],
   "version": "0.0.0",
   "private": true,
   "workspaces": [

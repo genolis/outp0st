@@ -1,7 +1,17 @@
 {
   "name": "@outp0st/rover",
   "version": "1.0.0",
-  "description": "terra outpost cli",
+  "description": "CLI application to interact with @outp0st/payload UI and Terra cosmwasm sources",
+  "homepage": "https://outp0st.io/docs/rover",
+  "author": "dimkk <dima.v@genolis.com.au>",
+  "repository": "https://github.com/genolis/outp0st",
+  "keywords": [
+    "terra",
+    "blockchain",
+    "ui",
+    "contracts",
+    "cli"
+  ],
   "main": "index.js",
   "private": false,
   "commitlint": {
@@ -25,23 +35,10 @@
   "bin": {
     "rover": "./dist/src/bin/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dimkk/node-command-line-starter.git"
-  },
-  "keywords": [
-    "CLI",
-    "Replace",
-    "JSON",
-    "Buildtool",
-    "Starter"
-  ],
-  "author": "dimkk (dimkk@outlook.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kreuzerk/node-command-line-starter/issues"
   },
-  "homepage": "https://github.com/kreuzerk/node-command-line-starter#readme",
   "dependencies": {
     "@outp0st/core": "^1.0.0",
     "boxen": "^5.1.2",
@@ -64,6 +61,7 @@
     "replace-json-property": "^1.4.1",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "@outp0st/tsconfig": "*"
   }
 }

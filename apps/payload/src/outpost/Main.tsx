@@ -17,41 +17,19 @@ const Lunaverse = () => {
       extra={
         <ExtraActions>
           <BtnGroup>
-            <Button
-              variant={
-                outpostGlobal.current === OutpostCurrentState.MAIN
-                  ? 'contained'
-                  : 'outlined'
-              }
-              onClick={() => switchCurrentState(OutpostCurrentState.MAIN)}
-              size="small"
-            >
-              Mainnet
-            </Button>
-
-            <Button
-              variant={
-                outpostGlobal.current === OutpostCurrentState.TEST
-                  ? 'contained'
-                  : 'outlined'
-              }
-              onClick={() => switchCurrentState(OutpostCurrentState.TEST)}
-              size="small"
-            >
-              Testnet
-            </Button>
-
-            <Button
-              variant={
-                outpostGlobal.current === OutpostCurrentState.LOCAL
-                  ? 'contained'
-                  : 'outlined'
-              }
-              onClick={() => switchCurrentState(OutpostCurrentState.LOCAL)}
-              size="small"
-            >
-              Localterra
-            </Button>
+            {[
+              { t: 'Mainnet', n: OutpostCurrentState.MAIN },
+              { t: 'Testnet', n: OutpostCurrentState.TEST },
+              { t: 'Localterra', n: OutpostCurrentState.LOCAL },
+            ].map(({ t, n }) => (
+              <Button
+                variant={outpostGlobal.current === n ? 'contained' : 'outlined'}
+                onClick={() => switchCurrentState(n)}
+                size="small"
+              >
+                {t}
+              </Button>
+            ))}
           </BtnGroup>
         </ExtraActions>
       }

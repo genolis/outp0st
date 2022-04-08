@@ -31,7 +31,6 @@ export function StateManagerService(
       });
     }
   };
-
   const delState = (id: number) => {
     return updateState({
       ...state,

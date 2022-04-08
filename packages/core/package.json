@@ -1,7 +1,7 @@
 {
   "name": "@outp0st/core",
-  "version": "1.0.1",
-  "description": "Core js/ts package for outp0st",
+  "version": "1.0.2",
+  "description": "Core package for outp0st",
   "homepage": "https://outp0st.io",
   "author": "dimkk <dima.v@genolis.com.au>",
   "repository": "https://github.com/genolis/outp0st",
@@ -12,57 +12,95 @@
     "contracts",
     "cli"
   ],
-  "main": "./build/cjs/index.js",
-  "module": "./build/esm/index.js",
-  "types": "./build/index.d.ts",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
   "license": "MIT",
-  "engines": {
-    "node": ">= 14"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "setup": "node -r ./esbuild-hook ./scripts/setup",
-    "dev": "nodemon -w src/**/*.ts -r ./esbuild-hook ./scripts/build",
-    "build": "yarn type:dts && yarn type:build",
-    "clean": "node -r ./esbuild-hook ./scripts/clean",
-    "type:dts": "tsc --emitDeclarationOnly",
-    "type:check": "tsc --noEmit",
-    "type:build": "node -r ./esbuild-hook ./scripts/build",
-    "format": "prettier \"src/**/*.ts\" --write",
-    "format:check": "prettier \"src/**/*.ts\" --check",
-    "lint": "eslint src --ext .ts --fix",
-    "lint:check": "eslint src --ext .ts",
-    "test": "ava",
-    "test:watch": "ava -w --color -v",
-    "test:coverage": "nyc ava && nyc report --reporter=html",
-    "spell:check": "cspell \"{README.md,CODE_OF_CONDUCT.md,CONTRIBUTING.md,.github/*.md,src/**/*.ts}\""
+    "build": "run-p build:*",
+    "dev": "run-s watch:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:lint": "eslint src --ext .ts --fix",
+    "test": "run-s build test:*",
+    "test:unit": "ava",
+    "check-cli": "run-s test diff-integration-tests check-integration-tests",
+    "check-integration-tests": "run-s check-integration-test:*",
+    "diff-integration-tests": "mkdir -p diff && rm -rf diff/test && cp -r test diff/test && rm -rf diff/test/test-*/.git && cd diff && git init --quiet && git add -A && git commit --quiet --no-verify --allow-empty -m 'WIP' && echo '\\n\\nCommitted most recent integration test output in the \"diff\" directory. Review the changes with \"cd diff && git diff HEAD\" or your preferred git diff viewer.'",
+    "watch:build": "tsc -p tsconfig.json -w",
+    "watch:test": "nyc ava -w --color -v",
+    "cov": "run-s build test:unit cov:html cov:lcov && open-cli coverage/index.html",
+    "cov:html": "nyc report --reporter=html",
+    "cov:lcov": "nyc report --reporter=lcov",
+    "cov:send": "run-s cov:lcov && codecov",
+    "cov:check": "nyc report && nyc check-coverage --lines 100 --functions 100 --branches 100",
+    "doc": "run-s doc:html && open-cli build/docs/index.html",
+    "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
+    "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
+    "reset-hard": "git clean -dfx && git reset --hard && npm prune",
+    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
+  },
+  "engines": {
+    "node": ">=16"
   },
   "devDependencies": {
-    "@types/node": "^16.9.1",
-    "@types/prompts": "^2.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.31.0",
-    "@typescript-eslint/parser": "^4.31.0",
+    "@ava/typescript": "^1.1.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@outp0st/tsconfig": "*",
-    "ava": "^3.15.0",
-    "cspell": "^5.9.0",
-    "esbuild": "^0.13.5",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "ava": "^3.12.1",
+    "codecov": "^3.5.0",
+    "cspell": "^4.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.8.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.24.2",
-    "nodemon": "^2.0.15",
+    "eslint-plugin-import": "^2.22.0",
+    "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
-    "prompts": "^2.4.1",
-    "slugify": "^1.6.0",
-    "source-map-support": "^0.5.20",
-    "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.4.3"
+    "open-cli": "^6.0.1",
+    "prettier": "^2.1.1",
+    "standard-version": "^9.0.0",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.19.0",
+    "typescript": "^4.0.2"
   },
-  "volta": {
-    "node": "16.4.1",
-    "yarn": "1.22.10",
-    "npm": "7.19.1"
+  "files": [
+    "build/main",
+    "build/module",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "ava": {
+    "failFast": true,
+    "timeout": "60s",
+    "typescript": {
+      "rewritePaths": {
+        "src/": "build/main/"
+      }
+    },
+    "files": [
+      "!build/module/**"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "exclude": [
+      "**/*.spec.js"
+    ]
   }
 }

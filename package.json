@@ -18,8 +18,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "test": "turbo run test",
     "build:web": "turbo run build --scope=@outp0st/web",
-    "build:payload": "SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true turbo run build --scope=@outp0st/payload --include-dependencies --no-deps",
+    "build:payload": "turbo run build --scope=@outp0st/payload --include-dependencies --no-deps",
     "dev": "turbo run dev --parallel",
     "dev:o": "turbo run dev --scope=@outp0st/payload",
     "dev:web": "turbo run dev --scope=@outp0st/web",
@@ -40,7 +41,8 @@
   },
   "engines": {
     "npm": ">=8.0.0",
-    "node": ">=14.0.0"
+    "node": ">=14.0.0",
+    "ubuntu": "21.10"
   },
   "packageManager": "npm@8.6.0"
 }

@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "test": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts test",
+    "test": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts test --passWithNoTests",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "s": "standard-changelog",
     "release": "standard-version"

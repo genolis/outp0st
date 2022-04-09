@@ -11,7 +11,7 @@
     "ui",
     "contracts"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -27,7 +27,7 @@
     "dev:web": "turbo run dev --scope=@outp0st/web",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "standard-version"
+    "release": "standard-version --path apps/payload"
   },
   "devDependencies": {
     "turbo": "latest",

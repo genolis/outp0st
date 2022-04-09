@@ -1,6 +1,6 @@
 {
   "name": "@outp0st/core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Core package for outp0st",
   "homepage": "https://outp0st.io",
   "author": "dimkk <dima.v@genolis.com.au>",
@@ -40,7 +40,8 @@
     "doc:html": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --out build/docs",
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
     "reset-hard": "git clean -dfx && git reset --hard && npm prune",
-    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
+    "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
+    "release": "standard-version"
   },
   "engines": {
     "node": ">=16"

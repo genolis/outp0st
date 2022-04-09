@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore(release): 1.1.2",
+  "packageName": "@outp0st/core",
+  "email": "dima.v@genolis.com.au",
+  "dependentChangeType": "patch"
+}

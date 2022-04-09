@@ -29,7 +29,7 @@
     "bump-version": "rjp package.json version $VERSION",
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
-    "semantic-release": "semantic-release",
+    "release": "standard-version",
     "publish": "npm publish --access=public"
   },
   "bin": {

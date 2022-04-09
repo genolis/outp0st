@@ -27,7 +27,7 @@
     "dev:web": "turbo run dev --scope=@outp0st/web",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "standard-version --path apps/payload"
+    "release": "turbo run release"
   },
   "devDependencies": {
     "turbo": "latest",

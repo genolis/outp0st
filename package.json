@@ -11,7 +11,7 @@
     "ui",
     "contracts"
   ],
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -27,18 +27,11 @@
     "dev:web": "turbo run dev --scope=@outp0st/web",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "standard-version",
-    "test:lib": "turbo run test --scope='@top/core'"
+    "release": "standard-version"
   },
   "devDependencies": {
-    "@spotify/prettier-config": "^13.0.0",
-    "ava": "^3.15.0",
-    "prettier": "^2.5.1",
-    "standard-version": "^9.3.2",
-    "tsconfig-paths": "^3.12.0",
     "turbo": "latest",
-    "winston": "^3.6.0",
-    "dotenv": "^16.0.0"
+    "standard-version": "^9.3.2"
   },
   "engines": {
     "npm": ">=8.0.0",

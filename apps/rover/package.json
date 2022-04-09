@@ -35,7 +35,7 @@
   "bin": {
     "rover": "./dist/src/bin/index.js"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/kreuzerk/node-command-line-starter/issues"
   },

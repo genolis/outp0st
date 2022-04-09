@@ -4,6 +4,7 @@
   "homepage": "https://outp0st.io",
   "author": "dimkk <dima.v@genolis.com.au>",
   "repository": "https://github.com/genolis/outp0st",
+  "license": "Apache-2.0",
   "keywords": [
     "terra",
     "blockchain",

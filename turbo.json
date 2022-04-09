@@ -13,6 +13,8 @@
     },
     "test": {
       "cache": false
+    },
+    "release": {
     }
   }
 }

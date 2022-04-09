@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "chore(release): 1.1.2",
-  "packageName": "@outp0st/payload",
-  "email": "dima.v@genolis.com.au",
-  "dependentChangeType": "patch"
-}

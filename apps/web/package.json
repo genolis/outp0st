@@ -15,7 +15,7 @@
     "docusaurus"
   ],
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -25,7 +25,8 @@
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "deploy": "yarn lint & docusaurus deploy",
-    "lint": "yarn run textlint docs"
+    "lint": "yarn run textlint docs",
+    "release": "standard-version"
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"

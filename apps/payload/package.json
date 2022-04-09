@@ -10,7 +10,7 @@
     "ui",
     "contracts"
   ],
-  "license": "CC-BY-NC",
+  "license": "Apache-2.0",
   "version": "1.1.1",
   "scripts": {
     "dev": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts start",

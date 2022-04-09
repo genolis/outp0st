@@ -15,7 +15,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "run-p build:*",
     "dev": "run-s watch:*",

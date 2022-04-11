@@ -18,16 +18,17 @@ const Lunaverse = () => {
         <ExtraActions>
           <BtnGroup>
             {[
-              { t: 'Mainnet', n: OutpostCurrentState.MAIN },
-              { t: 'Testnet', n: OutpostCurrentState.TEST },
-              { t: 'Localterra', n: OutpostCurrentState.LOCAL },
-            ].map(({ t, n }) => (
+              { title: 'Mainnet', net: OutpostCurrentState.MAIN },
+              { title: 'Testnet', net: OutpostCurrentState.TEST },
+              { title: 'Localterra', net: OutpostCurrentState.LOCAL },
+            ].map(({ title, net }) => (
               <Button
-                variant={outpostGlobal.current === n ? 'contained' : 'outlined'}
-                onClick={() => switchCurrentState(n)}
+                key={title}
+                variant={outpostGlobal.current === net ? 'contained' : 'outlined'}
+                onClick={() => switchCurrentState(net)}
                 size="small"
               >
-                {t}
+                {title}
               </Button>
             ))}
           </BtnGroup>

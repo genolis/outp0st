@@ -1,6 +1,6 @@
 # Contributing to Outp0st
 
-Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain interpreneurs.
+Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain entrepreneurs. We realize this is an ambitious goal. We can’t do it alone.
 
 Therefore we want to create a strong community of contributors -- all working together to create the kind of delightful experience that our developers deserve.
 

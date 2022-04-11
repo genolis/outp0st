@@ -53,7 +53,7 @@ function Home() {
           </TextBlock>
           <TextBlock title="Vision">
             <Text>
-            Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain interpreneurs.
+            Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain entrepreneurs.
             </Text>
           </TextBlock>
           <TextBlock title="Collaboration">

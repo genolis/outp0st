@@ -57,5 +57,6 @@ module.exports = {
       label: 'Contributing',
       items: ['contrib/getting-started'],
     },
+    'faq'
   ],
 };

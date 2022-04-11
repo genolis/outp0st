@@ -6,11 +6,11 @@
 [![lfg](https://img.shields.io/badge/lfg-preparing%20for%20apply-brightgreen)](https://lfg.org/grants/)
 [![Discord](https://img.shields.io/discord/961903521379282994)](https://discord.gg/CQjDUyBz)
 
-<!-- [![Main CI Build](https://github.com/backstage/backstage/workflows/Main%20Master%20Build/badge.svg)](https://github.com/backstage/backstage/actions?query=workflow%3A%22Main+Master+Build%22) -->
+<!-- [![Main CI Build](https://github.com/Outp0st/Outp0st/workflows/Main%20Master%20Build/badge.svg)](https://github.com/Outp0st/Outp0st/actions?query=workflow%3A%22Main+Master+Build%22) -->
 
 <!-- ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-[![Codecov](https://img.shields.io/codecov/c/github/backstage/backstage)](https://codecov.io/gh/backstage/backstage)
-[![](https://img.shields.io/npm/v/@backstage/core?label=Version)](https://github.com/backstage/backstage/releases) -->
+[![Codecov](https://img.shields.io/codecov/c/github/Outp0st/Outp0st)](https://codecov.io/gh/Outp0st/Outp0st)
+[![](https://img.shields.io/npm/v/@Outp0st/core?label=Version)](https://github.com/Outp0st/Outp0st/releases) -->
 
 ## What is Outp0st?
 
@@ -66,17 +66,14 @@ Check out [the documentation](https://outp0st.io/docs/quickstart) on how to star
 - [Payload](https://outp0st.io/docs/payload/anatomy)
 - [Rover](https://outp0st.io/docs/rover)
 
-<!-- ## Community
+## Community
 
-- [Discord chatroom](https://discord.gg/MUpMjP2) - Get support or discuss the project
-- [Contributing to Backstage](https://github.com/backstage/backstage/blob/master/CONTRIBUTING.md) - Start here if you want to contribute
-- [RFCs](https://github.com/backstage/backstage/labels/rfc) - Help shape the technical direction
-- [FAQ](https://backstage.io/docs/FAQ) - Frequently Asked Questions
+- [Discord chatroom](https://discord.gg/CQjDUyBz) - Get support or discuss the project
+- [Contributing to Outp0st](https://github.com/genolis/Outp0st/blob/main/CONTRIBUTING.md) - Start here if you want to contribute
+- [RFCs](https://github.com/genolis/Outp0st/labels/rfc) - Help shape the technical direction
+- [FAQ](https://Outp0st.io/docs/FAQ) - Frequently Asked Questions
 - [Code of Conduct](CODE_OF_CONDUCT.md) - This is how we roll
-- [Adopters](ADOPTERS.md) - Companies already using Backstage
-- [Blog](https://backstage.io/blog/) - Announcements and updates
-- [Newsletter](https://mailchi.mp/spotify/backstage-community) - Subscribe to our email newsletter
-- [Backstage Community Sessions](https://github.com/backstage/community) - Join monthly meetup and explore Backstage community -->
+- [Adopters](ADOPTERS.md) - Companies already using Outp0st
 
 _Give us a star ⭐️ - If you are using outp0st or think it is an interesting project, we would love a star ❤️_
 
@@ -85,8 +82,7 @@ _Give us a star ⭐️ - If you are using outp0st or think it is an interesting 
 Copyright 2022-now © The Outp0st Authors. All rights reserved.
 Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
-<!-- ## Security
+## Security
 
-Please report sensitive security issues via Spotify's [bug-bounty program](https://hackerone.com/spotify) rather than GitHub.
 
-For further details please see our complete [security release process](SECURITY.md). -->
+For further details please see our complete [security release process](SECURITY.md).

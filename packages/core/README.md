@@ -1,3 +1,6 @@
-# core-tss
+[![headline](../../assets/repo_top.png)](https://outp0st.io)
 
-test
+
+## Core lib module
+
+[contributing guide](https://outp0st.io/docs/contrib/getting-started)

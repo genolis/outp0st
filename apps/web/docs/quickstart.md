@@ -4,9 +4,9 @@ title: Quickstart
 
 ## Fastest way
 
-1. Go to this [link](https://app.outp0st.io/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy%2Frover_generated.json#CONFIG)
+1. Go to this [link](https://app.outp0st.io/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy%2Frover_generated.json#COU)
 2. It's [terrain's](https://github.com/iboss-ptk/terrain) starter project, if you want to check more complex examples, go to [this](/docs/examples) page
-3. Head to [next section](/docs/payload) to figure things out
+3. Head to [payload section](/docs/payload) to figure things out
 
 ## For cosmwasm developers
 

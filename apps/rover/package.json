@@ -29,7 +29,9 @@
     "bump-version": "rjp package.json version $VERSION",
     "test:coverage": "jest --coverage",
     "report:coverage": "npm run test:coverage && codecov",
-    "release": "standard-version",
+    "release:pre": "standard-version -t @outp0st/rover@ --path ./ --prerelease",
+    "release:patch": "standard-version -t @outp0st/rover@ --path ./ --release-as patch",
+    "release:minor": "standard-version -t @outp0st/rover@ --path ./ --release-as minor",
     "publish": "npm publish --access=public"
   },
   "bin": {

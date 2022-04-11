@@ -17,8 +17,9 @@
     "build": "SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "PORT=3001 SASS_PATH=node_modules:src/styles SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true react-scripts test --passWithNoTests",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "s": "standard-changelog",
-    "release": "standard-version"
+    "release:pre": "standard-version -t @outp0st/payload@ --path ./ --prerelease",
+    "release:patch": "standard-version -t @outp0st/payload@ --path ./ --release-as patch",
+    "release:minor": "standard-version -t @outp0st/payload@ --path ./ --release-as minor"
   },
   "browser": {
     "crypto": false,

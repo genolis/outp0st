@@ -26,7 +26,9 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "yarn lint & docusaurus deploy",
     "lint": "yarn run textlint docs",
-    "release": "standard-version"
+    "release:pre": "standard-version -t @outp0st/web@ --path ./ --prerelease",
+    "release:patch": "standard-version -t @outp0st/web@ --path ./ --release-as patch",
+    "release:minor": "standard-version -t @outp0st/web@ --path ./ --release-as minor"
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"

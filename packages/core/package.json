@@ -41,7 +41,9 @@
     "doc:json": "typedoc src/ --exclude **/*.spec.ts --target ES6 --mode file --json build/docs/typedoc.json",
     "reset-hard": "git clean -dfx && git reset --hard && npm prune",
     "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish",
-    "release": "standard-version"
+    "release:pre": "standard-version -t @outp0st/core@ --path ./ --prerelease",
+    "release:patch": "standard-version -t @outp0st/core@ --path ./ --release-as patch",
+    "release:minor": "standard-version -t @outp0st/core@ --path ./ --release-as minor"
   },
   "engines": {
     "node": ">=16"

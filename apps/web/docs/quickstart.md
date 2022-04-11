@@ -4,8 +4,6 @@ title: Quickstart
 
 ## Fastest way
 
-_TODO: make link generated using env variable to production payload url_
-
 1. Go to this [link](https://app.outp0st.io/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy%2Frover_generated.json#CONFIG)
 2. It's [terrain's](https://github.com/iboss-ptk/terrain) starter project, if you want to check more complex examples, go to [this](/docs/examples) page
 3. Head to [next section](/docs/payload) to figure things out
@@ -35,8 +33,6 @@ npx @outp0st/rover
 
 ## For everybody
 
-_TODO: update repo link_
-
 ### Prerequisites
 
 - Node LTS
@@ -44,7 +40,7 @@ _TODO: update repo link_
 - Token from [web3.storage/tokens](https://web3.storage/tokens/)
 
 ```sh
-git clone git@github.com:dimkk/terra-outpost-mono.git
+git clone git@github.com:genolis/outp0st.git
 cd terra-outpost-mono/packages/examles/terrain-starter
 echo TOKEN_WEB3STORAGE=[Place your token here] > .env
 npx @outp0st/rover

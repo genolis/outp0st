@@ -3,7 +3,7 @@ import {
   FeaturesCarousel,
   LightCta,
   Text,
-  TextBlock,
+  TextBlock
 } from '@algolia/ui-library';
 import React from 'react';
 
@@ -40,7 +40,7 @@ export function OPFeatureList() {
             You can document contract and it's messages using markdown inside
             Outp0st/Payload(UI) module!
           </Text>
-          <LightCta href="#">
+          <LightCta href="https://app.outp0st.io/outpost?state=https://dweb.link/ipfs/bafybeiegy6e7adktz3fraccvuq62wdj6wa2x34nvrvzp7wkbahgkq6kw7i/outpost.Rover_generated_10:20:06_AM.1.0.0.1649248371932.json#VES">
             Check documented example of vesting contract
           </LightCta>
         </TextBlock>

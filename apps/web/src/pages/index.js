@@ -5,7 +5,7 @@ import {
   SectionHeader,
   Text,
   TextBlock,
-  TextBlocksGrid,
+  TextBlocksGrid
 } from '@algolia/ui-library';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -51,10 +51,9 @@ function Home() {
               Secure access to Mainnet deployment wallets within the team
             </Text>
           </TextBlock>
-          <TextBlock title="Reduce errors">
+          <TextBlock title="Vision">
             <Text>
-              Reduce human factor and communication errors by eliminating the
-              use of deployment scripts
+            Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain interpreneurs.
             </Text>
           </TextBlock>
           <TextBlock title="Collaboration">
@@ -66,7 +65,7 @@ function Home() {
           <TextBlock title="Easy TGE">
             <Text>
               Take the stress out of the TGE activities, while providing secure
-              and robust communication
+              and robust communication with less impact of human error
             </Text>
           </TextBlock>
           <TextBlock title="Visualise your dApp">

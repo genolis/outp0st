@@ -14,6 +14,8 @@
 
 Outp0st is an open-source UI tool to enable next-level team collaboration on dApp development over Terra blockchain.
 
+Our vision for Outp0st is for it to become the trusted standard toolbox (read: UX layer) for the open source contracts infrastructure landscape. Think of it like Kubernetes for developer experience or CMS-like interface for blockchain interpreneurs.
+
 It consists of two modules: Payload (UI) and Rover (CLI)
 
 ### Main features

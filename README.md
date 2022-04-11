@@ -59,8 +59,8 @@ Check out [the documentation](https://outp0st.io/docs/quickstart) on how to star
 
 ## Documentation
 
-- [Examples](https://outp0st.io/docs/overview)
-- [Software Catalog](https://outp0st.io/docs/examples)
+- [Overview](https://outp0st.io/docs/overview)
+- [Examples](https://outp0st.io/docs/examples)
 - [Payload](https://outp0st.io/docs/payload/anatomy)
 - [Rover](https://outp0st.io/docs/rover)
 

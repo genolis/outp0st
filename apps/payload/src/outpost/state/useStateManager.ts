@@ -3,7 +3,7 @@ import { atom, useRecoilState } from 'recoil';
 import {
   getLocalSetting,
   setLocalSetting,
-  SettingKey,
+  SettingKey
 } from '../utils/localStorage';
 import { getId } from './useOutpostState';
 
@@ -28,7 +28,7 @@ const stateManager = atom({
       // },
     ],
     states: [],
-    currenConfig: initId,
+    currentConfigId: initId,
   },
 });
 

@@ -3,14 +3,12 @@
 # [Outp0st](https://outp0st.io)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](<https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)#summary>)
+[![Outpost ci](https://github.com/genolis/outp0st/actions/workflows/outpost_main.yml/badge.svg)](https://github.com/genolis/outp0st/actions/workflows/outpost_main.yml)
 [![lfg](https://img.shields.io/badge/lfg-preparing%20for%20apply-brightgreen)](https://lfg.org/grants/)
 [![Discord](https://img.shields.io/discord/961903521379282994)](https://discord.gg/CQjDUyBz)
-
-<!-- [![Main CI Build](https://github.com/Outp0st/Outp0st/workflows/Main%20Master%20Build/badge.svg)](https://github.com/Outp0st/Outp0st/actions?query=workflow%3A%22Main+Master+Build%22) -->
-
-<!-- ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-[![Codecov](https://img.shields.io/codecov/c/github/Outp0st/Outp0st)](https://codecov.io/gh/Outp0st/Outp0st)
-[![](https://img.shields.io/npm/v/@Outp0st/core?label=Version)](https://github.com/Outp0st/Outp0st/releases) -->
+![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/genolis/outp0st?filename=apps%2Fpayload%2Fpackage.json&label=payload)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/genolis/outp0st?color=green&filename=apps%2Frover%2Fpackage.json&label=rover)
 
 ## What is Outp0st?
 

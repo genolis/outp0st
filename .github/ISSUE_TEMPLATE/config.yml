@@ -1,0 +1,12 @@
+---
+  blank_issues_enabled: false
+  contact_links:
+    - about: 'Please ask and answer usage questions in GitHub Discussions'
+      name: Question
+      url: 'https://github.com/genolis/outp0st/discussions'
+    - about: 'Alternatively, you can use the Outp0st Community Discord'
+      name: Chat
+      url: 'https://discord.gg/CQjDUyBz'
+    - about: 'Please check the FAQ before filing new issues'
+      name: 'Outp0st FAQ'
+      url: 'https://outp0st.io/docs/faq'

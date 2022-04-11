@@ -51,5 +51,11 @@ module.exports = {
         'rover',
       ],
     },
+    {
+      type: 'category',
+      collapsed: false,
+      label: 'Contributing',
+      items: ['contrib/getting-started'],
+    },
   ],
 };

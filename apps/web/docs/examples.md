@@ -2,12 +2,10 @@
 title: Examples
 ---
 
-import { appUrl } from '../src/uitls.js';
-
 ## Terrain starter project
 
 - <a
-    href={`${appUrl()}/outpost?state=https://dweb.link/ipfs/bafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy/rover_generated.json#CONFIG`}
+    href="https://app.outp0st.io/outpost?state=https://dweb.link/ipfs/bafybeifkajmpjwfufflwryki3xa66hn3y5mlbamkla5rr45puzxp2xc3vy/rover_generated.json#COU"
     target="_blank"
   >
     🎇 outp0st payload ui
@@ -19,7 +17,7 @@ import { appUrl } from '../src/uitls.js';
 ## Anchor protocol open source contracts
 
 - <a
-    href={`${appUrl()}/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeiaqh7er2yfohcqp6trq56pi2vr3wkxmceitlymkhqtg474ugf36m4%2Frover_generated.json#CONFIG`}
+    href="https://app.outp0st.io/outpost?state=https%3A%2F%2Fdweb.link%2Fipfs%2Fbafybeiaqh7er2yfohcqp6trq56pi2vr3wkxmceitlymkhqtg474ugf36m4%2Frover_generated.json#CONFIG"
     target="_blank"
   >
     🎇 outp0st payload ui
@@ -32,7 +30,7 @@ import { appUrl } from '../src/uitls.js';
 ## Mirror protocol open source contracts
 
 - <a
-    href={`${appUrl()}outpost?state=https://dweb.link/ipfs/bafybeibg3chjqw7ixk5opxrzmbvue27c5oxao4v5fgdqwvf7thycifsmny/rover_generated.json#CONFIG`}
+    href="https://app.outp0st.io/outpost?state=https://dweb.link/ipfs/bafybeibg3chjqw7ixk5opxrzmbvue27c5oxao4v5fgdqwvf7thycifsmny/rover_generated.json#CONFIG"
     target="_blank"
   >
     🎇 outp0st payload ui

@@ -22,3 +22,5 @@ npm run dev
 - **apps/rover** cli tool
 - **apps/web** landing page and this docs
 - **packages/core** core npm lib for all stuff
+
+_we are not using cz-commit for now so just commit with [convenctional commit notation](https://www.conventionalcommits.org/en/v1.0.0/#summary)_

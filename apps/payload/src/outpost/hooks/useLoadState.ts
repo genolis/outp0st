@@ -13,18 +13,20 @@ export function useLoadState() {
   const { loadStateFromText } = useSaveLoad();
   const query = useQuery();
   const stateUrl = query.get('state');
-  const { updateSettings, settings } = useOutpostSettings();
+  const { updateSettings, updateLoading, settings } = useOutpostSettings();
   useEffect(() => {
-    async function ls(stateUrl: string) {
-      const state = await readTextUrl(stateUrl);
-      if (!state) {
-        console.error('State load failed from url:', stateUrl);
+    async function ls(stateUrl: string | null) {
+      if (stateUrl) {
+        const state = await readTextUrl(stateUrl);
+        if (!state) {
+          console.error('State load failed from url:', stateUrl);
+        }
+        loadStateFromText(state, stateUrl);
+        updateSettings({ stateLoadSwitcher: !settings.stateLoadSwitcher, loading: false });
       }
-      loadStateFromText(state, stateUrl);
-      updateSettings({ stateLoadSwitcher: !settings.stateLoadSwitcher });
+      updateLoading(false);
     }
-    if (!stateUrl) return;
+
     ls(stateUrl);
-    // eslint-disable-next-line
   }, []);
 }

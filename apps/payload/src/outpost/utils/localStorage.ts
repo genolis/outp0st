@@ -1,7 +1,7 @@
 import {
   OutpostCurrentState,
   OutpostGlobal,
-  OutpostSettings,
+  OutpostSettings
 } from '@outp0st/core';
 
 export enum SettingKey {
@@ -18,7 +18,7 @@ const DefaultOutpost: OutpostGlobal = {
   current: OutpostCurrentState.TEST,
 };
 
-const DefaultOutpostSettings: OutpostSettings = { stateLoadSwitcher: false };
+const DefaultOutpostSettings: OutpostSettings = { stateLoadSwitcher: false, loading: false };
 
 export const DefaultSettings = {
   [SettingKey.outpost]: DefaultOutpost,

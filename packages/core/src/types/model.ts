@@ -86,6 +86,7 @@ export enum OutpostCurrentState {
 
 export interface OutpostSettings {
   stateLoadSwitcher: boolean;
+  loading: boolean;
 }
 
 export interface CoinInput {

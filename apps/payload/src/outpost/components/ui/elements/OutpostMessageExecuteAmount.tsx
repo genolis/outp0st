@@ -20,8 +20,7 @@ export default function OutpostMessageExecuteAmount({
 }: OutpostMessageExecuteAmountProps) {
   const bankBalance = useBankBalance();
   const { updateMessage } = useOutpostState();
-  if (!message.coins) return <span></span>;
-  const coins = message.coins as CoinInput[];
+  const coins = (message.coins || []) as CoinInput[];
   const defaultItem = { denom: initialGasDenom };
   return (
     <FormItem label={'Coins to send'}>

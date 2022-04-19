@@ -21,7 +21,7 @@
     "docusaurus": "docusaurus",
     "start": "npm run dev",
     "dev": "BROWSER=none docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && node injectGA",
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "deploy": "yarn lint & docusaurus deploy",

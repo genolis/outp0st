@@ -4,8 +4,6 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](<https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)#summary>)
 [![Outpost ci](https://github.com/genolis/outp0st/actions/workflows/outpost_main.yml/badge.svg)](https://github.com/genolis/outp0st/actions/workflows/outpost_main.yml)
-[![lfg](https://img.shields.io/badge/lfg-preparing%20for%20apply-brightgreen)](https://lfg.org/grants/)
-[![Discord](https://img.shields.io/discord/961903521379282994)](https://discord.gg/CQjDUyBz)
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/genolis/outp0st?filename=apps%2Fpayload%2Fpackage.json&label=payload)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/genolis/outp0st?color=green&filename=apps%2Frover%2Fpackage.json&label=rover)
@@ -26,6 +24,8 @@ It consists of two modules: Payload (UI) and Rover (CLI)
 - Contract and messages documentation
 - Shareable UI
 - IPFS as a storage layer
+
+> ### 🚧 Outp0st is alpha software — in active but early development, battle tested on mainnet launches. You are welcome to try it out, but note there a number of [missing features and issues](https://github.com/genolis/outp0st/issues) that you may run into! 🚧
 
 ## Use cases
 

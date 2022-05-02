@@ -1,6 +1,6 @@
 {
   "name": "@outp0st/rover",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "CLI application to interact with @outp0st/payload UI and Terra cosmwasm sources",
   "homepage": "https://outp0st.io/docs/rover",
   "author": "dimkk <dima.v@genolis.com.au>",
@@ -35,7 +35,7 @@
     "publish": "npm publish --access=public"
   },
   "bin": {
-    "rover": "./dist/src/bin/index.js"
+    "rover": "./dist/bin/index.js"
   },
   "license": "Apache-2.0",
   "bugs": {

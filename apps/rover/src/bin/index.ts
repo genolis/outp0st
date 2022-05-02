@@ -3,7 +3,7 @@ import { OutpostCurrentState, OutpostGlobal } from '@outp0st/core';
 import { Command } from 'commander';
 import 'dotenv/config';
 import fs from 'fs';
-import * as packgeJSON from '../../package.json';
+// import * as packgeJSON from '../../package.json';
 import { getContracts } from '../contract';
 import { generateGlobalState } from '../globalState';
 import { log } from '../log';
@@ -23,7 +23,7 @@ const defaultOptions: RoverOptions = {
 
 async function main() {
   program
-    .version(packgeJSON.version)
+    // .version(packgeJSON.version)
     // .command('run')
     .action(run);
 

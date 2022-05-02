@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/genolis/outp0st/compare/@outp0st/rover@1.0.4...@outp0st/rover@1.0.5) (2022-05-02)
+
+
+### Bug Fixes
+
+* **rover:** removed dist from gitigonre to add built code ([15bd48b](https://github.com/genolis/outp0st/commit/15bd48b61f772504049337afa0acc717ea1fdbee))
+
 ### 1.0.4 (2022-05-02)
 
 

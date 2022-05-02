@@ -1,6 +1,6 @@
 {
   "name": "@outp0st/rover",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CLI application to interact with @outp0st/payload UI and Terra cosmwasm sources",
   "homepage": "https://outp0st.io/docs/rover",
   "author": "dimkk <dima.v@genolis.com.au>",

@@ -1,6 +1,18 @@
 {
-  "extends": "@outp0st/tsconfig/base-cli.json",
-  "include": ["src"],
-  "exclude": ["**/*.spec.ts"],
-  "compilerOptions": { "outDir": "dist", "skipLibCheck": true }
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "lib": [
+    "es2015"
+  ]
 }

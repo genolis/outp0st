@@ -50,7 +50,7 @@ export enum ContractExecuteMultiMessageTypes {
 export enum ContractMessageTypes {
   INSTA = 'INSTA',
   EXECUTE = 'EXECUTE',
-  // EXECUTE_MULTI = 'EXECUTE_MULTI',
+  EXECUTE_MULTI = 'EXECUTE_MULTI',
   QUERY = 'QUERY',
   DOC = 'DOC',
 }

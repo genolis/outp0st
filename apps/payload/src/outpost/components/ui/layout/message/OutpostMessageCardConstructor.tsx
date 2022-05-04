@@ -10,9 +10,9 @@ const OutpostMessageQuery = React.lazy(
 const OutpostMessageExecute = React.lazy(
   () => import('../../messages/OutpostMessageExecute'),
 );
-// const OutpostMessageExecuteMulti = React.lazy(
-//   () => import('../../messages/OutpostMessageExecuteMulti'),
-// );
+const OutpostMessageExecuteMulti = React.lazy(
+  () => import('../../messages/OutpostMessageExecuteMulti'),
+);
 const OutpostMessageInsta = React.lazy(
   () => import('../../messages/OutpostMessageInsta'),
 );
@@ -50,8 +50,8 @@ function GetMessageByType(message: ContractMessage) {
       return <OutpostMessageQuery message={message} />;
     case ContractMessageTypes.EXECUTE:
       return <OutpostMessageExecute message={message} />;
-    // case ContractMessageTypes.EXECUTE_MULTI:
-    //   return <OutpostMessageExecuteMulti message={message} />;
+    case ContractMessageTypes.EXECUTE_MULTI:
+      return <OutpostMessageExecuteMulti message={message} />;
     case ContractMessageTypes.DOC:
       return <OutpostMessageDoc message={message} />;
     default:

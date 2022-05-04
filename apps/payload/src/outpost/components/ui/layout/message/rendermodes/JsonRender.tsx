@@ -7,6 +7,7 @@ interface JsonRenderProps {
   message: ContractMessage;
   failMessage?: string | undefined;
   validateError?: string | undefined;
+  placeholder?:string;
 }
 
 // function addNumbersToJsonString(noNumbersJsonString: string) {
@@ -14,7 +15,7 @@ interface JsonRenderProps {
 
 // }
 
-function JsonRender({ message, failMessage, validateError }: JsonRenderProps) {
+function JsonRender({ message, failMessage, validateError, placeholder }: JsonRenderProps) {
   const { updateMessage } = useOutpostState();
   let error: string = '';
   if (validateError) error = `JSON error: ${validateError}`;
@@ -23,6 +24,7 @@ function JsonRender({ message, failMessage, validateError }: JsonRenderProps) {
     <FormItem label="json msg" error={error}>
       <EditorInput
         value={message.message}
+        placeholder={placeholder}
         onChange={e => {
           updateMessage({ ...message, message: e.target.value });
         }}

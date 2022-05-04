@@ -7,6 +7,7 @@ interface OutpostCardMessageRendererProps {
   message: ContractMessage;
   failMessage?: string | undefined;
   validateError?: string | undefined;
+  placeholder?: string;
 }
 
 function OutpostCardMessageRenderer(props: OutpostCardMessageRendererProps) {

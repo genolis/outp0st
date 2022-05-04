@@ -1,5 +1,5 @@
 import { Button, Collapse } from '@mui/material';
-import { ContractMessage, ContractMessageTypes } from '@outp0st/core';
+import { ContractMessage, ContractMessageRenderModes, ContractMessageTypes } from '@outp0st/core';
 import { useRO } from 'outpost/hooks/useRO';
 import { useOutpostState } from 'outpost/state/useOutpostState';
 import { FC, ReactNode } from 'react';
@@ -25,24 +25,24 @@ const generateButtons = (message: ContractMessage, updateMessage: any) => {
   return buttons;
 };
 
-// const generateButtonsRender = (
-//   message: ContractMessage,
-//   updateMessage: any,
-// ) => {
-//   let buttons: ReactNode[] = [];
-//   for (let item in ContractMessageRenderModes) {
-//     buttons.push(
-//       <Button
-//         key={item}
-//         variant={message.renderMode === item ? 'contained' : 'outlined'}
-//         onClick={() => updateMessage({ ...message, renderMode: item })}
-//       >
-//         {item}
-//       </Button>,
-//     );
-//   }
-//   return buttons;
-// };
+const generateButtonsRender = (
+  message: ContractMessage,
+  updateMessage: any,
+) => {
+  let buttons: ReactNode[] = [];
+  for (let item in ContractMessageRenderModes) {
+    buttons.push(
+      <Button
+        key={item}
+        variant={message.renderMode === item ? 'contained' : 'outlined'}
+        onClick={() => updateMessage({ ...message, renderMode: item })}
+      >
+        {item}
+      </Button>,
+    );
+  }
+  return buttons;
+};
 
 // const generateButtonsMulti = (message: ContractMessage, updateMessage: any) => {
 //   let buttons: ReactNode[] = [];
@@ -68,11 +68,11 @@ const OutpostCardMessageBody: FC<OutpostCardMessageBodyProps> = ({
   const ro = useRO();
   return (
     <Collapse in={!message.collapsed} timeout="auto" unmountOnExit>
-      {/* {!ro && (
+      {!ro && (
         <BtnGroup label="Render mode">
           {generateButtonsRender(message, updateMessage)}
         </BtnGroup>
-      )} */}
+      )}
       {!ro && (
         <BtnGroup label="Message type">
           {generateButtons(message, updateMessage)}

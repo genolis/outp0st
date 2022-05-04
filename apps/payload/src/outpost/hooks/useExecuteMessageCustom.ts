@@ -15,7 +15,7 @@ export function useExecuteMessageCustom(
     contractAddress: string,
     exec_msg: any,
     coins: Coins,
-  ) => any[],
+  ) => {memo:string, msgs:any[]},
 ): any {
   const { getContract } = useOutpostState();
   const bankBalance = useBankBalance();
@@ -34,9 +34,9 @@ export function useExecuteMessageCustom(
 
     const exec_msg = parseJSON(msg);
     const coins = getCoins([defaultItem]);
-    const msgs = createMessagesFn(address, contractAddress!, exec_msg, coins); //[new MsgExecuteContract(address, contractAddress!, exec_msg, coins)];
+    const {memo, msgs} = createMessagesFn(address, contractAddress!, exec_msg, coins); //[new MsgExecuteContract(address, contractAddress!, exec_msg, coins)];
 
-    return { msgs };
+    return { memo, msgs };
   }, [address, contractAddress, msg, initialGasDenom, createMessagesFn]);
   const estimationTxValues = useMemo(
     () => [msg, contractAddress],

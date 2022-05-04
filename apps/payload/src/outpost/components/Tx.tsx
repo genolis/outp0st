@@ -1,47 +1,43 @@
-import { Fragment, ReactNode } from "react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import { Coin, Coins, CreateTxOptions, Fee, LCDClient } from "@terra-money/terra.js";
+import { ConnectType, CreateTxFailed, TxFailed, useConnectedWallet, UserDenied, useWallet } from "@terra-money/wallet-provider";
+import { isDenom, isDenomIBC, readDenom } from "@terra.kitchen/utils";
+import ConnectWallet from "app/sections/ConnectWallet";
+import { isWallet, useAuth } from "auth";
+import { PasswordError } from "auth/scripts/keystore";
+import BigNumber from "bignumber.js";
+import classNames from "classnames";
+import { Details } from "components/display";
+import { Modal } from "components/feedback";
+import { FormError, FormItem, Input, Select, Submit } from "components/form";
+import { Pre } from "components/general";
+import { Flex, Grid } from "components/layout";
+import { Read } from "components/token";
+import { DEFAULT_GAS_ADJUSTMENT } from "config/constants";
+import { useBankBalance, useIsWalletEmpty } from "data/queries/bank";
+import { isBroadcastingState, latestTxState } from "data/queries/tx";
+import { queryKey, RefetchOptions } from "data/query";
+import { useCurrency } from "data/settings/Currency";
+import { useAddress, useNetwork } from "data/wallet";
+import useToPostMultisigTx from "pages/multisig/utils/useToPostMultisigTx";
+import { head, isNil } from "ramda";
+import { Fragment, ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { QueryKey, useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import classNames from "classnames";
-import BigNumber from "bignumber.js";
-import { head, isNil } from "ramda";
-
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
-import { isDenom, isDenomIBC, readDenom } from "@terra.kitchen/utils";
-import { Coin, Coins, LCDClient } from "@terra-money/terra.js";
-import { CreateTxOptions, Fee } from "@terra-money/terra.js";
-import { ConnectType, UserDenied } from "@terra-money/wallet-provider";
-import { CreateTxFailed, TxFailed } from "@terra-money/wallet-provider";
-import { useWallet, useConnectedWallet } from "@terra-money/wallet-provider";
-
-import { Contents } from "types/components";
-import { DEFAULT_GAS_ADJUSTMENT } from "config/constants";
-import { has } from "utils/num";
-import { getAmount, sortCoins } from "utils/coin";
-import { getErrorMessage } from "utils/error";
-import { useCurrency } from "data/settings/Currency";
-import { queryKey, RefetchOptions } from "data/query";
-import { useAddress, useNetwork } from "data/wallet";
-import { isBroadcastingState, latestTxState } from "data/queries/tx";
-import { useBankBalance, useIsWalletEmpty } from "data/queries/bank";
-
-import { Pre } from "components/general";
-import { Flex, Grid } from "components/layout";
-import { FormError, Submit, Select, Input, FormItem } from "components/form";
-import { Modal } from "components/feedback";
-import { Details } from "components/display";
-import { Read } from "components/token";
-import ConnectWallet from "app/sections/ConnectWallet";
-import useToPostMultisigTx from "pages/multisig/utils/useToPostMultisigTx";
-import { isWallet, useAuth } from "auth";
-import { PasswordError } from "auth/scripts/keystore";
-
-import styles from "./Tx.module.scss";
 import { useTx } from "txs/TxContext";
 import { toInput } from "txs/utils";
+import { Contents } from "types/components";
+import { getAmount, sortCoins } from "utils/coin";
+import { getErrorMessage } from "utils/error";
+import { has } from "utils/num";
+import styles from "./Tx.module.scss";
+
+
+
+
 
 interface Props<TxValues> {
   /* Only when the token is paid out of the balance held */
@@ -222,12 +218,12 @@ function Tx<TxValues>(props: Props<TxValues>) {
         throw new Error("Fee is not estimated");
 
       const tx = createTx(values);
-
+      console.log({tx});
       if (!tx) throw new Error("Tx is not defined");
 
       const gasCoins = new Coins([Coin.fromData(gasFee)]);
       const fee = new Fee(estimatedGas, gasCoins);
-
+      
       if (isWallet.multisig(wallet)) {
         const unsignedTx = await auth.create({ ...tx, fee });
         navigate(toPostMultisigTx(unsignedTx));

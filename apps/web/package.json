@@ -45,7 +45,7 @@
     "docusaurus2-dotenv": "^1.4.0",
     "file-loader": "^4.3.0",
     "image-webpack-loader": "^6.0.0",
-    "imagemin": "^7.0.0",
+    "imagemin": "^8.0.1",
     "lottie-web": "^5.9.1",
     "my-loaders": "file:plugins/my-loaders",
     "prism-react-renderer": "^1.1.0",

@@ -71,7 +71,7 @@
     "react-modal": "^3.14.4",
     "react-query": "^3.34.14",
     "react-router-dom": "^6.2.1",
-    "recharts": "^2.1.8",
+    "recharts": "^2.1.13",
     "recoil": "^0.6.1",
     "sass": "^1.49.7",
     "secp256k1": "^4.0.3",

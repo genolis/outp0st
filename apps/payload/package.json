@@ -45,7 +45,7 @@
     "@terra.kitchen/utils": "^1.0.6",
     "@tippyjs/react": "^4.2.6",
     "@uiw/react-md-editor": "^3.9.5",
-    "axios": "^0.25.0",
+    "axios": "^1.6.4",
     "bignumber.js": "^9.0.2",
     "buffer": "^6.0.3",
     "classnames": "^2.3.1",

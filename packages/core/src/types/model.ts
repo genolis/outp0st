@@ -61,13 +61,16 @@ export enum ContractMessageRenderModes {
   SCHEMA = 'SCHEMA',
 }
 
-export interface Outpost {
+export interface OutpostMeta {
   title?: string;
   version?: string;
   params?: OutpostParam[];
+  isReadonly?: boolean;
+}
+
+export interface Outpost extends OutpostMeta {
   contracts: Contract[];
   messages: ContractMessage[];
-  isReadonly?: boolean;
 }
 
 export interface OutpostGlobal {

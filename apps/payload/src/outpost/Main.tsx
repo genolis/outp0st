@@ -1,14 +1,18 @@
 import { Button, Skeleton } from '@mui/material';
-import { OutpostCurrentState } from '@outp0st/core';
+import { OutpostCurrentState, OutpostGlobal } from '@outp0st/core';
 import classNames from "classnames/bind";
+import { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
 import { ExtraActions, Page } from 'components/layout';
 import { OutpostTabs } from './components/OutpostTabs';
 import BtnGroup from './components/ui/elements/BtnGroup';
 import Tabs from './components/ui/elements/Tabs';
 import { useStartup } from './hooks/useStartup';
 import styles from './Main.module.scss';
+import { outpostGlobalSelector } from './state/selectors';
 import { useOutpostSettings } from './state/useOutpostSettings';
 import { useOutpostState } from './state/useOutpostState';
+import { setLocalSetting, SettingKey } from './utils/localStorage';
 
 const Loading = (props) => {
   const { hide, show } = styles;
@@ -26,11 +30,19 @@ const Loading = (props) => {
 }
 
 
+const usePersistOutpostState = () => {
+  const globalState = useRecoilValue<OutpostGlobal>(outpostGlobalSelector);
+  useEffect(() => {
+    setLocalSetting(SettingKey.outpost, globalState);
+  }, [globalState]);
+};
+
 const Lunaverse = () => {
   const { outpostGlobal, outpost, switchCurrentState } = useOutpostState();
   const { loading } = useOutpostSettings();
 
   useStartup();
+  usePersistOutpostState();
 
   return <Loading loading={loading}>
     <Page

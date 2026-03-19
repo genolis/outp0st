@@ -5,117 +5,256 @@ import {
   Outpost,
   OutpostCurrentState,
   OutpostGlobal,
+  OutpostMeta,
 } from '@outp0st/core';
-import { atom, useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import {
-  getLocalSetting,
-  setLocalSetting,
-  SettingKey,
-} from '../utils/localStorage';
-
-const outpostState = atom({
-  key: 'outpostState',
-  default: getLocalSetting<OutpostGlobal>(SettingKey.outpost),
-});
+  contractsAtomFamily,
+  currentEnvAtom,
+  globalTitleAtom,
+  messagesAtomFamily,
+  metaAtomFamily,
+} from './atoms';
+import { currentOutpostSelector, outpostGlobalSelector } from './selectors';
 
 export const getId = () => {
   return GetId();
 };
 
 export const useOutpostState = () => {
-  const [state, setState] = useRecoilState<OutpostGlobal>(outpostState);
+  const [currentEnv, setCurrentEnv] = useRecoilState(currentEnvAtom);
+  const [contracts, setContracts] = useRecoilState(
+    contractsAtomFamily(currentEnv),
+  );
+  const [messages, setMessages] = useRecoilState(
+    messagesAtomFamily(currentEnv),
+  );
+  const [meta, setMeta] = useRecoilState(metaAtomFamily(currentEnv));
+  const [, setGlobalTitle] = useRecoilState(globalTitleAtom);
 
-  //const validateName = (name: string) => !list.some((item) => item.name === name);
+  // Selectors for backward-compatible derived state
+  const outpost = useRecoilValue(currentOutpostSelector);
+  const outpostGlobal = useRecoilValue(outpostGlobalSelector);
 
-  // use it to modify title, version and so on
+  // Atom setters for all three environments (needed by updateGlobalState)
+  const [, setMainContracts] = useRecoilState(
+    contractsAtomFamily(OutpostCurrentState.MAIN),
+  );
+  const [, setMainMessages] = useRecoilState(
+    messagesAtomFamily(OutpostCurrentState.MAIN),
+  );
+  const [, setMainMeta] = useRecoilState(
+    metaAtomFamily(OutpostCurrentState.MAIN),
+  );
+  const [, setTestContracts] = useRecoilState(
+    contractsAtomFamily(OutpostCurrentState.TEST),
+  );
+  const [, setTestMessages] = useRecoilState(
+    messagesAtomFamily(OutpostCurrentState.TEST),
+  );
+  const [, setTestMeta] = useRecoilState(
+    metaAtomFamily(OutpostCurrentState.TEST),
+  );
+  const [, setLocalContracts] = useRecoilState(
+    contractsAtomFamily(OutpostCurrentState.LOCAL),
+  );
+  const [, setLocalMessages] = useRecoilState(
+    messagesAtomFamily(OutpostCurrentState.LOCAL),
+  );
+  const [, setLocalMeta] = useRecoilState(
+    metaAtomFamily(OutpostCurrentState.LOCAL),
+  );
+
+  const envSetters: Record<
+    OutpostCurrentState,
+    {
+      setContracts: (v: Contract[]) => void;
+      setMessages: (v: ContractMessage[]) => void;
+      setMeta: (v: OutpostMeta) => void;
+    }
+  > = {
+    [OutpostCurrentState.MAIN]: {
+      setContracts: setMainContracts,
+      setMessages: setMainMessages,
+      setMeta: setMainMeta,
+    },
+    [OutpostCurrentState.TEST]: {
+      setContracts: setTestContracts,
+      setMessages: setTestMessages,
+      setMeta: setTestMeta,
+    },
+    [OutpostCurrentState.LOCAL]: {
+      setContracts: setLocalContracts,
+      setMessages: setLocalMessages,
+      setMeta: setLocalMeta,
+    },
+  };
+
+  // --- Backward-compatible shims ---
+
   const outpostApp = (
     action: 'get' | 'set',
     key: keyof Outpost,
     value?: any,
   ): undefined | any => {
     if (action === 'get') {
-      return state[state.current][key];
+      if (key === 'contracts') return contracts;
+      if (key === 'messages') return messages;
+      return meta[key as keyof OutpostMeta];
     } else if (action === 'set') {
-      updateState({ ...state[state.current], [key]: value });
+      if (key === 'contracts') {
+        setContracts(value);
+      } else if (key === 'messages') {
+        setMessages(value);
+      } else {
+        setMeta(prev => ({ ...prev, [key]: value }));
+      }
     }
   };
 
   const switchCurrentState = (env: OutpostCurrentState) => {
-    updateGlobalState({ ...state, current: env });
+    setCurrentEnv(env);
   };
 
-  const updateGlobalState = (globalState: OutpostGlobal) => {
-    setState(globalState);
-    setLocalSetting(SettingKey.outpost, globalState);
-  };
+  /**
+   * Backward-compatible updateState: decomposes an Outpost into atoms.
+   * Safe even with partial objects (the #25 bug pattern) because meta
+   * only updates when meta fields are explicitly provided.
+   */
   const updateState = (newState: Outpost) => {
-    // https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
-    const sortedContracts = [...newState.contracts].sort(
-      (a: Contract, b: Contract) => {
-        if (a.title < b.title) {
-          return -1;
-        }
-        if (a.title > b.title) {
-          return 1;
-        }
-        return 0;
-      },
-    );
-
-    const sortedState = {
-      ...newState,
-      contracts: [...sortedContracts],
-    };
-
-    const globalState = {
-      ...state,
-      ...{ [state.current]: sortedState },
-    };
-    // refactor? this to preserve state params like title, version, and other - which are not updated in things like removeContract and so on
-    //const finalState = { ...state, ...sortedState };
-    setState(globalState);
-    setLocalSetting(SettingKey.outpost, globalState);
+    if (newState.contracts !== undefined) {
+      setContracts(newState.contracts);
+    }
+    if (newState.messages !== undefined) {
+      setMessages(newState.messages);
+    }
+    setMeta(prev => ({
+      title: newState.title !== undefined ? newState.title : prev.title,
+      version: newState.version !== undefined ? newState.version : prev.version,
+      params: newState.params !== undefined ? newState.params : prev.params,
+      isReadonly:
+        newState.isReadonly !== undefined
+          ? newState.isReadonly
+          : prev.isReadonly,
+    }));
   };
 
-  // const paramsCrud = useCRUDFactory<Outpost, OutpostParam>(
-  //   state[state.current],
-  //   'params',
-  //   updateState,
-  // );
+  /**
+   * Backward-compatible updateGlobalState: distributes an OutpostGlobal
+   * across all environment atoms.
+   */
+  const updateGlobalState = (globalState: OutpostGlobal) => {
+    setCurrentEnv(globalState.current);
+    setGlobalTitle(globalState.title);
 
-  // const getParam = ({ id, title }: { id?: number; title?: string }) => {
-  //   if ((!id || id < 1) && !title) return;
-  //   let value: OutpostParam | undefined;
-  //   const params = (paramsCrud.read() as OutpostParam[]) || [];
-  //   if (title) value = params.find(x => x.title === title);
-  //   else if (id) value = params.find(x => x.id === id);
-  //   return value;
-  // };
+    for (const env of [
+      OutpostCurrentState.MAIN,
+      OutpostCurrentState.TEST,
+      OutpostCurrentState.LOCAL,
+    ]) {
+      const envState = globalState[env];
+      if (!envState) continue;
+      const setters = envSetters[env];
+      setters.setContracts(envState.contracts ?? []);
+      setters.setMessages(envState.messages ?? []);
+      setters.setMeta({
+        title: envState.title,
+        version: envState.version,
+        params: envState.params,
+        isReadonly: envState.isReadonly,
+      });
+    }
+  };
 
-  // const updateOrAddParam = (
-  //   title: string,
-  //   value: any,
-  //   type: OutpostParamsTypes,
-  // ) => {
-  //   const param = getParam({ title });
-  //   if (!param) {
-  //     paramsCrud.create({
-  //       id: 0,
-  //       title: title,
-  //       value: value,
-  //       type: type,
-  //     });
-  //   } else {
-  //     paramsCrud.update({ ...param, value: value });
-  //   }
-  // };
+  // --- Contract operations ---
 
-  // const removeParam = ({ id, title }: { id?: number; title?: string }) => {
-  //   if ((!id || id < 1) && !title) return;
-  //   let param = getParam({ id, title });
-  //   if (!param) return;
-  //   paramsCrud.del(param);
-  // };
+  const getContracts = () => outpost.contracts;
+
+  const getContract = (id: number) =>
+    outpost.contracts.find(item => item.id === id);
+
+  const addContract = (newItem: Contract) => {
+    const id = getId();
+    setContracts(prev => [...prev, { ...newItem, id }]);
+    return id;
+  };
+
+  const updateContract = (updated: Contract) => {
+    setContracts(prev => [
+      ...prev.filter(item => item.id !== updated.id),
+      { ...updated },
+    ]);
+  };
+
+  const removeContract = (id: number) => {
+    const contract = getContract(id);
+    if (!contract) return;
+    const messageIds = contract.messages;
+    setContracts(prev => prev.filter(item => item.id !== id));
+    setMessages(prev =>
+      prev.filter(item => messageIds.indexOf(item.id) === -1),
+    );
+  };
+
+  const addContractMessageId = (contractId: number, messageId: number) => {
+    setContracts(prev =>
+      prev.map(c =>
+        c.id === contractId
+          ? { ...c, messages: [...c.messages, messageId] }
+          : c,
+      ),
+    );
+  };
+
+  const removeContractMessageId = (contractId: number, messageId: number) => {
+    setContracts(prev =>
+      prev.map(c =>
+        c.id === contractId
+          ? { ...c, messages: c.messages.filter(item => item !== messageId) }
+          : c,
+      ),
+    );
+  };
+
+  // --- Message operations ---
+
+  const getMessage = (id: number) => messages.find(item => item.id === id);
+
+  const getMessagesByContractId = (id: number) =>
+    messages.map(item => (item.contractId === id ? item : false));
+
+  const addMessage = (newItem: ContractMessage) => {
+    const id = getId();
+    const contract = getContract(newItem.contractId);
+    if (!contract) return;
+    setContracts(prev => [
+      ...prev.filter(item => item.id !== newItem.contractId),
+      { ...contract, messages: [...contract.messages, id] },
+    ]);
+    setMessages(prev => [...prev, { ...newItem, id }]);
+    return id;
+  };
+
+  const updateMessage = (updated: ContractMessage) => {
+    setMessages(prev => [
+      ...prev.filter(item => item.id !== updated.id),
+      { ...updated },
+    ]);
+  };
+
+  const removeMessage = (id: number) => {
+    const messageToRemove = getMessage(id);
+    if (!messageToRemove) return;
+    const contract = getContract(messageToRemove.contractId);
+    if (!contract) return;
+    setContracts(prev => [
+      ...prev.filter(item => item.id !== contract.id),
+      { ...contract, messages: contract.messages.filter(item => item !== id) },
+    ]);
+    setMessages(prev => prev.filter(item => item.id !== id));
+  };
+
+  // --- Message reordering ---
 
   const move = (
     direction: 'up' | 'down',
@@ -165,156 +304,9 @@ export const useOutpostState = () => {
     return move(
       direction,
       msg,
-      () => {
-        return true;
-      },
-      () => {
-        return false;
-      },
+      () => true,
+      () => false,
     );
-  };
-
-  const getContracts = () => {
-    return state[state.current].contracts;
-  };
-  const addContract = (newItem: Contract) => {
-    const id = getId();
-    updateState({
-      ...state[state.current],
-      contracts: [
-        ...state[state.current].contracts,
-        {
-          ...newItem,
-          id,
-        },
-      ],
-    });
-    return id;
-  };
-
-  const updateContract = (updated: Contract) => {
-    updateState({
-      ...state[state.current],
-      contracts: [
-        ...state[state.current].contracts.filter(
-          item => item.id !== updated.id,
-        ),
-        {
-          ...updated,
-        },
-      ],
-    });
-  };
-
-  const addContractMessageId = (contractId: number, messageId: number) => {
-    const updated = getContract(contractId);
-    if (!updated) return;
-    updateState({
-      ...state[state.current],
-      contracts: [
-        ...state[state.current].contracts,
-        {
-          ...updated,
-          messages: [...updated.messages, messageId],
-        },
-      ],
-    });
-  };
-
-  const removeContractMessageId = (contractId: number, messageId: number) => {
-    const updated = getContract(contractId);
-    if (!updated) return;
-    updateState({
-      ...state[state.current],
-      contracts: [
-        ...state[state.current].contracts,
-        {
-          ...updated,
-          messages: updated.messages.filter(item => item !== messageId),
-        },
-      ],
-    });
-  };
-
-  const removeContract = (id: number) => {
-    const contractToRemoveMessagesIds = getContract(id)?.messages;
-    updateState({
-      messages: state[state.current].messages.filter(
-        item => contractToRemoveMessagesIds?.indexOf(item.id) === -1,
-      ),
-      contracts: state[state.current].contracts.filter(item => item.id !== id),
-    });
-  };
-
-  const getContract = (id: number) => {
-    return state[state.current].contracts.find(item => item.id === id);
-  };
-
-  const addMessage = (newItem: ContractMessage) => {
-    const id = getId();
-    const updated = getContract(newItem.contractId);
-    if (!updated) return;
-    updateState({
-      contracts: [
-        ...state[state.current].contracts.filter(
-          item => item.id !== newItem.contractId,
-        ),
-        {
-          ...updated,
-          messages: [...updated.messages, id],
-        },
-      ],
-      messages: [
-        ...state[state.current].messages,
-        {
-          ...newItem,
-          id,
-        },
-      ],
-    });
-    return id;
-  };
-
-  const updateMessage = (updated: ContractMessage) => {
-    //removeContract(updated.id!);
-    //console.log({ updated });
-    updateState({
-      ...state[state.current],
-      messages: [
-        ...state[state.current].messages.filter(item => item.id !== updated.id),
-        {
-          ...updated,
-        },
-      ],
-    });
-  };
-
-  const getMessage = (id: number) => {
-    return state[state.current].messages.find(item => item.id === id);
-  };
-  const getMessagesByContractId = (id: number) => {
-    return state[state.current].messages.map(item =>
-      item.contractId === id ? item : false,
-    );
-  };
-  const removeMessage = (id: number) => {
-    const messageToRemove = getMessage(id);
-    if (!messageToRemove) return;
-    const updated = getContract(messageToRemove.contractId);
-
-    if (!updated) return;
-    updateState({
-      contracts: [
-        ...state[state.current].contracts.filter(
-          item => item.id !== updated.id,
-        ),
-        {
-          ...updated,
-          messages: updated.messages.filter(item => item !== id),
-        },
-      ],
-      messages: state[state.current].messages.filter(item => item.id !== id),
-    });
   };
 
   return {
@@ -330,17 +322,13 @@ export const useOutpostState = () => {
     getMessage,
     removeMessage,
     getContracts,
-    outpost: state[state.current],
+    outpost,
     updateState,
     moveMessage,
     canMessageMove,
     outpostApp,
-    // paramsCrud,
-    // getParam,
-    // updateOrAddParam,
-    // removeParam,
     switchCurrentState,
-    outpostGlobal: state,
+    outpostGlobal,
     updateGlobalState,
   };
 };

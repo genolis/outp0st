@@ -239,6 +239,7 @@ export const useOutpostState = () => {
   const removeContract = (id: number) => {
     const contractToRemoveMessagesIds = getContract(id)?.messages;
     updateState({
+      ...state[state.current],
       messages: state[state.current].messages.filter(
         item => contractToRemoveMessagesIds?.indexOf(item.id) === -1,
       ),
@@ -255,6 +256,7 @@ export const useOutpostState = () => {
     const updated = getContract(newItem.contractId);
     if (!updated) return;
     updateState({
+      ...state[state.current],
       contracts: [
         ...state[state.current].contracts.filter(
           item => item.id !== newItem.contractId,
@@ -304,6 +306,7 @@ export const useOutpostState = () => {
 
     if (!updated) return;
     updateState({
+      ...state[state.current],
       contracts: [
         ...state[state.current].contracts.filter(
           item => item.id !== updated.id,
